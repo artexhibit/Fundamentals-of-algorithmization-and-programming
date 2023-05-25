@@ -1,0 +1,49 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+header {
+	display: flex;
+	justify-content: center;
+	padding: 20px 0;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main div {
+	display: flex;
+	justify-content: center;
+	height: 240px;
+}
+
+main div img {
+	height: 200px;
+	width: 300px;
+}
+
+.parametersDiv {
+	width: 180px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding-top: 20px;
+	padding-left: 30px;
+}
+
+.parameter {
+	width: 175px;
+	border-bottom: 1px dotted #000;
+}
+
+.devider {
+	background-color: gray;
+	max-height: 1px;
+	width: 800px;
+	margin: 20px 0;
+}
