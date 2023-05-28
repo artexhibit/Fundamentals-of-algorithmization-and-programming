@@ -1,0 +1,39 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+#photoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#photo {
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    width: 64px;
+    height: 48px;
+    margin: 5px 5px;
+}
+
+.fullImg {
+    width: 640px;
+    height: 480px;
+    margin: 15px 15px;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+}
+
+#buttons button {
+    margin: 10px 10px;
+    padding: 5px 10px;
+}
