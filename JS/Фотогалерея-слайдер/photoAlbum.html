@@ -48,7 +48,9 @@
                 fullImage.src = event.target.src;
                 photo.append(fullImage);
                 clickedImage = event.target;
-                createImageMap()
+                
+                createImageMap();
+                createBorderForClickedImage();
             };
             
             //3.Change full image in photo section after click on prev or next button
@@ -56,7 +58,6 @@
                 removeFullPhotoIfNeeded();
                 
                 event.target.id == "prevPhoto" ? changeImageFromLeftToRight() : changeImageFromRightToLeft()
-                
                 photo.append(fullImage);
             };
             
@@ -86,7 +87,9 @@
                     clickedImage = clickedImage.nextSibling;
                 }
                 photo.append(fullImage);
+                
                 createImageMap();
+                createBorderForClickedImage();
             };
             
             //Check if photo section is empty, if not - remove displaying photo, because we need to show only one full photo at a time
@@ -104,6 +107,7 @@
                     photo.append(fullImage);
                     
                     createImageMap();
+                    createBorderForClickedImage();
                 };
             };
             
@@ -150,6 +154,7 @@
                     fullImage.src = clickedImage.previousSibling.src;
                     clickedImage = clickedImage.previousSibling;
                 }
+                createBorderForClickedImage();
             };
             
             function changeImageFromRightToLeft() {
@@ -163,7 +168,16 @@
                     fullImage.src = clickedImage.nextSibling.src;
                     clickedImage = clickedImage.nextSibling;
                 }
+                createBorderForClickedImage();
             };
+            
+            function createBorderForClickedImage() {
+                const miniImages = [...photoContainer.childNodes];
+                
+                miniImages.forEach(img => {
+                    img.src == clickedImage.src ? img.classList.add("showBorder") : img.classList.remove("showBorder")
+                });
+            }
         </script>
     </body>
 </html>
