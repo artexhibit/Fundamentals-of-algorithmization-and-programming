@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="classesHomework.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p>7. Работа с элементами:</p>
+    <p>Один элемент:</p>
+    <div id="myFirstDiv"></div>
+    <p>Несколько элементов:</p>
+    <div id="mySecondDiv"></div>
+    <div id="myDevider"></div>
+    <div id="myThirdDiv"></div>
+
+    <script>
+        const divOne = document.querySelector("#myFirstDiv");
+        const devider = document.querySelector("#myDevider");
+        const divTwo = document.querySelector("#mySecondDiv");
+        const divThree = document.querySelector("#myThirdDiv"); 
+        
+        divOne.style.border = "2px solid black";
+        devider.style.height = "1px";
+        devider.style.backgroundColor = "black"
+        divTwo.style.border = "2px solid red";
+        divThree.style.border = "2px solid green";
+
+        //One element
+        let elem = new ElemOne(divOne);
+        //add value to element's text
+        elem.html("!");
+        //add value after element
+        elem.append("!");
+        //add value before element
+        elem.prepend("!")
+        //set element's attributes + chain functionality
+        elem.attr("class", "www").attr("title", "hello");
+        
+        //Multiple elements
+        let elemM = new ElemMult([divThree, divTwo]);
+        elemM.prepend("!").append("!");
+    </script>
+</body>
+</html>
