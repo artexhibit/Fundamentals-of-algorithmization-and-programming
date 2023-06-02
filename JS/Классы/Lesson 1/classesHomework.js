@@ -223,7 +223,7 @@ class ElemMult {
 };
 
 //Сreating own "forEach function"
-Array.prototype.each = function(callback){
+Array.prototype.each = function(callback) {
 	for (let i = 0; i < this.length; i++) {
 		callback(this[i]);
 	};

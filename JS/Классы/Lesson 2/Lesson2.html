@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Calendar</title>
+	<script src="Lesson2.js"></script>
+
+	<style>
+		table {
+			border-collapse: collapse;
+		}
+
+		td {
+			width: 30px;
+			height: 30px;
+			border: 1px solid black;
+			text-align: center;
+		}
+
+		tbody tr:first-child {
+			font-weight: bold;
+		}
+
+		#empty {
+			background-color: rgba(150, 150, 150, 0.2);
+		}
+
+		#head {
+			border: none;
+			font-size: larger;
+			font-weight: bolder;
+		}
+	</style>
+</head>
+<body>
+	<br>
+	<div id="calendarContainer"></div>
+	<script>
+		Number().calendar(2020, 5, "#calendarContainer");
+	</script>
+	</body>
+</html
