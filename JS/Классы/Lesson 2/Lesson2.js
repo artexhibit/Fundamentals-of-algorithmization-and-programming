@@ -3,7 +3,7 @@
 function Card(from, to) {
 	this.from = from;
 	this.to = to;
-
+	
 	this.show = function () {
 		return `${this.from}, ${this.to} <br>`;
 	};
@@ -23,11 +23,11 @@ class Human {
 		this.age = age;
 		this.height = height;
 	};
-
+	
 	getInfo() {
 		return `${this.name}, ${this.age}, ${this.height}`;
 	};
-
+	
 	getName() {
 		return this.name;
 	};
@@ -43,11 +43,11 @@ document.write(`2. Массив humans создан. В нём ${humans.length} 
 //Использован алгоритм быстрой сортировки
 function sortByName(array) {
 	if (array.length < 2) { return array; };
-
+	
 	let smallestArray = [];
 	let biggestArray = [];
 	let baseElement = array.length - 1;
-
+	
 	for (let i = 0; i < array.length - 1; i++) {
 		if (array[i].name < array[baseElement].name) {
 			smallestArray.push(array[i]);
@@ -65,7 +65,7 @@ function sortByHeight(array) {
 	let smallestArray = [];
 	let biggestArray = [];
 	let baseElement = array.length - 1;
-
+	
 	for (let i = 0; i < array.length - 1; i++) {
 		if (array[i].height > array[baseElement].height) {
 			smallestArray.push(array[i]);
@@ -109,16 +109,16 @@ Number.prototype.calendar = function (year, month, containerId) {
 		let container = document.querySelector(containerId);
 		let table = document.createElement("table");
 		let tbody = document.createElement("tbody");
-
+		
 		let thead = document.createElement("thead");
 		let row = document.createElement("tr");
 		let column = document.createElement("td");
-
+		
 		column.colSpan = 7;
 		column.setAttribute("id", "head");
 		row.append(column);
 		thead.append(row);
-
+		
 		let rowsAmount = 0;
 		let firstDayOfMonth = new Date(year, month - 1, 1);
 		let monthDays = new Date(year, month, 0).getDate();
@@ -127,18 +127,18 @@ Number.prototype.calendar = function (year, month, containerId) {
 		let monthName = firstDayOfMonth.toLocaleString('ru', { month: 'long' });
 		let numberOfWeeks = Math.ceil(monthDays / 7) + 1;
 		rowsAmount = (dayName == "вс" || dayName == "сб") ? 7 : numberOfWeeks
-
+		
 		column.innerHTML = `${monthName}, ${year}`
-
+		
 		function getFirstMonthDayInWeekNumber() {
 			return firstDayOfMonth.getDay() == 0 ? 7 : firstDayOfMonth.getDay();
 		}
-
+		
 		let monthDaysArr = Array.from(Array(monthDays), (_, i) => i + 1);
-
+		
 		for (let i = 0; i < rowsAmount; i++) {
 			let row = document.createElement("tr");
-
+			
 			for (let j = 0; j < 7; j++) {
 				let column = document.createElement("td");
 				if (i == 0) {
@@ -148,25 +148,25 @@ Number.prototype.calendar = function (year, month, containerId) {
 			};
 			tbody.append(row);
 		};
-
+		
 		let trArray = [...tbody.childNodes];
 		let tdArray = [];
-
+		
 		for (let i = 0; i < trArray.length; i++) {
 			if (i != 0) {
 				let td = [...trArray[i].childNodes];
 				tdArray.push(...td);
 			};
 		};
-
+		
 		let count = 0;
 		let setUpNextMonthNumber = 1;
-
+		
 		function setUpPrevMonthNumbers(i) {
 			let numbersArray = [];
 			let sectionsToInsert = firstMonthDayInWeekNumber - 1;
 			let previousMonthLastDay = new Date(year, month - 1, 0).getDate();
-
+			
 			for (let i = 0; i < sectionsToInsert; i++) {
 				const value = previousMonthLastDay - i;
 				numbersArray.push(value);
@@ -174,7 +174,7 @@ Number.prototype.calendar = function (year, month, containerId) {
 			numbersArray.reverse();
 			return numbersArray[i]
 		}
-
+		
 		for (let i = 0; i < tdArray.length; i++) {
 			if (i < firstMonthDayInWeekNumber - 1) {
 				tdArray[i].innerHTML = setUpPrevMonthNumbers(i);
