@@ -1,0 +1,119 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Forms</title>
+    </head>
+    <body>
+        <h1>Продажа квартир КВАДРИТО</h1>
+        <p>Заполните форму ниже о квартире, которую хотите выставить на продажу:</p>
+        <table>
+            <tr style="vertical-align: top;">
+                <td>
+                    <strong>Город:</strong>    
+                </td>
+                <td>
+                    <select name="city" id="">
+                        <option value="-1">Выберите город для продажи____________________</option>
+                        <option value="0">Москва</option>
+                        <option value="1">Санкт-Петербург</option>
+                        <option value="2">Новосибирск</option>
+                        <option value="3">Воронеж</option>
+                        <option value="4">Вологда</option>
+                        <option value="5">Магадан</option>
+                    </select>
+                </td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td>
+                    <strong>Материал здания:</strong>
+                </td>
+                <td>
+                    <div style="margin-left: 6px;"><input type="checkbox" name="type_material" id="" value="0">Кирпич</div>
+                    <div style="margin-left: 6px;"><input type="checkbox" name="type_material" id="" value="1">Блоки</div>
+                    <div style="margin-left: 6px;"><input type="checkbox" name="type_material" id="" value="2">Монолит</div>
+                    <div style="margin-left: 6px;"><input type="checkbox" name="type_material" id="" value="3">Панель</div>
+                    <div style="margin-left: 6px;"><input type="checkbox" name="type_material" id="" value="4">Дерево</div>
+                </td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td>
+                    <strong>Общая площадь (м<sup>2</sup>)</strong>
+                </td>
+                <td>
+                    <input type="text" name="basic_m_start" placeholder="OT" size="21">
+                    <input type="text" name="basic_m_end" placeholder="ДО" size="21">
+                </td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td>
+                    <strong>Площадь кухни (м<sup>2</sup>)</strong>
+                </td>
+                <td>
+                    <input type="text" name="kitchen_m_start" placeholder="OT" size="21">
+                    <input type="text" name="kitchen_m_end" placeholder="ДО" size="21">
+                </td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td>
+                    <strong>Жилая площадь (м<sup>2</sup>)</strong>
+                </td>
+                <td>
+                    <input type="text" name="live_m_start" placeholder="OT" size="21">
+                    <input type="text" name="live_m_end" placeholder="ДО" size="21">
+                </td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td>
+                    <strong>Год постройки</strong>
+                </td>
+                <td>
+                    <input type="text" name="years_start" placeholder="OT" size="21">
+                    <input type="text" name="years_end" placeholder="ДО" size="21">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <strong>Этаж</strong>
+                </td>
+                <td>
+                    <input type="text" name="level_start" placeholder="OT" size="21">
+                    <input type="text" name="level_end" placeholder="ДО" size="21">
+                    <div style="margin-left: 3px;">Не последний <input type="checkbox" name="not_end" id=""></div>
+                </td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td>
+                    <strong>До метро (по карте):</strong>
+                </td>
+                <td>
+                    <select name="distance" id="">
+                        <option value="-1">Выберите расстояние___________________________</option>
+                        <option value="500m">До 7 мин. пешком (до 500 м.)</option>
+                        <option value="1000m">До 15 мин. пешком (до 1 км.)</option>
+                        <option value="1500m">До 21 мин. пешком (до 1,5 км.)</option>
+                        <option value="3000m">До 40 мин. пешком (до 3 км.)</option>
+                        <option value="5000m">До 1 часа пешком (до 5 км.)</option>
+                    </select>
+                </td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td>
+                    <strong>Продавец</strong>
+                </td>
+                <td>
+                    <div style="margin-left: 6px;"><input type="radio" name="saler" id="" value="0">Не важно</div>
+                    <div style="margin-left: 6px;"><input type="radio" name="saler" id="" value="1">Агентство</div>
+                    <div style="margin-left: 6px;"><input type="radio" name="saler" id="" value="2">Собственник</div>
+                </td>
+            </tr>
+            <tr style="vertical-align: top;">
+                <td colspan="2">
+                    <input type="submit" value="Показать предложения">
+                    <input type="reset" value="Сбросить фильтры">
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
