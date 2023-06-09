@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Программирование в среде JavaScript</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	
+	<body>
+		<div class="content">
+			<table>
+				<tbody>
+					<tr>
+						<td>Код</td>
+						<td>Откуда</td>
+						<td>Дата и время вылета</td>
+						<td>Куда</td>
+						<td>Дата и время прилета</td>
+						<td>Цена</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>SU 13</td>
+						<td>Санкт-Петербург, Пулково LED</td>
+						<td>20-09-2022, 12:13</td>
+						<td>Москва, Шереметьево SVO</td>
+						<td>20-09-2022, 13:22</td>
+						<td>4 970&#8381;</td>
+						<td>
+							<input type="radio" name="select">
+						</td>
+					</tr>
+					<tr>
+						<td>N4 239</td>
+						<td>Санкт-Петербург, Пулково LED</td>
+						<td>21-09-2022, 11:30</td>
+						<td>Магас, Магас IGT</td>
+						<td>21-09-2022, 15:55</td>
+						<td>4 698&#8381;</td>
+						<td><input type="radio" name="select"></td>
+					</tr>
+					<tr>
+						<td>ZF 8871</td>
+						<td>Москва, Внуково VKO</td>
+						<td>24-09-2022, 00:30</td>
+						<td>Анталья, Анталья AYT</td>
+						<td>24-09-2022, 05:25</td>
+						<td>25 713&#8381;</td>
+						<td><input type="radio" name="select"></td>
+					</tr>
+					<tr>
+						<td>RT 612</td>
+						<td>Волгоград, Гумрак VOG</td>
+						<td>24-09-2022, 08:05</td>
+						<td>Самара, Курумоч KUF</td>
+						<td>24-09-2022, 10:30</td>
+						<td>6 722&#8381;</td>
+						<td><input type="radio" name="select"></td>
+					</tr>
+					<tr>
+						<td>N4 750</td>
+						<td>Сочи, Сочи AER</td>
+						<td>20-09-2022, 03:05</td>
+						<td>Киров, Победилово KVX</td>
+						<td>20-09-2022, 06:30</td>
+						<td>10 930&#8381;</td>
+						<td><input type="radio" name="select"></td>
+					</tr>
+					<tr>
+						<td>UT 6426</td>
+						<td>Нарьян-Мар, Нарьян-Мар NNM</td>
+						<td>23-09-2022, 17:00</td>
+						<td>Уфа, Уфа UFA</td>
+						<td>23-09-2022, 21:20</td>
+						<td>11 781&#8381;</td>
+						<td><input type="radio" name="select"></td>
+					</tr>
+					<tr>
+						<td>U6 2953</td>
+						<td>Екатеринбург, Кольцово SVX</td>
+						<td>30-10-2022, 02:45</td>
+						<td>Душанбе, Душанбе DYU</td>
+						<td>30-10-2022, 06:05</td>
+						<td>9 445&#8381;</td>
+						<td><input type="radio" name="select"></td>
+					</tr>
+					<tr>
+						<td>U6 405</td>
+						<td>Самара, Курумоч KUF</td>
+						<td>27-09-2022, 10:25</td>
+						<td>Минеральные Воды, Минеральные Воды MRV</td>
+						<td>27-09-2022, 12:10</td>
+						<td>3 286&#8381;</td>
+						<td><input type="radio" name="select"></td>
+					</tr>
+					<tr>
+						<td>A4 864</td>
+						<td>Баку, им. Гейдара Алиева GYD</td>
+						<td>26-09-2022, 12:10</td>
+						<td>Астрахань, Астрахань ASF</td>
+						<td>26-09-2022, 13:40</td>
+						<td>7 703&#8381;</td>
+						<td><input type="radio" name="select" checked></td>
+					</tr>
+					<tr>
+						<td>WZ 1102</td>
+						<td>Актау, Актау SCO</td>
+						<td>20-09-2022, 14:50</td>
+						<td>Екатеринбург, Кольцово SVX</td>
+						<td>20-09-2022, 16:55</td>
+						<td>16 764&#8381;</td>
+						<td><input type="radio" name="select"></td>
+					</tr>
+				</tbody>
+				
+			</table>
+			
+		</div>
+		<div class="result">
+			<!-- сюда выводить данные -->
+		</div>
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				let pickedButton = document.querySelector("input[name=select]:checked");
+				changeContent(pickedButton);
+			});
+			
+			let div = document.querySelector(".result");
+			let h3 = document.createElement("h3");
+			let p = document.createElement("p");
+			h3.textContent = "Выбранный элемент";
+			
+			let radioButtons = document.querySelectorAll("input[name=select]");
+			
+			for (let i = 0; i < radioButtons.length; i++) {
+				radioButtons[i].addEventListener("change", function() { changeContent(this) });
+				
+				function changeContent(button) {
+					let buttonNodes = button.parentElement.parentElement.childNodes;
+					
+					let obj = {
+						id: buttonNodes[1].textContent,
+						from: buttonNodes[3].textContent,
+						dateFrom: buttonNodes[5].textContent,
+						to: buttonNodes[7].textContent,
+						dateTo: buttonNodes[9].textContent,
+						price: buttonNodes[11].textContent
+					};
+					
+					p.innerHTML = 
+					"Код: " + obj.id + "<br>" + 
+					"Откуда: " + obj.from + "<br>" +
+					"Дата и время вылета: " + obj.dateFrom + "<br>" +
+					"Куда: " + obj.to + "<br>" +
+					"Дата и время прилета: " + obj.dateTo + "<br>" +
+					"Цена: " + obj.price + "<br>"
+					
+					div.append(h3);
+					div.append(p);
+					
+					console.log(obj)
+				}
+			}
+		</script>		
+	</body>
+</html>

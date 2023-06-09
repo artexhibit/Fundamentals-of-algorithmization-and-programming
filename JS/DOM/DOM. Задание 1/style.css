@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.content {
+	width: 100%;
+}
+
+table {
+	margin: 0 auto;
+	border-collapse: collapse;
+}
+
+table * {
+	border-right: 1px solid #CBCBCB;
+	padding: 10px;
+}
+
+tr:nth-child(2n+1) {
+	background: #eee;
+}
+
+tr:nth-child(1) {
+	background: #2980B9;
+	color: #fff;
+	text-align: center;
+	font: bolder 16px sans-serif;
+	padding: 5px;
+}
