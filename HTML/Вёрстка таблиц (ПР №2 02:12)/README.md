@@ -6,7 +6,7 @@
 
 Создайте страницу, как на рисунке ниже.
 
-<img src="images/result1.png" alt="Result" width="500">
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/HTML/Вёрстка%20таблиц%20(ПР%20№2%2002%3A12)/images/result1.png" alt="Result" width="500">
 
 Форма должна включать в себя следующие элементы:
 
@@ -16,7 +16,7 @@
 
 Создайте страницу, как на рисунке ниже. Во вложенной таблице справа используются изображения **css.jpg** и **css3.jpg**.
 
-<img src="images/result2.png" alt="Result" width="500">
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/HTML/Вёрстка%20таблиц%20(ПР%20№2%2002%3A12)/images/result2.png" alt="Result" width="500">
 
 ## Самостоятельная работа No3. Создание страницы html на основе таблицы.
 

@@ -4,7 +4,7 @@
 
 Создайте форму по образцу, представленному ниже на изображении:
 
-<img src="image.png" alt="Result" width="500">
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/HTML/Базовая%20вёрстка%20(ПР%20№3%2017.12)/image.png" alt="Result" width="500">
 
 Форма должна включать в себя следующие элементы:
 

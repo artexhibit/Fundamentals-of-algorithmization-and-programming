@@ -15,5 +15,5 @@
 
 Выведите автомобили марки Toyota в браузер. Примерный формат вывода представлен на рисунке.
 
-![Result](https://github.com/artexhibit/Fundamentals-of-algorithmization-and-programming/blob/main/JS/JSON/Lesson%201/images/Result.png?raw=true)
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/JS/JSON/Lesson%201/images/Result.png?raw=true" alt="Result" width="500">
 

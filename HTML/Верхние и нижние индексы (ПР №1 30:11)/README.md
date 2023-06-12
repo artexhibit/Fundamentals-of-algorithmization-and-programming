@@ -6,7 +6,7 @@
 
 Напишите код HTML, чтобы получить результат, приведенный на рисунке.
 
-<img src="images/result1.png" alt="Result" width="300">
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/HTML/Верхние%20и%20нижние%20индексы%20(ПР%20№1%2030%3A11)/images/result1.png" alt="Result" width="300">
 
 Рис.1 Верхние и нижние индексы
 
@@ -16,7 +16,7 @@
 
 Напишите код HTML, чтобы получить результат, приведенный на рисунке.
 
-<img src="images/result2.png" alt="Result" width="500">
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/HTML/Верхние%20и%20нижние%20индексы%20(ПР%20№1%2030%3A11)/images/result2.png" alt="Result" width="500">
 
 Рис.2 Использование спецсимволов
 
@@ -26,6 +26,6 @@
 
 Напишите код HTML, чтобы получить результат, приведенный на рисунке.
 
-<img src="images/result3.png" alt="Result" width="500">
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/HTML/Верхние%20и%20нижние%20индексы%20(ПР%20№1%2030%3A11)/images/result3.png" alt="Result" width="500">
 
 Выполненные задания добавьте в архив. Назовите архив **family_SRSWEB_1**, где **fаmil** ваша фамилия в английской транскрипции. Полученный архив вышлите преподавателю.

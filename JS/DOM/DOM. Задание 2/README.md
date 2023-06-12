@@ -6,6 +6,10 @@
 
 Выделите массивы `flights` и `passengers` из структуры объекта и выведите в виде отдельных таблиц. Примерный формат вывода представлен на изображении:
 
-<img src="result.png" alt="Result" width="600">
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/JS/DOM/DOM.%20Задание%202/result.png" alt="Result" width="500">
+
+
+
+
 
 

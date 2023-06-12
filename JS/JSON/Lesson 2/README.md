@@ -4,7 +4,7 @@
 
 Примерный формат вывода представлен на рисунке.
 
-![Result](https://github.com/artexhibit/Fundamentals-of-algorithmization-and-programming/blob/main/JS/JSON/Lesson%202/Result.png)
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/JS/JSON/Lesson%202/Result.png" alt="Result" width="500">
 
 
 
