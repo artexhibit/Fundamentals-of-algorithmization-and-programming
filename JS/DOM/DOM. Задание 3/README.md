@@ -19,6 +19,6 @@
 
 P.S. Метод `insertAdjacentHTML` - прекрасный способ добавления узлов, но в учебных целях постарайтесь в данной работе его не применять. Он очень сильно упрощает задачу, а наша главная цель не выполнить работу, а научиться манипулировать узлами.
 
-![result](https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/JS/DOM/DOM.%20Задание%203/images/result.png?raw=true)
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/JS/DOM/DOM.%20Задание%203/images/result.png?raw=true" alt="Result" width="500">
 
 

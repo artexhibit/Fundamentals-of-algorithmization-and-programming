@@ -24,7 +24,7 @@
 
 Создайте страницу, как на рисунке ниже. Во вложенной таблице справа используются изображения **javascript.jpg** и **javascript2.jpg**.
 
-<img src="images/result3.png" alt="Result" width="500">
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/HTML/Вёрстка%20таблиц%20(ПР%20№2%2002%3A12)/images/result3.png" alt="Result" width="500">
 
 ## Самостоятельная работа No4. Объединение страниц ссылками.
 
