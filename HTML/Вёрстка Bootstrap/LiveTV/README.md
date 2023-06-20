@@ -1,3 +1,7 @@
+# Вёрстка сайта с помощью Bootstrap
+
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/HTML/Вёрстка%20Bootstrap/LiveTV/img/result.png" alt="Result" width="800">
+
 ## 2. Секция «Главный экран»
  
 Софи была счастлива в браке со своим мужем Генри. Пока однажды ей не пришло анонимное письмо, предупреждение, что ей нужно бежать  от мужа. Пытаясь разгадать эту загадку, Софи впадает в ужас, ведь Генри оказывается совсем не тем человеком, которого она знает…
