@@ -68,7 +68,7 @@ input[type="checkbox"]:checked {
 
 @media (min-width: 768px) and (max-width: 991px) {
     .subscribe-headline {
-        width: 88%;
+        width: 100%;
     }
 
     .subscription-button {
