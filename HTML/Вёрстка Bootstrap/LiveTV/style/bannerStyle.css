@@ -3,11 +3,16 @@
     background-size: cover;
 }
 
+.container-padding {
+    padding-left: 3.75%;
+    padding-right: 3.75%;
+}
+
 .banner-image {
     background-image: url(../img/1.jpg);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 92.5%;
+   
     height: 100%;
 }
 
@@ -66,7 +71,7 @@
 
 .banner-info-margin {
     margin-top: 14rem;
-    margin-left: 4rem;
+    margin-left: 2.5rem;
 }
 
 .banner-buttons-container {
@@ -80,7 +85,7 @@
 
 @media (min-width: 0px) and (max-width: 767px) {
     .banner-info-margin {
-        margin-top: 16rem;
+        margin-top: 18rem;
     }
 
     .banner-info-container-size {

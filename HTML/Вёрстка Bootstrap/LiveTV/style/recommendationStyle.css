@@ -7,18 +7,19 @@
 }
 
 .recommendation-image-margin {
-    margin-right: 2.6rem;
+    margin-right: 2.5rem;
 }
 
-.reduce-image-sm-screen {}
+.image-container {
+    width: 23%;
+}
 
-.image-margin-sm-screen {}
+.image-style {
+    width: 100%;
+    object-fit: contain;
+}
 
 @media (min-width: 0px) and (max-width: 767px) {
-    .image-margin-sm-screen {
-        margin-right: 0rem;
-    }
-
     .reduce-image-sm-screen {
         width: 40%;
     }

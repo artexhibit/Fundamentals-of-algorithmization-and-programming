@@ -1,14 +1,10 @@
 .livetv-container {
-    width: 92.5%;
     padding-bottom: 10%;
 }
 
-.livetv-info {
-    width: 93%;
-}
-
 .livetv-headline {
-    font-size: 28;
+    font-size: 30;
+    line-height: 2.2rem;
 }
 
 .gradient-text {
@@ -17,8 +13,4 @@
     background-image: linear-gradient(to right, #0355CE, #6CB1FA);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
-
-.image-width {
-    width: 83%;
 }

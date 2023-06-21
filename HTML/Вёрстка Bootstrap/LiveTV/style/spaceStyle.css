@@ -1,5 +1,4 @@
 .space-block {
-    width: 92.5%;
     aspect-ratio: 2 / 1;
 }
 
@@ -8,7 +7,7 @@
 }
 
 .info-container {
-    width: 32%;
+    width: 33%;
     height: 50%;
     top: 13%;
     left: 5%;
@@ -30,10 +29,6 @@
         margin-top: 40px;
         align-items: center;
         text-align: center;
-    }
-
-    .space-block {
-        margin-left: 3%;
     }
 }
 
