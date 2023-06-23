@@ -1,6 +1,6 @@
 # Экзамен по предмету "Алгоритмизация и программирование", 1 курс
 
-<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/HTML/Вёрстка%20Bootstrap/LiveTV/img/ex-mark.png" alt="exmark" width="800">
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/JS/Экзамен%20Алгоритмизация%20и%20программирование/images/ex_mark.png" alt="exmark" align="left" width="30">
 
 Вопросы будут в каждом билете (по 1 вопросу на билет), однако отвечать на вопрос будет необходимо только в случае, если сделать практическое задание не получится совсем. 
 
@@ -32,7 +32,7 @@
 22. Раскройте сущность понятия замыкание в JS.
 23. Что представляет собой класс в JS? В чем различие между классом и функцией-конструктором.
  
-<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/HTML/Вёрстка%20Bootstrap/LiveTV/img/ex-mark.png" alt="exmark" width="800">
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/JS/Экзамен%20Алгоритмизация%20и%20программирование/images/ex_mark.png" alt="exmark" align="left" width="30">
 
 - На оценку «удовлетворительно» (3) необходимо выполнить задание 1.1 и 1.2.
 - На оценку «хорошо» (4) необходимо выполнить задание 1 целиком.

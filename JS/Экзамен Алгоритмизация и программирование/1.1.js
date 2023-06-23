@@ -16,6 +16,7 @@ button.textContent = "Подробнее";
 bookDiv.classList.add("bookContent");
 languageDiv.classList.add("langSection");
 numbersDiv.classList.add("numbSection");
+contentDiv.classList.add("content");
 
 country.title = "Страна";
 language.title = "Язык книги";
@@ -43,4 +44,5 @@ fetch('books.json')
             let newDiv = bookDiv.cloneNode(true);
             contentDiv.append(newDiv);
         });
+        window.onload = sortBooks();
     });

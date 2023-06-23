@@ -1,8 +1,13 @@
+let toolsDiv = document.createElement("div");
 let input = document.createElement("input");
+
 input.type = "text";
 input.name = "q";
 input.placeholder = "Поиск...";
 input.addEventListener("input", filterBooks);
+
+toolsDiv.classList.add("tools");
+toolsDiv.append(input);
 
 function filterBooks(event) {
     main.lastChild.childNodes.forEach(div => {
