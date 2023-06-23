@@ -32,7 +32,7 @@
 22. Раскройте сущность понятия замыкание в JS.
 23. Что представляет собой класс в JS? В чем различие между классом и функцией-конструктором.
  
-<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/JS/Экзамен%20Алгоритмизация%20и%20программирование/images/ex_mark.png" alt="exmark" align="left" width="30">
+<img src="https://raw.githubusercontent.com/artexhibit/Fundamentals-of-algorithmization-and-programming/main/JS/Экзамен%20Алгоритмизация%20и%20программирование/images/ex_mark.png" alt="exmark" align="left" width="45">
 
 - На оценку «удовлетворительно» (3) необходимо выполнить задание 1.1 и 1.2.
 - На оценку «хорошо» (4) необходимо выполнить задание 1 целиком.
