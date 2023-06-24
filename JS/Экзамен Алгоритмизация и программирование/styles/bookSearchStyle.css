@@ -1,0 +1,123 @@
+main div.content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 0 5%;
+}
+
+div.bookContent {
+    width: 23%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 1% 1%;
+    border: 2px solid black;
+    background-color: bisque;
+}
+
+div.langSection,
+div.numbSection {
+    width: 100%;
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+div.bookContent>p:nth-child(2) {
+    font-weight: bold;
+    font-size: 100%;
+}
+
+div.bookContent>p:nth-child(3) {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+div.bookContent>*:nth-child(2n+3) {
+    margin-bottom: 5%;
+}
+
+input {
+    width: 20%;
+}
+
+img {
+    height: 300px;
+    width: 100%;
+    padding: 5% 5%;
+    object-fit: contain;
+}
+
+p {
+    text-align: center;
+    margin: 0 2%;
+}
+
+button {
+    width: 45%;
+    height: 30px;
+    align-self: center;
+    margin: 5% 0;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    div.bookContent {
+        width: 100%;
+        margin: 5% 20%;
+    }
+
+    img {
+        height: 200px;
+    }
+
+    div.bookContent>*:nth-child(2n+3) {
+        margin-bottom: 0;
+    }
+
+    button {
+        width: 35%;
+        height: 25px;
+        margin: 2% 0;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    main div.tools {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    div.sortSection {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    div.bookContent {
+        width: 40%;
+        margin: 5% 5%;
+    }
+
+    img {
+        height: 240px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    main div.content {
+        justify-content: center;
+    }
+
+    div.bookContent {
+        width: 30%;
+    }
+
+    img {
+        height: 270px;
+    }
+}
