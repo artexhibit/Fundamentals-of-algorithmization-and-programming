@@ -5,7 +5,7 @@ main div.content {
     margin: 0 5%;
 }
 
-div.bookContent {
+.bookContent {
     width: 23%;
     display: flex;
     flex-wrap: wrap;
@@ -15,8 +15,8 @@ div.bookContent {
     background-color: bisque;
 }
 
-div.langSection,
-div.numbSection {
+.langSection,
+.numbSection {
     width: 100%;
     margin: 0;
     justify-content: center;
@@ -25,17 +25,17 @@ div.numbSection {
     flex-wrap: nowrap;
 }
 
-div.bookContent>p:nth-child(2) {
+.bookContent>p:nth-child(2) {
     font-weight: bold;
     font-size: 100%;
 }
 
-div.bookContent>p:nth-child(3) {
+.bookContent>p:nth-child(3) {
     font-weight: bold;
     font-size: 120%;
 }
 
-div.bookContent>*:nth-child(2n+3) {
+.bookContent>*:nth-child(2n+3) {
     margin-bottom: 5%;
 }
 
@@ -63,7 +63,7 @@ button {
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
-    div.bookContent {
+    .bookContent {
         width: 100%;
         margin: 5% 20%;
     }
@@ -72,7 +72,7 @@ button {
         height: 200px;
     }
 
-    div.bookContent>*:nth-child(2n+3) {
+    .bookContent>*:nth-child(2n+3) {
         margin-bottom: 0;
     }
 
@@ -91,14 +91,14 @@ button {
         align-items: center;
     }
 
-    div.sortSection {
+    .sortSection {
         width: 100%;
         flex-direction: column;
     }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    div.bookContent {
+    .bookContent {
         width: 40%;
         margin: 5% 5%;
     }
@@ -113,7 +113,7 @@ button {
         justify-content: center;
     }
 
-    div.bookContent {
+    .bookContent {
         width: 30%;
     }
 

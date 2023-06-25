@@ -1,44 +1,76 @@
 let slidersDiv = document.createElement("div");
-let sliderDiv = document.createElement("div");
+let sliderOneDiv = document.createElement("div");
+let sliderOneContent = document.createElement("div");
 let buttonsDiv = document.createElement("div");
 let leftButton = document.createElement("button");
 let rightButton = document.createElement("button");
 let leftButtonIcon = document.createElement("img");
 let rightButtonIcon = document.createElement("img");
-let rightButtonWasPressed;
-
-let i = 1;
+let previousIndex;
 
 fetch('books.json')
     .then(response => response.json())
     .then(books => {
         for (let i = 0; i < 3; i++) {
             let sliderImage = document.createElement("img");
-            sliderImage.classList.add("imgToDisplay");
+            sliderImage.classList.add("sliderImage");
             sliderImage.src = books[i].imageLink.split("-").join("_");
-            sliderDiv.append(sliderImage);
+            sliderOneContent.append(sliderImage);
         }
+        setInterval(moveSlideForward, 2000);
     });
 
 leftButtonIcon.src = "images/left.png";
 rightButtonIcon.src = "images/right.png";
 buttonsDiv.classList.add("buttons");
 
-leftButton.addEventListener("click", leftButtonPressed);
-rightButton.addEventListener("click", rightButtonPressed);
+leftButton.addEventListener("click", moveSlideBack);
+rightButton.addEventListener("click", moveSlideForward);
 leftButton.append(leftButtonIcon);
 rightButton.append(rightButtonIcon);
 buttonsDiv.append(leftButton, rightButton);
-sliderDiv.classList.add("slideContent");
+sliderOneDiv.classList.add("sliderOne");
+sliderOneContent.classList.add("sliderOneContent");
 slidersDiv.classList.add("slidersContent");
 
-slidersDiv.append(sliderDiv);
-sliderDiv.append(buttonsDiv);
+slidersDiv.append(sliderOneDiv);
+sliderOneDiv.append(sliderOneContent);
+sliderOneDiv.append(buttonsDiv);
 
-function leftButtonPressed() {
+function moveSlideBack() {
+    let currentIndex = 0;
+    let images = document.querySelectorAll(".sliderImage");
+    let imagesAmount = images.length;
+
+    previousIndex = currentIndex;
+    currentIndex = (currentIndex - 1 + imagesAmount);
+
+    sliderOneContent.classList.add("moveSlide");
+    sliderOneContent.prepend(images[currentIndex]);
+
+    setTimeout(() => {
+        sliderOneContent.classList.remove('moveSlide'); 
+        sliderOneContent.classList.add("sliderTransition");
+    }, 10);
+
+    setTimeout(() => {
+        sliderOneContent.classList.remove("sliderTransition");
+    }, 400);
 };
 
-function rightButtonPressed() {
+function moveSlideForward() {
+    let currentIndex = 0;
+    let images = document.querySelectorAll(".sliderImage");
 
+    previousIndex = currentIndex;
+    currentIndex++;
+
+    sliderOneContent.classList.add("sliderTransition");
+    sliderOneContent.classList.add("moveSlide");
+
+    setTimeout(() => {
+        sliderOneContent.appendChild(images[previousIndex]);
+        sliderOneContent.classList.remove("sliderTransition", 'moveSlide');
+    }, 400);
 };
 
