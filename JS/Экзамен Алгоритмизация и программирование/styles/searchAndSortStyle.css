@@ -19,13 +19,21 @@ main {
 
 .sortSection {
     display: flex;
-    width: 80%;
+    width: 30%;
     justify-content: flex-end;
 }
 
 main div.tools {
     width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 2% 0;
     padding: 0 6%;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+    .sortSection {
+        width: 60%;
+    }
 }

@@ -1,0 +1,48 @@
+.paginationDiv {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.paginationButtons {
+    width: 45%;
+    display: flex;
+}
+
+.paginationButton {
+    width: 50%;
+    height: 20px;
+    margin: 0 2%;
+}
+
+.switch {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    width: 5%;
+}
+
+.disableButton {
+    cursor: not-allowed;
+    pointer-events: none;
+    color: #c0c0c0; 
+    background-color: #ffffff;
+ }
+
+ @media (min-width: 0px) and (max-width: 767px) {
+    .paginationDiv {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        margin: 3% 0;
+    }
+
+    .switch {
+        width: 100%;
+        justify-content: center;
+        margin-top: 3%;
+    }
+}

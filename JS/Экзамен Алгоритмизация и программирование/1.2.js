@@ -18,6 +18,6 @@ function filterBooks(event) {
                 matchIsFound = true;
             }
         });
-        div.style.display = matchIsFound ? "flex" : "none"
+        div.style.display = matchIsFound ? "flex" : "none";
     });
 };

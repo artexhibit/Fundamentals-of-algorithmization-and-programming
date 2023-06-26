@@ -16,7 +16,7 @@ button.textContent = "Подробнее";
 bookDiv.classList.add("bookContent");
 languageDiv.classList.add("langSection");
 numbersDiv.classList.add("numbSection");
-contentDiv.classList.add("content");
+contentDiv.classList.add("booksContent");
 
 country.title = "Страна";
 language.title = "Язык книги";
@@ -27,11 +27,9 @@ languageDiv.append(country, language);
 numbersDiv.append(pages, year);
 bookDiv.append(image, author, title, languageDiv, numbersDiv, button)
 
-//1.receive content from JSON 
 fetch('books.json')
     .then(response => response.json())
     .then(books => {
-//2.insert data into html blocks
         books.forEach(book => {
             image.src = book.imageLink.split("-").join("_");
             author.textContent = book.author;
@@ -45,4 +43,6 @@ fetch('books.json')
             contentDiv.append(newDiv);
         });
         window.onload = sortBooks();
+        window.onload = leftPaginationButton.classList.add("disableButton");
+        window.onload = rightPaginationButton.classList.add("disableButton");
     });
