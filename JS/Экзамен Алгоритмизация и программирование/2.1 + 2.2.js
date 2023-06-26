@@ -49,7 +49,7 @@ function moveSlideBack() {
     sliderOneContent.prepend(images[currentIndex]);
 
     setTimeout(() => {
-        sliderOneContent.classList.remove('moveSlide'); 
+        sliderOneContent.classList.remove('moveSlide');
         sliderOneContent.classList.add("sliderTransition");
     }, 10);
 
