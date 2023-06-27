@@ -17,6 +17,7 @@ bookDiv.classList.add("bookContent");
 languageDiv.classList.add("langSection");
 numbersDiv.classList.add("numbSection");
 contentDiv.classList.add("booksContent");
+button.classList.add("detailsButton");
 
 country.title = "Страна";
 language.title = "Язык книги";
@@ -45,4 +46,5 @@ fetch('books.json')
         window.onload = sortBooks();
         window.onload = leftPaginationButton.classList.add("disableButton");
         window.onload = rightPaginationButton.classList.add("disableButton");
+        contentDiv.childNodes.forEach(book => { book.lastChild.addEventListener("click", openModal); })
     });
