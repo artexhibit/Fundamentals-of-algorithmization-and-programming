@@ -8,17 +8,12 @@ let leftButtonIcon = document.createElement("img");
 let rightButtonIcon = document.createElement("img");
 let previousIndex;
 
-fetch('books.json')
-    .then(response => response.json())
-    .then(books => {
-        for (let i = 0; i < 3; i++) {
-            let sliderImage = document.createElement("img");
-            sliderImage.classList.add("sliderImage");
-            sliderImage.src = books[i].imageLink.split("-").join("_");
-            sliderOneContent.append(sliderImage);
-        }
-        setInterval(moveSlideForward, 2000);
-    });
+for (let i = 0; i < 3; i++) {
+    let sliderImage = document.createElement("img");
+    sliderImage.classList.add("sliderImage");
+    sliderImage.src = parsedBooks[i].imageLink.split("-").join("_");
+    sliderOneContent.append(sliderImage);
+}
 
 leftButtonIcon.src = "images/left.png";
 rightButtonIcon.src = "images/right.png";
@@ -73,4 +68,5 @@ function moveSlideForward() {
         sliderOneContent.classList.remove("sliderTransition", 'moveSlide');
     }, 400);
 };
+setInterval(moveSlideForward, 2000);
 

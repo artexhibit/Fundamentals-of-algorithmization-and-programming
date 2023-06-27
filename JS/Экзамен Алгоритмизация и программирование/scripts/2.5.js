@@ -18,6 +18,8 @@ modalBackground.addEventListener("click", closeModal);
 closeButton.append(closeButtonIcon);
 modalContent.append(closeButton, bookTitle, bookName, bookDescription);
 
+contentDiv.childNodes.forEach(book => { book.lastChild.addEventListener("click", openModal); })
+
 function closeModal() {
     modalBackground.classList.add("hidden");
     modalContent.classList.add("hidden");

@@ -67,3 +67,4 @@ function descendingSort(array, option) {
         });
     }
 }
+sortBooks();

@@ -1,3 +1,4 @@
+let parsedBooks = JSON.parse(books);
 let contentDiv = document.createElement("div");
 
 let bookDiv = document.createElement("div");
@@ -28,23 +29,15 @@ languageDiv.append(country, language);
 numbersDiv.append(pages, year);
 bookDiv.append(image, author, title, languageDiv, numbersDiv, button)
 
-fetch('books.json')
-    .then(response => response.json())
-    .then(books => {
-        books.forEach(book => {
-            image.src = book.imageLink.split("-").join("_");
-            author.textContent = book.author;
-            title.textContent = book.title;
-            country.textContent = `🌎 ${book.country}`;
-            language.textContent = `🗣 ${book.language}`;
-            pages.textContent = `📘 ${book.pages}`;
-            year.textContent = `🪶 ${book.year}`;
+parsedBooks.forEach(book => {
+    image.src = book.imageLink.split("-").join("_");
+    author.textContent = book.author;
+    title.textContent = book.title;
+    country.textContent = `🌎 ${book.country}`;
+    language.textContent = `🗣 ${book.language}`;
+    pages.textContent = `📘 ${book.pages}`;
+    year.textContent = `🪶 ${book.year}`;
 
-            let newDiv = bookDiv.cloneNode(true);
-            contentDiv.append(newDiv);
-        });
-        window.onload = sortBooks();
-        window.onload = leftPaginationButton.classList.add("disableButton");
-        window.onload = rightPaginationButton.classList.add("disableButton");
-        contentDiv.childNodes.forEach(book => { book.lastChild.addEventListener("click", openModal); })
-    });
+    let newDiv = bookDiv.cloneNode(true);
+    contentDiv.append(newDiv);
+});

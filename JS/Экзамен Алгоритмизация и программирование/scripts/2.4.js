@@ -31,6 +31,9 @@ leftPaginationButton.addEventListener("click", movePageBack);
 rightPaginationButton.addEventListener("click", movePageForward);
 checkbox.addEventListener("click", checkboxClicked);
 
+leftPaginationButton.classList.add("disableButton");
+rightPaginationButton.classList.add("disableButton");
+
 function checkboxClicked(event) {
     if (event.target.checked) {
         movePageForward();

@@ -24,26 +24,21 @@ carouselContainer.appendChild(carouselContent);
 carouselContainer.appendChild(carouselButtonsContainer);
 slidersDiv.append(carouselContainer);
 
-fetch('books.json')
-    .then(response => response.json())
-    .then(books => {
-        for (let i = 0; i < 10; i++) {
-            let imageDiv = document.createElement("div");
-            let carouselImage = document.createElement("img");
+for (let i = 0; i < 10; i++) {
+    let imageDiv = document.createElement("div");
+    let carouselImage = document.createElement("img");
 
-            if (i == 2) {
-                carouselImage.classList.add("carouselBigImage");
-            } else {
-                carouselImage.classList.add("carouselNormalImage");
-            }
+    if (i == 2) {
+        carouselImage.classList.add("carouselBigImage");
+    } else {
+        carouselImage.classList.add("carouselNormalImage");
+    }
 
-            imageDiv.classList.add("imageContainer");
-            imageDiv.append(carouselImage);
-            carouselImage.src = books[i].imageLink.split("-").join("_");
-            carouselContent.append(imageDiv);
-        }
-        setInterval(moveCarouselForward, 2000);
-    });
+    imageDiv.classList.add("imageContainer");
+    imageDiv.append(carouselImage);
+    carouselImage.src = parsedBooks[i].imageLink.split("-").join("_");
+    carouselContent.append(imageDiv);
+}
 
 function moveCarouselBack() {
     if (functionCalled) {
@@ -97,3 +92,4 @@ function moveCarouselForward() {
     }
     setTimeout(() => { functionCalled = true; }, 410);
 }
+setInterval(moveCarouselForward, 2000);
