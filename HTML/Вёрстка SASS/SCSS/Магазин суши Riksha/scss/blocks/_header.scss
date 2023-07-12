@@ -4,18 +4,85 @@
     box-sizing: border-box;
 }
 
-header {
+.header {
     width: 100%;
-    height: auto;
     display: flex;
     background: linear-gradient(to bottom, white 0%, white 50%, #F5F5F5 50%, #F5F5F5 100%);
-    justify-content: center;
+
+    &__body {
+        display: flex;
+        margin: auto;
+    }
+
+    &__logo {
+        margin: 8px 0;
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__up {
+        display: flex;
+        height: 50%;
+        align-items: center;
+    }
+
+    &__low {
+        display: flex;
+        height: 50%;
+        align-items: center;
+    }
 }
 
-.header__nav {
+.logo {}
+
+.nav {
     display: flex;
+    list-style: none;
+
+    &__item {}
 }
 
-#header__logo {
-    margin: 8px 0;
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+    &__phone {
+        display: flex;
+    }
+
+    &__icon {}
+
+    &__number {}
+
+    &__hours {}
+}
+
+.cart {
+
+    &__amount {}
+
+    &__devider {}
+
+    &__icon {}
+
+    &__items {}
+}
+
+.profile {
+
+    &__icon {}
+}
+
+.food-type {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__icon {}
+
+    &__name {}
 }
