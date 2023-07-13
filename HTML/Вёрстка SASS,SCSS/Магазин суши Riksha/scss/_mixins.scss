@@ -1,0 +1,6 @@
+@mixin fontConfig($family, $size, $weight, $color: black) {
+    font-family: $family, sans-serif;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}

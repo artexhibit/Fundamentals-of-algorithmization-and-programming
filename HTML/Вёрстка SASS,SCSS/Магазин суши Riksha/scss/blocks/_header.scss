@@ -42,7 +42,16 @@
     display: flex;
     list-style: none;
 
-    &__item {}
+    &__item {
+        @include fontConfig($regularFont, 14px, 400);
+    }
+}
+
+.link {
+    &:link, &:visited  {
+        color: black;
+        text-decoration: none;
+    }
 }
 
 .contact {
@@ -56,14 +65,22 @@
 
     &__icon {}
 
-    &__number {}
+    &__number {
+        @include fontConfig($mediumFont, 16px, 500);
+    }
 
-    &__hours {}
+    &__hours {
+        @include fontConfig($mediumFont, 12px, 500, #B7B7B7);
+    }
 }
 
 .cart {
+    display: flex;
+    align-items: center;
 
-    &__amount {}
+    &__amount {
+        @include fontConfig($mediumFont, 14px, 500);
+    }
 
     &__devider {}
 
@@ -84,5 +101,7 @@
 
     &__icon {}
 
-    &__name {}
+    &__name {
+        @include fontConfig($mediumFont, 16px, 500);
+    }
 }
