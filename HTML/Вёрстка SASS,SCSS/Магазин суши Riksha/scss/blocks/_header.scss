@@ -5,22 +5,27 @@
 }
 
 .header {
-    width: 100%;
+    min-width: 100%;
     display: flex;
     background: linear-gradient(to bottom, white 0%, white 50%, #F5F5F5 50%, #F5F5F5 100%);
 
     &__body {
         display: flex;
         margin: auto;
+        width: 81.56%;
     }
 
     &__logo {
         margin: 8px 0;
+        max-width: 134px;
     }
 
     &__nav {
         display: flex;
         flex-direction: column;
+        flex-grow: 1;
+        max-width: 1022px;
+        margin-left: 41px;
     }
 
     &__up {
@@ -33,6 +38,7 @@
         display: flex;
         height: 50%;
         align-items: center;
+        justify-content: space-between;
     }
 }
 
@@ -41,6 +47,9 @@
 .nav {
     display: flex;
     list-style: none;
+    max-width: 517px;
+    flex-grow: 1;
+    justify-content: space-between;
 
     &__item {
         @include fontConfig($regularFont, 14px, 400);
@@ -48,7 +57,9 @@
 }
 
 .link {
-    &:link, &:visited  {
+
+    &:link,
+    &:visited {
         color: black;
         text-decoration: none;
     }
@@ -58,6 +69,9 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+    margin-left: 87px;
+    max-width: 154px;
+    flex-grow: 1;
 
     &__phone {
         display: flex;
@@ -66,6 +80,7 @@
     &__icon {}
 
     &__number {
+        margin-left: 8px;
         @include fontConfig($mediumFont, 16px, 500);
     }
 
@@ -77,19 +92,47 @@
 .cart {
     display: flex;
     align-items: center;
+    width: 134px;
+    height: 48px;
+    margin-left: 56px;
+    background-color: #F5F5F5;
+    border-radius: 6px;
+    justify-content: space-around;
 
     &__amount {
         @include fontConfig($mediumFont, 14px, 500);
+        width: 45px;
+        text-align: center;
     }
 
-    &__devider {}
+    &__devider {
+        height: 24px;
+        border-left: 1px solid white;
+        border-radius: 4px;
+    }
+
+    &__button {
+        @include transparentButton(24px, 24px);
+        position: relative;
+    }
 
     &__icon {}
 
-    &__items {}
+    &__items {
+        position: absolute;
+        top: -3px;
+        right: -5px;
+    }
 }
 
 .profile {
+
+    &__button {
+        @include transparentButton(48px, 48px);
+        background-color: #F5F5F5;
+        border-radius: 6px;
+        margin-left: 24px;
+    }
 
     &__icon {}
 }
@@ -99,7 +142,9 @@
     flex-direction: column;
     align-items: center;
 
-    &__icon {}
+    &__icon {
+        margin-bottom: 10px;
+    }
 
     &__name {
         @include fontConfig($mediumFont, 16px, 500);
