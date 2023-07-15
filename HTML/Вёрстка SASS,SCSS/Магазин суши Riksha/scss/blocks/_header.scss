@@ -9,15 +9,30 @@
     display: flex;
     background: linear-gradient(to bottom, white 0%, white 50%, #F5F5F5 50%, #F5F5F5 100%);
 
+    @include breakpoint(sm, md) {
+        background: white;
+    }
+
     &__body {
         display: flex;
         margin: auto;
         width: 81.56%;
+        flex-direction: column;
+
+        @include breakpoint(lg, xl) {
+            flex-direction: row;
+        }
     }
 
     &__logo {
         margin: 8px 0;
-        max-width: 134px;
+        max-width: 70px;
+        align-self: center;
+
+        @include breakpoint(lg, xl) {
+            max-width: 134px;
+            align-self: flex-start;
+        }
     }
 
     &__nav {
@@ -26,12 +41,20 @@
         flex-grow: 1;
         max-width: 1022px;
         margin-left: 41px;
+
+        @include breakpoint(sm, md) {
+            margin: 0;
+        }
     }
 
     &__up {
         display: flex;
         height: 50%;
         align-items: center;
+
+        @include breakpoint(sm, md) {
+            flex-direction: column;
+        }
     }
 
     &__low {
@@ -39,6 +62,14 @@
         height: 50%;
         align-items: center;
         justify-content: space-between;
+
+        @include breakpoint(sm, md) {
+            flex-wrap: wrap;
+            justify-content: space-around;
+            border-radius: 10px;
+            background: #F5F5F5;
+            padding: 10px 0;
+        }
     }
 }
 
@@ -51,13 +82,21 @@
     flex-grow: 1;
     justify-content: space-between;
 
+    @include breakpoint(sm) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @include breakpoint(md) {
+        width: 70%;
+    }
+
     &__item {
         @include fontConfig($regularFont, 14px, 400);
     }
 }
 
 .link {
-
     &:link,
     &:visited {
         color: black;
@@ -72,6 +111,15 @@
     margin-left: 87px;
     max-width: 154px;
     flex-grow: 1;
+
+    @include breakpoint(lg) {
+        margin-left: 20px;
+    }
+
+    @include breakpoint(sm, md) {
+        margin: 10px 0;
+        align-items: center;
+    }
 
     &__phone {
         display: flex;
@@ -99,10 +147,27 @@
     border-radius: 6px;
     justify-content: space-around;
 
+    @include breakpoint(sm, md) {
+        height: 32px;
+        width: 110px;
+        margin: 10px 0;
+    }
+
+    @include breakpoint(lg) {
+        margin-left: 10px;
+        width: 90px;
+    }
+
     &__amount {
         @include fontConfig($mediumFont, 14px, 500);
         width: 45px;
         text-align: center;
+        margin-left: 16px;
+
+        @include breakpoint(sm, md, lg) {
+            width: 25px;
+            margin-left: 4%;
+        }
     }
 
     &__devider {
@@ -126,12 +191,21 @@
 }
 
 .profile {
-
     &__button {
         @include transparentButton(48px, 48px);
         background-color: #F5F5F5;
         border-radius: 6px;
         margin-left: 24px;
+
+        @include breakpoint(sm, md) {
+            width: 32px;
+            height: 32px;
+            margin: 10px 0;
+        }
+
+        @include breakpoint(lg) {
+            margin-left: 10px;
+        }
     }
 
     &__icon {}
@@ -141,6 +215,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include breakpoint(sm) {
+        margin-top: 5%;
+        margin-right: 5%;
+    }
 
     &__icon {
         margin-bottom: 10px;

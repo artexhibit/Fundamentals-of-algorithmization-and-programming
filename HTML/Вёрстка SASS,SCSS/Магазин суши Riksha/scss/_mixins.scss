@@ -3,11 +3,23 @@
     font-size: $size;
     font-weight: $weight;
     color: $color;
-};
+}
 
-@mixin transparentButton($width, $height)  {
+@mixin transparentButton($width, $height) {
     width: $width;
     height: $height;
     background-color: transparent;
     border: none;
+}
+
+@mixin breakpoint($userValues...) {
+    @each $value in $userValues {
+        $myMap: map-get($breakpoints, $value);
+
+        @if $myMap {
+            @media (#{$myMap}) {
+                @content;
+            }
+        }
+    }
 }
