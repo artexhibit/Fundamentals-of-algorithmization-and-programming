@@ -10,6 +10,12 @@
         position: relative;
         background-color: #F5F9FA;
         border-radius: 20px;
+
+        @include breakpoint(sm) {
+            flex-direction: column-reverse;
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__left-btn {
@@ -17,17 +23,41 @@
         top: 50%;
         left: - #{button-position($giftSwitchButtonSize)};
         transform: translateY(-50%);
+        
+        @include breakpoint(md, lg) {
+            $giftSwitchButtonSize: 65px;
+            left: - #{button-position($giftSwitchButtonSize)};
+        }
+
+        @include breakpoint(sm) {
+            $giftSwitchButtonSize: 32px;
+            left: - #{button-position($giftSwitchButtonSize)};
+        }
     }
 
     &__left-half {
         width: 50%;
         padding-left: 4.92%;
         padding-top: 9.59%;
+
+        @include breakpoint(sm) {
+            width: 80%;
+            padding: 0;
+            margin-bottom: 60px;
+        }
     }
 
     &__title {
         @include fontConfig("TTInterfacesSemiBold", 40px, 700);
         width: 98%;
+
+        @include breakpoint(md, lg) {
+            @include fontConfig("TTInterfacesSemiBold", 30px, 700);
+        }
+
+        @include breakpoint(sm) {
+            @include fontConfig("TTInterfacesSemiBold", 15px, 700);
+        }
     }
 
     &__title--orange {
@@ -37,6 +67,10 @@
     &__subtitle {
         @include fontConfig("TTInterfacesRegular", 20px, 500);
         margin-top: 8px;
+
+        @include breakpoint(sm) {
+            @include fontConfig("TTInterfacesSemiBold", 13px, 700);
+        }
     }
 
     &__right-half {
@@ -57,6 +91,16 @@
         top: 50%;
         right: - #{button-position($giftSwitchButtonSize)};
         transform: translateY(-50%);
+
+        @include breakpoint(md, lg) {
+            $giftSwitchButtonSize: 65px;
+            right: - #{button-position($giftSwitchButtonSize)};
+        }
+
+        @include breakpoint(sm) {
+            $giftSwitchButtonSize: 32px;
+            right: - #{button-position($giftSwitchButtonSize)};
+        }
     }
 }
 
@@ -65,17 +109,42 @@
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background: white;
 
-    &__arrow {}
+    @include breakpoint(md, lg) {
+        $giftSwitchButtonSize: 65px;
+        @include configureButton($giftSwitchButtonSize, $giftSwitchButtonSize);
+    }
+
+    @include breakpoint(sm) {
+        $giftSwitchButtonSize: 45px;
+        @include configureButton($giftSwitchButtonSize, $giftSwitchButtonSize);
+    }
+
+    &__arrow {
+        @include breakpoint(sm) {
+            width: 20px;
+        }
+    }
 }
 
 .details-btn {
     @include configureButton($giftDetailsButtonSize, $giftDetailsButtonSize);
     position: absolute;
-    background: url('../images/gift/redCircle.png');
+    background-image: url('../images/gift/redCircle.png');
+    background-size: contain;
     bottom: - #{button-position($giftDetailsButtonSize)};
     left: 60px;
+
+    @include breakpoint(sm, md) {
+        $giftDetailsButtonSize: 90px;
+        @include configureButton($giftDetailsButtonSize, $giftDetailsButtonSize);
+        bottom: - #{button-position($giftDetailsButtonSize)};
+    }
     
     &__title {
-        @include fontConfig("TTInterfacesMedium", 18px, 700, white)
+        @include fontConfig("TTInterfacesMedium", 18px, 700, white);
+
+        @include breakpoint(sm, md) {
+            @include fontConfig("TTInterfacesMedium", 13px, 700, white);
+        }
     }
 }
