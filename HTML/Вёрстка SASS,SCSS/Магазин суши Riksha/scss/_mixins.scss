@@ -5,11 +5,24 @@
     color: $color;
 }
 
-@mixin transparentButton($width, $height) {
+@mixin makeTransparentButton($width, $height) {
     width: $width;
     height: $height;
     background-color: transparent;
     border: none;
+    cursor: pointer;
+}
+
+@mixin configureButton($width, $height) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.9;
+    width: $width;
+    height: $height;
+    cursor: pointer;
 }
 
 @mixin breakpoint($userValues...) {

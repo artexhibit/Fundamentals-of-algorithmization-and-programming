@@ -1,0 +1,81 @@
+.gift {
+    min-width: 100%;
+    display: flex;
+
+    &__body {
+        display: flex;
+        margin: auto;
+        width: 81.56%;
+        margin-top: 48px;
+        position: relative;
+        background-color: #F5F9FA;
+        border-radius: 20px;
+    }
+
+    &__left-btn {
+        position: absolute;
+        top: 50%;
+        left: - #{button-position($giftSwitchButtonSize)};
+        transform: translateY(-50%);
+    }
+
+    &__left-half {
+        width: 50%;
+        padding-left: 4.92%;
+        padding-top: 9.59%;
+    }
+
+    &__title {
+        @include fontConfig("TTInterfacesSemiBold", 40px, 700);
+        width: 98%;
+    }
+
+    &__title--orange {
+        color: #E07153;
+    }
+
+    &__subtitle {
+        @include fontConfig("TTInterfacesRegular", 20px, 500);
+        margin-top: 8px;
+    }
+
+    &__right-half {
+        display: flex;
+        width: 50%;
+    }
+
+    &__image {
+     width: 100px;
+     max-height: 424px;
+     object-fit: contain;
+     flex: 1;
+     padding-right: 9%;
+    }
+
+    &__right-btn {
+        position: absolute;
+        top: 50%;
+        right: - #{button-position($giftSwitchButtonSize)};
+        transform: translateY(-50%);
+    }
+}
+
+.switch-button {
+    @include configureButton($giftSwitchButtonSize, $giftSwitchButtonSize);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: white;
+
+    &__arrow {}
+}
+
+.details-btn {
+    @include configureButton($giftDetailsButtonSize, $giftDetailsButtonSize);
+    position: absolute;
+    background: url('../images/gift/redCircle.png');
+    bottom: - #{button-position($giftDetailsButtonSize)};
+    left: 60px;
+    
+    &__title {
+        @include fontConfig("TTInterfacesMedium", 18px, 700, white)
+    }
+}

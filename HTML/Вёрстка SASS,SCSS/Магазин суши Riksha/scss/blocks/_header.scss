@@ -19,7 +19,7 @@
         width: 81.56%;
         flex-direction: column;
 
-        @include breakpoint(lg, xl) {
+        @include breakpoint(lg, xl, 2xl) {
             flex-direction: row;
         }
     }
@@ -29,7 +29,7 @@
         max-width: 70px;
         align-self: center;
 
-        @include breakpoint(lg, xl) {
+        @include breakpoint(lg, xl, 2xl) {
             max-width: 134px;
             align-self: flex-start;
         }
@@ -40,7 +40,7 @@
         flex-direction: column;
         flex-grow: 1;
         max-width: 1022px;
-        margin-left: 41px;
+        margin-left: 56px;
 
         @include breakpoint(sm, md) {
             margin: 0;
@@ -113,7 +113,7 @@
     flex-grow: 1;
 
     @include breakpoint(lg) {
-        margin-left: 20px;
+        margin-left: 10px;
     }
 
     @include breakpoint(sm, md) {
@@ -145,7 +145,7 @@
     margin-left: 56px;
     background-color: #F5F5F5;
     border-radius: 6px;
-    justify-content: space-around;
+    justify-content: space-evenly;
 
     @include breakpoint(sm, md) {
         height: 32px;
@@ -162,7 +162,6 @@
         @include fontConfig($mediumFont, 14px, 500);
         width: 45px;
         text-align: center;
-        margin-left: 16px;
 
         @include breakpoint(sm, md, lg) {
             width: 25px;
@@ -177,7 +176,7 @@
     }
 
     &__button {
-        @include transparentButton(24px, 24px);
+        @include makeTransparentButton(24px, 24px);
         position: relative;
     }
 
@@ -192,7 +191,7 @@
 
 .profile {
     &__button {
-        @include transparentButton(48px, 48px);
+        @include makeTransparentButton(48px, 48px);
         background-color: #F5F5F5;
         border-radius: 6px;
         margin-left: 24px;
