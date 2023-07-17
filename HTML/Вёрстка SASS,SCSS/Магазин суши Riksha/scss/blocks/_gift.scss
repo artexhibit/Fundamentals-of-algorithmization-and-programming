@@ -8,13 +8,14 @@
         width: 81.56%;
         margin-top: 48px;
         position: relative;
-        background-color: #F5F9FA;
+        background-color: rgba(245, 249, 250, 0.7);
         border-radius: 20px;
 
         @include breakpoint(sm) {
             flex-direction: column-reverse;
             align-items: center;
             text-align: center;
+            background-color: rgba(245, 249, 250, 0.5);
         }
     }
 

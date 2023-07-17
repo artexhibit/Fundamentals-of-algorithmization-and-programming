@@ -4,13 +4,30 @@
     box-sizing: border-box;
 }
 
+body {
+    position: relative;
+}
+
+.background-stripes {
+    position: absolute;
+    width: 81.56%;
+    height: 100%;
+    left: 9.22%;
+    background: repeating-linear-gradient(to right, #FAFAFA 0, #FAFAFA 79px, transparent 79px, transparent 104px);   
+    z-index: -1;
+
+    @include breakpoint(sm) {
+        background: repeating-linear-gradient(to right, #FAFAFA 0, #FAFAFA 30px, transparent 30px, transparent 38px);
+    }
+}
+
 .header {
     min-width: 100%;
     display: flex;
-    background: linear-gradient(to bottom, white 0%, white 50%, #F5F5F5 50%, #F5F5F5 100%);
+    background: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(245, 245, 245, 0.7) 50%, rgba(245, 245, 245, 0.7) 100%);
 
     @include breakpoint(sm, md) {
-        background: white;
+        background: transparent;
     }
 
     &__body {
@@ -67,7 +84,7 @@
             flex-wrap: wrap;
             justify-content: space-around;
             border-radius: 10px;
-            background: #F5F5F5;
+            background: rgba(245, 245, 245, 0.5);
             padding: 10px 0;
         }
     }
