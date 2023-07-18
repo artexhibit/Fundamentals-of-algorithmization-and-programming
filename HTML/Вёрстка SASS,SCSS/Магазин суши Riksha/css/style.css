@@ -475,6 +475,7 @@ body {
 
 .switch-button {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   border: none;
@@ -489,6 +490,7 @@ body {
 @media ((min-width: 768px) and (max-width: 1023.98px)) {
   .switch-button {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     border: none;
@@ -502,6 +504,7 @@ body {
 @media ((min-width: 1024px) and (max-width: 1279.98px)) {
   .switch-button {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     border: none;
@@ -515,6 +518,7 @@ body {
 @media (max-width: 767.98px) {
   .switch-button {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     border: none;
@@ -533,6 +537,7 @@ body {
 
 .details-btn {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   border: none;
@@ -550,6 +555,7 @@ body {
 @media (max-width: 767.98px) {
   .details-btn {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     border: none;
@@ -564,6 +570,7 @@ body {
 @media ((min-width: 768px) and (max-width: 1023.98px)) {
   .details-btn {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     border: none;
@@ -596,4 +603,149 @@ body {
     font-weight: 700;
     color: white;
   }
+}
+
+.advantage {
+  min-width: 100%;
+  display: flex;
+  position: relative;
+  margin-top: 133px;
+}
+@media (max-width: 767.98px) {
+  .advantage {
+    margin-top: 70px;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .advantage {
+    margin-top: 70px;
+  }
+}
+.advantage__decoration {
+  position: absolute;
+  left: 0;
+  top: -128px;
+  opacity: 0.6;
+  width: 12%;
+}
+.advantage__body {
+  display: flex;
+  margin: auto;
+  width: 81.56%;
+  justify-content: space-between;
+}
+@media (max-width: 767.98px) {
+  .advantage__body {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.advantage__btn {
+  position: absolute;
+  right: 13px;
+  bottom: 40px;
+  background-image: url("../images/gift/redCircle.png");
+  background-size: contain;
+  box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  opacity: 0.9;
+  width: 110px;
+  height: 110px;
+  cursor: pointer;
+}
+@media (max-width: 767.98px) {
+  .advantage__btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    border-radius: 50%;
+    opacity: 0.9;
+    width: 51px;
+    height: 51px;
+    cursor: pointer;
+    right: 5%;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .advantage__btn {
+    bottom: 190px;
+  }
+}
+@media (max-width: 767.98px) {
+  .advantage__btn-icon {
+    width: 15%;
+  }
+}
+.advantage__btn-title {
+  font-family: "TTInterfacesRegular", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+}
+@media (max-width: 767.98px) {
+  .advantage__btn-title {
+    font-family: "TTInterfacesRegular", sans-serif;
+    font-size: 9px;
+    font-weight: 400;
+    color: white;
+  }
+}
+
+.advantage-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .advantage-item {
+    text-align: center;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .advantage-item {
+    text-align: center;
+  }
+}
+.advantage-item__container {
+  width: 180px;
+  height: 107px;
+}
+.advantage-item__title {
+  font-family: "TTInterfacesSemiBold", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: black;
+}
+.advantage-item__circle {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  background-color: #E07153;
+  border-radius: 50%;
+  margin-top: -30px;
+}
+.advantage-item__icon {
+  position: absolute;
+  right: -15px;
+}
+.advantage-item__subtitle {
+  font-family: "TTInterfacesSemiBold", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: black;
+  margin-top: 12px;
+}
+.advantage-item__comment {
+  font-family: "TTInterfacesRegular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+  margin-top: 2px;
 }

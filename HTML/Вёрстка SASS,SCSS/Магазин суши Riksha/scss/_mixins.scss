@@ -13,8 +13,9 @@
     cursor: pointer;
 }
 
-@mixin configureButton($width, $height) {
+@mixin configureButton($width, $height, $flexDir: row) {
     display: flex;
+    flex-direction: $flexDir;
     justify-content: center;
     align-items: center;
     border: none;

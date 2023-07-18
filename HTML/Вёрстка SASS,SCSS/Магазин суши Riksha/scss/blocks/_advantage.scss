@@ -1,0 +1,107 @@
+.advantage {
+    min-width: 100%;
+    display: flex;
+    position: relative;
+    margin-top: 133px;
+
+    @include breakpoint(sm, md) {
+        margin-top: 70px;
+    }
+
+    &__decoration {
+        position: absolute;
+        left: 0;
+        top: -128px;
+        opacity: 0.6;
+        width: 12%;
+    }
+
+    &__body {
+        display: flex;
+        margin: auto;
+        width: 81.56%;
+        justify-content: space-between;
+
+        @include breakpoint(sm) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        right: 13px;
+        bottom: 40px;
+        background-image: url('../images/gift/redCircle.png');
+        background-size: contain;
+        box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.4);
+
+        @include configureButton(110px, 110px, column);
+
+        @include breakpoint(sm) {
+            @include configureButton(51px, 51px, column);
+            right: 5%;
+        }
+
+        @include breakpoint(md) {
+            bottom: 190px;
+        }
+    }
+
+    &__btn-icon {
+        @include breakpoint(sm) {
+            width: 15%;
+        }
+    }
+
+    &__btn-title {
+        @include fontConfig("TTInterfacesRegular", 15px, 600, white);
+
+        @include breakpoint(sm) {
+            @include fontConfig("TTInterfacesRegular", 9px, 400, white);
+        }
+    }
+}
+
+.advantage-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint(sm, md) {
+        text-align: center;
+    }
+
+    &__container {
+        width: 180px;
+        height: 107px;
+    }
+
+    &__title {
+        @include fontConfig("TTInterfacesSemiBold", 32px, 700);
+    }
+
+    &__circle {
+        position: relative;
+        width: 72px;
+        height: 72px;
+        background-color: #E07153;
+        border-radius: 50%;
+        margin-top: -30px;
+    }
+
+    &__icon {
+        position: absolute;
+        right: -15px;
+    }
+
+    &__subtitle {
+        @include fontConfig("TTInterfacesSemiBold", 14px, 700);
+        margin-top: 12px;
+    }
+
+    &__comment {
+        @include fontConfig("TTInterfacesRegular", 14px, 400);
+        margin-top: 2px;
+    }
+}
