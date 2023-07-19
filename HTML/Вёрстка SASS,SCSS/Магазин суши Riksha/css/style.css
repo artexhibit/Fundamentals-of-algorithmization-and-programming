@@ -25,12 +25,12 @@ body {
   width: 81.56%;
   height: 100%;
   left: 9.22%;
-  background: repeating-linear-gradient(to right, #FAFAFA 0, #FAFAFA 79px, transparent 79px, transparent 104px);
+  background: repeating-linear-gradient(to right, #fafafa 0, #fafafa 79px, transparent 79px, transparent 104px);
   z-index: -1;
 }
 @media (max-width: 767.98px) {
   .background-stripes {
-    background: repeating-linear-gradient(to right, #FAFAFA 0, #FAFAFA 30px, transparent 30px, transparent 38px);
+    background: repeating-linear-gradient(to right, #fafafa 0, #fafafa 30px, transparent 30px, transparent 38px);
   }
 }
 
@@ -208,7 +208,7 @@ body {
   font-family: "TTInterfacesMedium", sans-serif;
   font-size: 12px;
   font-weight: 500;
-  color: #B7B7B7;
+  color: #b7b7b7;
 }
 
 .cart {
@@ -217,7 +217,7 @@ body {
   width: 134px;
   height: 48px;
   margin-left: 56px;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   border-radius: 6px;
   justify-content: space-evenly;
 }
@@ -292,7 +292,7 @@ body {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   border-radius: 6px;
   margin-left: 24px;
 }
@@ -422,7 +422,7 @@ body {
   }
 }
 .gift__title--orange {
-  color: #E07153;
+  color: #e07153;
 }
 .gift__subtitle {
   font-family: "TTInterfacesRegular", sans-serif;
@@ -727,7 +727,7 @@ body {
   position: relative;
   width: 72px;
   height: 72px;
-  background-color: #E07153;
+  background-color: #e07153;
   border-radius: 50%;
   margin-top: -30px;
 }

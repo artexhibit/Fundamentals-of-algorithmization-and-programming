@@ -22,17 +22,17 @@
     &__left-btn {
         position: absolute;
         top: 50%;
-        left: - #{button-position($giftSwitchButtonSize)};
+        left: -#{button-position($giftSwitchButtonSize)};
         transform: translateY(-50%);
-        
+
         @include breakpoint(md, lg) {
             $giftSwitchButtonSize: 65px;
-            left: - #{button-position($giftSwitchButtonSize)};
+            left: -#{button-position($giftSwitchButtonSize)};
         }
 
         @include breakpoint(sm) {
             $giftSwitchButtonSize: 32px;
-            left: - #{button-position($giftSwitchButtonSize)};
+            left: -#{button-position($giftSwitchButtonSize)};
         }
     }
 
@@ -62,7 +62,7 @@
     }
 
     &__title--orange {
-        color: #E07153;
+        color: #e07153;
     }
 
     &__subtitle {
@@ -80,27 +80,27 @@
     }
 
     &__image {
-     width: 100px;
-     max-height: 424px;
-     object-fit: contain;
-     flex: 1;
-     padding-right: 9%;
+        width: 100px;
+        max-height: 424px;
+        object-fit: contain;
+        flex: 1;
+        padding-right: 9%;
     }
 
     &__right-btn {
         position: absolute;
         top: 50%;
-        right: - #{button-position($giftSwitchButtonSize)};
+        right: -#{button-position($giftSwitchButtonSize)};
         transform: translateY(-50%);
 
         @include breakpoint(md, lg) {
             $giftSwitchButtonSize: 65px;
-            right: - #{button-position($giftSwitchButtonSize)};
+            right: -#{button-position($giftSwitchButtonSize)};
         }
 
         @include breakpoint(sm) {
             $giftSwitchButtonSize: 32px;
-            right: - #{button-position($giftSwitchButtonSize)};
+            right: -#{button-position($giftSwitchButtonSize)};
         }
     }
 }
@@ -130,17 +130,17 @@
 .details-btn {
     @include configureButton($giftDetailsButtonSize, $giftDetailsButtonSize);
     position: absolute;
-    background-image: url('../images/gift/redCircle.png');
+    background-image: url("../images/gift/redCircle.png");
     background-size: contain;
-    bottom: - #{button-position($giftDetailsButtonSize)};
+    bottom: -#{button-position($giftDetailsButtonSize)};
     left: 60px;
 
     @include breakpoint(sm, md) {
         $giftDetailsButtonSize: 90px;
         @include configureButton($giftDetailsButtonSize, $giftDetailsButtonSize);
-        bottom: - #{button-position($giftDetailsButtonSize)};
+        bottom: -#{button-position($giftDetailsButtonSize)};
     }
-    
+
     &__title {
         @include fontConfig("TTInterfacesMedium", 18px, 700, white);
 

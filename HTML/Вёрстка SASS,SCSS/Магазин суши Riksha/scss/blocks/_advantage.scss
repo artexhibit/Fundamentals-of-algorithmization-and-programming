@@ -32,7 +32,7 @@
         position: absolute;
         right: 13px;
         bottom: 40px;
-        background-image: url('../images/gift/redCircle.png');
+        background-image: url("../images/gift/redCircle.png");
         background-size: contain;
         box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.4);
 
@@ -85,7 +85,7 @@
         position: relative;
         width: 72px;
         height: 72px;
-        background-color: #E07153;
+        background-color: #e07153;
         border-radius: 50%;
         margin-top: -30px;
     }

@@ -1,173 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+    </head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-
-<body>
-    <div class="background-stripes"></div>
-    <header class="header">
-        <div class="header__body">
-            <img class="header__logo logo" src="./images/header/logo.png" alt="logo">
-            <div class="header__nav">
-                <div class="header__up">
-                    <ul class="nav">
-                        <li class="nav__item"><a class="link" href="#">О нас</a></li>
-                        <li class="nav__item"><a class="link" href="#">Доставка и оплата</a></li>
-                        <li class="nav__item"><a class="link" href="#">Контакты</a></li>
-                        <li class="nav__item"><a class="link" href="#">Бонусы</a></li>
-                        <li class="nav__item"><a class="link" href="#">Вакансии</a></li>
-                    </ul>
-                    <div class="contact">
-                        <div class="contact__phone">
-                            <img class="contact__icon" src="./images/header/phone.svg" alt="phone">
-                            <p class="contact__number">+7 (495) 617-14-24</p>
+    <body>
+        <div class="background-stripes"></div>
+        <header class="header">
+            <div class="header__body">
+                <img class="header__logo logo" src="./images/header/logo.png" alt="logo" />
+                <div class="header__nav">
+                    <div class="header__up">
+                        <ul class="nav">
+                            <li class="nav__item"><a class="link" href="#">О нас</a></li>
+                            <li class="nav__item"><a class="link" href="#">Доставка и оплата</a></li>
+                            <li class="nav__item"><a class="link" href="#">Контакты</a></li>
+                            <li class="nav__item"><a class="link" href="#">Бонусы</a></li>
+                            <li class="nav__item"><a class="link" href="#">Вакансии</a></li>
+                        </ul>
+                        <div class="contact">
+                            <div class="contact__phone">
+                                <img class="contact__icon" src="./images/header/phone.svg" alt="phone" />
+                                <p class="contact__number">+7 (495) 617-14-24</p>
+                            </div>
+                            <p class="contact__hours">c 10:00 до 23:00</p>
                         </div>
-                        <p class="contact__hours">c 10:00 до 23:00</p>
-                    </div>
-                    <div class="cart">
-                        <p class="cart__amount">0 &#8381;</p>
-                        <div class="cart__devider"></div>
-                        <button class="cart__button">
-                            <img class="cart__icon" src="./images/header/cart.svg" alt="cart">
-                            <img class="cart__items" src="./images/header/cartItems.svg" alt="cartItems">
+                        <div class="cart">
+                            <p class="cart__amount">0 &#8381;</p>
+                            <div class="cart__devider"></div>
+                            <button class="cart__button">
+                                <img class="cart__icon" src="./images/header/cart.svg" alt="cart" />
+                                <img class="cart__items" src="./images/header/cartItems.svg" alt="cartItems" />
+                            </button>
+                        </div>
+                        <button class="profile__button">
+                            <img class="profile__icon" src="./images/header/profile.svg" alt="profile" />
                         </button>
                     </div>
-                    <button class="profile__button">
-                        <img class="profile__icon" src="./images/header/profile.svg" alt="profile">
+                    <div class="header__low">
+                        <div class="food-type">
+                            <img class="food-type__icon" src="./images/header/foodTypes/pizza.svg" alt="pizza" />
+                            <a class="food-type__name link" href="#">Пицца</a>
+                        </div>
+                        <div class="food-type">
+                            <img class="food-type__icon" src="./images/header/foodTypes/sushi.svg" alt="profile" />
+                            <a class="food-type__name link" href="#">Суши</a>
+                        </div>
+                        <div class="food-type">
+                            <img class="food-type__icon" src="./images/header/foodTypes/rolle.svg" alt="profile" />
+                            <a class="food-type__name link" href="#">Роллы</a>
+                        </div>
+                        <div class="food-type">
+                            <img class="food-type__icon" src="./images/header/foodTypes/set.svg" alt="profile" />
+                            <a class="food-type__name link" href="#">Сеты</a>
+                        </div>
+                        <div class="food-type">
+                            <img class="food-type__icon" src="./images/header/foodTypes/wok.svg" alt="profile" />
+                            <a class="food-type__name link" href="#">Wok</a>
+                        </div>
+                        <div class="food-type">
+                            <img class="food-type__icon" src="./images/header/foodTypes/soup.svg" alt="profile" />
+                            <a class="food-type__name link" href="#">Супы</a>
+                        </div>
+                        <div class="food-type">
+                            <img class="food-type__icon" src="./images/header/foodTypes/salad.svg" alt="profile" />
+                            <a class="food-type__name link" href="#">Салаты</a>
+                        </div>
+                        <div class="food-type">
+                            <img class="food-type__icon" src="./images/header/foodTypes/dessert.svg" alt="profile" />
+                            <a class="food-type__name link" href="#">Десерты</a>
+                        </div>
+                        <div class="food-type">
+                            <img class="food-type__icon" src="./images/header/foodTypes/drink.svg" alt="profile" />
+                            <a class="food-type__name link" href="#">Напитки</a>
+                        </div>
+                        <div class="food-type">
+                            <img class="food-type__icon" src="./images/header/foodTypes/sale.svg" alt="profile" />
+                            <a class="food-type__name link" href="#">Акции</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="gift">
+            <div class="gift__body">
+                <button class="gift__left-btn switch-button">
+                    <img class="switch-button__arrow" src="./images/gift/arrowLeft.png" alt="arrowLeft" />
+                </button>
+                <button class="details-btn">
+                    <p class="details-btn__title">Подробнее</p>
+                </button>
+                <div class="gift__left-half">
+                    <p class="gift__title">
+                        Калифорния
+                        <span class="gift__title--orange">в подарок</span>
+                        при первом заказе
+                    </p>
+                    <p class="gift__subtitle">от 1500 &#8381;</p>
+                </div>
+                <div class="gift__right-half">
+                    <img class="gift__image" src="./images/gift/roll.png" alt="roll" />
+                </div>
+                <button class="gift__right-btn switch-button">
+                    <img class="switch-button__arrow" src="./images/gift/arrowRight.png" alt="arrowRight" />
+                </button>
+            </div>
+        </section>
+        <section class="advantage">
+            <img class="advantage__decoration" src="./images/advantage/decoration.png" alt="decoration" />
+            <div class="advantage__body">
+                <div class="advantage-item">
+                    <svg class="advantage-item__container" viewBox="0 -50 180 107">
+                        <path id="curve" d="M0,60 C60,-30 120,-30 180,60" fill="transparent" />
+                        <text class="advantage-item__title">
+                            <textPath href="#curve" text-anchor="middle" startOffset="50%" baseline-shift="-25%">Бесплатная</textPath>
+                        </text>
+                    </svg>
+                    <div class="advantage-item__circle">
+                        <img class="advantage-item__icon" src="./images/advantage/bag.svg" alt="bag" />
+                    </div>
+                    <p class="advantage-item__subtitle">доставка</p>
+                    <p class="advantage-item__comment">при заказе от 600 &#8381;</p>
+                </div>
+                <div class="advantage-item">
+                    <svg class="advantage-item__container" viewBox="0 -50 180 107">
+                        <path id="curve" d="M0,60 C60,-50 120,-30 180,60" fill="transparent" />
+                        <text class="advantage-item__title">
+                            <textPath href="#curve" text-anchor="middle" startOffset="50%" baseline-shift="-25%">Доставим</textPath>
+                        </text>
+                    </svg>
+                    <div class="advantage-item__circle">
+                        <img class="advantage-item__icon" src="./images/advantage/clock.svg" alt="clock" />
+                    </div>
+                    <p class="advantage-item__subtitle">за 60 мин</p>
+                    <p class="advantage-item__comment">или проморол за опоздание</p>
+                </div>
+                <div class="advantage-item">
+                    <svg class="advantage-item__container" viewBox="0 -50 180 107">
+                        <path id="curve" d="M0,60 C60,-50 120,-30 180,60" fill="transparent" />
+                        <text class="advantage-item__title">
+                            <textPath href="#curve" text-anchor="middle" startOffset="50%" baseline-shift="-25%">Подарим</textPath>
+                        </text>
+                    </svg>
+                    <div class="advantage-item__circle">
+                        <img class="advantage-item__icon" src="./images/advantage/box.svg" alt="box" />
+                    </div>
+                    <p class="advantage-item__subtitle">бонусы</p>
+                    <p class="advantage-item__comment">бонусная система 1 &#8381; = 1 бонус</p>
+                </div>
+                <div class="advantage-item">
+                    <svg class="advantage-item__container" viewBox="0 -50 180 107">
+                        <path id="curve" d="M0,60 C60,-50 120,-30 180,60" fill="transparent" />
+                        <text class="advantage-item__title">
+                            <textPath href="#curve" text-anchor="middle" startOffset="50%" baseline-shift="-25%">Свежие</textPath>
+                        </text>
+                    </svg>
+                    <div class="advantage-item__circle">
+                        <img class="advantage-item__icon" src="./images/advantage/shrimp.svg" alt="shrimp" />
+                    </div>
+                    <p class="advantage-item__subtitle">продукты</p>
+                    <p class="advantage-item__comment">Никаких заготовок!</p>
+                </div>
+                <button class="advantage__btn">
+                    <img class="advantage__btn-icon" src="./images/advantage/arrowUp.svg" alt="arrowUp" />
+                    <p class="advantage__btn-title">Наверх</p>
+                </button>
+            </div>
+        </section>
+        <section class="positions">
+            <div class="positions__body">
+                <div class="positions__headline">
+                    <img class="positions__mascot" src="./images/positions/illRoll.png" alt="illRoll" />
+                    <button class="headline-button">
+                        <p class="headline-button__main">Топ позиции</p>
+                    </button>
+                    <button class="headline-button">
+                        <p class="headline-button__secondary">Новинки</p>
                     </button>
                 </div>
-                <div class="header__low">
-                    <div class="food-type">
-                        <img class="food-type__icon" src="./images/header/foodTypes/pizza.svg" alt="pizza">
-                        <a class="food-type__name link" href="#">Пицца</a>
+                <div class="positions__row">
+                    <div class="food-card">
+                        <div class="food-card__header">
+                            <div class="qualities">
+                                <img class="qualities__image" src="./images/positions/pepper.svg" alt="pepper" />
+                                <p class="qualities__headline">Острое</p>
+                                <img class="qualities__image" src="./images/positions/roll.svg" alt="roll" />
+                                <p class="qualities__headline">Горячий ролл</p>
+                            </div>
+                            <img class="food-card__image" src="./images/positions/roll1.png" alt="roll" />
+                            <div class="label">
+                                <p class="label__text">TOP</p>
+                            </div>
+                        </div>
+                        <div class="food-card__main">
+                            <div class="food-weight">
+                                <p class="food-weight__label">200 грамм</p>
+                                <div class="food-weight__separator"></div>
+                                <p class="food-weight__label">130 Ккал</p>
+                            </div>
+                            <p class="food-card__title">Ролл "Филадельфия"</p>
+                            <p class="food-card__subtitle">Лосось, сыр "Филадельфия", огурец, авокадо</p>
+                        </div>
+                        <div class="food-card__footer">
+                            <div class="price">
+                                <p class="price__old">269 &#8381;</p>
+                                <p class="price__new">219 &#8381;</p>
+                            </div>
+                            <button class="order-btn">
+                                <p class="order-btn__label">Заказать</p>
+                            </button>
+                        </div>
                     </div>
-                    <div class="food-type">
-                        <img class="food-type__icon" src="./images/header/foodTypes/sushi.svg" alt="profile">
-                        <a class="food-type__name link" href="#">Суши</a>
+                    <div class="food-card">
+                        <div class="food-card__header">
+                            <div class="qualities">
+                                <img class="qualities__image" src="./images/positions/roll.svg" alt="roll" />
+                                <p class="qualities__headline">Горячий ролл</p>
+                            </div>
+                            <img class="food-card__image" src="./images/positions/roll2.png" alt="roll" />
+                            <div class="label">
+                                <p class="label__text">TOP</p>
+                            </div>
+                        </div>
+                        <div class="food-card__main">
+                            <div class="food-weight">
+                                <p class="food-weight__label">200 грамм</p>
+                                <div class="food-weight__separator"></div>
+                                <p class="food-weight__label">130 Ккал</p>
+                            </div>
+                            <p class="food-card__title">Ролл "Сливочная креветка"</p>
+                            <p class="food-card__subtitle">Лосось, сыр "Филадельфия", огурец, авокадо</p>
+                        </div>
+                        <div class="food-card__footer">
+                            <div class="price">
+                                <p class="price__old">224 &#8381;</p>
+                                <p class="price__new">219 &#8381;</p>
+                            </div>
+                            <button class="order-btn">
+                                <p class="order-btn__label">Заказать</p>
+                            </button>
+                        </div>
                     </div>
-                    <div class="food-type">
-                        <img class="food-type__icon" src="./images/header/foodTypes/rolle.svg" alt="profile">
-                        <a class="food-type__name link" href="#">Роллы</a>
+                    <div class="food-card">
+                        <div class="food-card__header">
+                            <div class="qualities">
+                                <img class="qualities__image" src="./images/positions/pepper.svg" alt="pepper" />
+                                <p class="qualities__headline">Острое</p>
+                                <img class="qualities__image" src="./images/positions/roll.svg" alt="roll" />
+                                <p class="qualities__headline">Горячий ролл</p>
+                            </div>
+                            <img class="food-card__image" src="./images/positions/roll1.png" alt="roll" />
+                            <div class="label">
+                                <p class="label__text">TOP</p>
+                            </div>
+                        </div>
+                        <div class="food-card__main">
+                            <div class="food-weight">
+                                <p class="food-weight__label">200 грамм</p>
+                                <div class="food-weight__separator"></div>
+                                <p class="food-weight__label">130 Ккал</p>
+                            </div>
+                            <p class="food-card__title">Ролл "Чикен энд Чиз"</p>
+                            <p class="food-card__subtitle">Лосось, сыр "Филадельфия", огурец, авокадо</p>
+                        </div>
+                        <div class="food-card__footer">
+                            <div class="price">
+                                <p class="price__old">232 &#8381;</p>
+                                <p class="price__new">199 &#8381;</p>
+                            </div>
+                            <button class="order-btn">
+                                <p class="order-btn__label">Заказать</p>
+                            </button>
+                        </div>
                     </div>
-                    <div class="food-type">
-                        <img class="food-type__icon" src="./images/header/foodTypes/set.svg" alt="profile">
-                        <a class="food-type__name link" href="#">Сеты</a>
-                    </div>
-                    <div class="food-type">
-                        <img class="food-type__icon" src="./images/header/foodTypes/wok.svg" alt="profile">
-                        <a class="food-type__name link" href="#">Wok</a>
-                    </div>
-                    <div class="food-type">
-                        <img class="food-type__icon" src="./images/header/foodTypes/soup.svg" alt="profile">
-                        <a class="food-type__name link" href="#">Супы</a>
-                    </div>
-                    <div class="food-type">
-                        <img class="food-type__icon" src="./images/header/foodTypes/salad.svg" alt="profile">
-                        <a class="food-type__name link" href="#">Салаты</a>
-                    </div>
-                    <div class="food-type">
-                        <img class="food-type__icon" src="./images/header/foodTypes/dessert.svg" alt="profile">
-                        <a class="food-type__name link" href="#">Десерты</a>
-                    </div>
-                    <div class="food-type">
-                        <img class="food-type__icon" src="./images/header/foodTypes/drink.svg" alt="profile">
-                        <a class="food-type__name link" href="#">Напитки</a>
-                    </div>
-                    <div class="food-type">
-                        <img class="food-type__icon" src="./images/header/foodTypes/sale.svg" alt="profile">
-                        <a class="food-type__name link" href="#">Акции</a>
-                    </div>
+                    <button class="positions__btn switch-button">
+                        <img class="switch-button__arrow" src="./images/gift/arrowRight.png" alt="arrowRight" />
+                    </button>
                 </div>
+                <img class="positions__decoration" src="./images/positions/decoration2.png" alt="decoration" />
             </div>
-        </div>
-    </header>
-    <section class="gift">
-        <div class="gift__body">
-            <button class="gift__left-btn switch-button">
-                <img class="switch-button__arrow" src="./images/gift/arrowLeft.png" alt="arrowLeft">
-            </button>
-            <button class="details-btn">
-                <p class="details-btn__title">Подробнее</p>
-            </button>
-            <div class="gift__left-half">
-                <p class="gift__title">Калифорния <span class="gift__title--orange">в подарок</span> при первом
-                    заказе</p>
-                <p class="gift__subtitle">от 1500 &#8381;</p>
-            </div>
-            <div class="gift__right-half">
-                <img class="gift__image" src="./images/gift/roll.png" alt="roll">
-            </div>
-            <button class="gift__right-btn switch-button">
-                <img class="switch-button__arrow" src="./images/gift/arrowRight.png" alt="arrowRight">
-            </button>
-        </div>
-    </section>
-    <section class="advantage">
-        <img class="advantage__decoration" src="./images/advantage/decoration.png" alt="decoration">
-        <div class="advantage__body">
-            <div class="advantage-item">
-                <svg class="advantage-item__container" viewBox="0 -50 180 107">
-                    <path id="curve" d="M0,60 C60,-30 120,-30 180,60" fill="transparent"/>
-                    <text class="advantage-item__title">
-                        <textPath href="#curve" text-anchor="middle" startOffset="50%" baseline-shift="-25%">Бесплатная</textPath>
-                    </text>
-                </svg>
-                <div class="advantage-item__circle">
-                    <img class="advantage-item__icon" src="./images/advantage/bag.svg" alt="bag">
-                </div>
-                <p class="advantage-item__subtitle">доставка</p>
-                <p class="advantage-item__comment">при заказе от 600 &#8381;</p>
-            </div>
-            <div class="advantage-item">
-                <svg class="advantage-item__container" viewBox="0 -50 180 107">
-                    <path id="curve" d="M0,60 C60,-50 120,-30 180,60" fill="transparent"/>
-                    <text class="advantage-item__title">
-                        <textPath href="#curve" text-anchor="middle" startOffset="50%" baseline-shift="-25%">Доставим</textPath>
-                    </text>
-                </svg>
-                <div class="advantage-item__circle">
-                    <img class="advantage-item__icon" src="./images/advantage/clock.svg" alt="clock">
-                </div>
-                <p class="advantage-item__subtitle">за 60 мин</p>
-                <p class="advantage-item__comment">или проморол за опоздание</p>
-            </div>
-            <div class="advantage-item">
-                <svg class="advantage-item__container" viewBox="0 -50 180 107">
-                    <path id="curve" d="M0,60 C60,-50 120,-30 180,60" fill="transparent"/>
-                    <text class="advantage-item__title">
-                        <textPath href="#curve" text-anchor="middle" startOffset="50%" baseline-shift="-25%">Подарим</textPath>
-                    </text>
-                </svg>
-                <div class="advantage-item__circle">
-                    <img class="advantage-item__icon" src="./images/advantage/box.svg" alt="box">
-                </div>
-                <p class="advantage-item__subtitle">бонусы</p>
-                <p class="advantage-item__comment">бонусная система 1 &#8381; = 1 бонус</p>
-            </div>
-            <div class="advantage-item">
-                <svg class="advantage-item__container" viewBox="0 -50 180 107">
-                    <path id="curve" d="M0,60 C60,-50 120,-30 180,60" fill="transparent"/>
-                    <text class="advantage-item__title">
-                        <textPath href="#curve" text-anchor="middle" startOffset="50%" baseline-shift="-25%">Свежие</textPath>
-                    </text>
-                </svg>
-                <div class="advantage-item__circle">
-                    <img class="advantage-item__icon" src="./images/advantage/shrimp.svg" alt="shrimp">
-                </div>
-                <p class="advantage-item__subtitle">продукты</p>
-                <p class="advantage-item__comment">Никаких заготовок!</p>
-            </div>
-            <button class="advantage__btn">
-                <img class="advantage__btn-icon" src="./images/advantage/arrowUp.svg" alt="arrowUp">
-                <p class="advantage__btn-title">Наверх</p>
-            </button>
-        </div>
-    </section>
-</body>
-
+        </section>
+    </body>
 </html>
