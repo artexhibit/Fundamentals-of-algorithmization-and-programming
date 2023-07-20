@@ -1,77 +1,184 @@
 .positions {
+    min-width: 100%;
+    display: flex;
+
     &__body {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 135px;
+        width: 81.56%;
+        position: relative;
     }
 
     &__headline {
+        display: flex;
+        position: relative;
     }
 
     &__mascot {
+        position: absolute;
+        left: -80px;
     }
 
     &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 39px;
     }
 
     &__btn {
+        position: absolute;
+        right: 0;
     }
 
     &__decoration {
+        position: absolute;
+        right: 0;
     }
 }
+
 .headline-button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin-right: 32px;
+
     &__main {
+        @include fontConfig("TTInterfacesRegular", 48px, 600);
     }
 
     &__secondary {
+        @include fontConfig("TTInterfacesRegular", 48px, 500, #b7b7b7);
     }
 }
+
 .food-card {
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 32.13%;
+    max-width: 392px;
+
     &__header {
+        position: relative;
     }
 
     &__image {
+        width: 100%;
     }
 
     &__main {
+        margin-top: 26px;
     }
 
     &__title {
+        @include fontConfig("TTInterfacesRegular", 24px, 600);
+        display: flex;
+        height: 30px;
+        margin: 4px 0;
+
+        @include breakpoint(lg) {
+            @include fontConfig("TTInterfacesRegular", 19px, 600);
+            align-items: center;
+        }
+
+        @include breakpoint(md) {
+            @include fontConfig("TTInterfacesRegular", 14px, 600);
+            align-items: center;
+        }
     }
 
     &__subtitle {
+        @include fontConfig("TTInterfacesRegular", 14px, 400);
     }
 
     &__footer {
+        display: flex;
+        margin: 0 24px;
+        justify-content: space-between;
+        margin-top: 54px;
+
+        @include breakpoint(md, lg) {
+            margin-top: 30px;
+        }
     }
 }
+
 .qualities {
+    position: absolute;
+    left: 0;
+    top: 0;
+
     &__image {
     }
 
     &__headline {
     }
 }
+
 .label {
+    position: absolute;
+    right: 0;
+    top: 0;
     &__text {
     }
 }
+
 .food-weight {
+    display: flex;
+    align-items: center;
+
     &__label {
+        @include fontConfig("TTInterfacesRegular", 14px, 400, #b7b7b7);
     }
 
     &__separator {
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #e07153;
+        margin: 0 8px;
     }
 }
+
 .price {
+    display: flex;
+    flex-direction: column;
+
     &__old {
+        @include fontConfig("TTInterfacesRegular", 14px, 400, #b7b7b7);
+        text-decoration-line: line-through;
+        line-height: 11px;
     }
 
     &__new {
+        @include fontConfig("TTInterfacesBold", 32px, 700);
+
+        @include breakpoint(lg) {
+            @include fontConfig("TTInterfacesBold", 25px, 700);
+        }
+
+        @include breakpoint(md) {
+            @include fontConfig("TTInterfacesBold", 20px, 700);
+        }
     }
 }
+
 .order-btn {
+    border: none;
+    background-color: #e07153;
+    background-image: url("../images/positions/btnBackground.svg");
+    background-size: cover;
+    width: 52.33%;
+    max-width: 180px;
+    max-height: 44px;
+    border-radius: 2px;
+    cursor: pointer;
+
     &__label {
+        @include fontConfig("TTInterfacesSemiBold", 14px, 700, white);
     }
 }
+
 .switch-button {
     &__arrow {
     }
