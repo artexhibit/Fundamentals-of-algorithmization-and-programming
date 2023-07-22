@@ -72,6 +72,10 @@
         text-align: center;
     }
 
+    @include breakpoint(md) {
+        width: 165px;
+    }
+
     &__container {
         width: 180px;
         height: 107px;
@@ -103,5 +107,9 @@
     &__comment {
         @include fontConfig("TTInterfacesRegular", 14px, 400);
         margin-top: 2px;
+
+        @include breakpoint(sm) {
+            width: 90%;
+        }
     }
 }
