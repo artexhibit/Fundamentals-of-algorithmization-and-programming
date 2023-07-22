@@ -57,6 +57,17 @@
         top: 50%;
         right: -#{button-position($giftSwitchButtonSize)};
         transform: translateY(-50%);
+
+        @include breakpoint(md, lg) {
+            $giftSwitchButtonSize: 65px;
+            right: -#{button-position($giftSwitchButtonSize)};
+        }
+
+        @include breakpoint(sm) {
+            top: 46%;
+            $giftSwitchButtonSize: 32px;
+            right: -#{button-position($giftSwitchButtonSize)};
+        }
     }
 
     &__decoration {
@@ -76,6 +87,10 @@
 
     @include breakpoint(sm) {
         margin-right: 10px;
+
+        &:nth-child(3) {
+            margin: 0;
+        }
     }
 
     &__main {
@@ -105,7 +120,6 @@
     @include breakpoint(sm) {
         width: 100%;
         max-width: 100%;
-        margin-top: 40px;
         align-items: center;
     }
 
@@ -123,16 +137,14 @@
 
         @include breakpoint(sm) {
             width: 80%;
-            margin-left: 20px;
         }
     }
 
     &__main {
-        margin-top: 26px;
-        margin-left: 24px;
+        margin: 26px 24px 0;
 
         @include breakpoint(sm) {
-            margin: 0px;
+            margin: 16px;
         }
     }
 
@@ -179,7 +191,7 @@
 
         @include breakpoint(sm) {
             flex-direction: column;
-            margin-top: 20px;
+            margin: 0 0 20px;
             width: 100%;
             align-items: center;
         }
@@ -225,7 +237,7 @@
     justify-content: center;
     position: absolute;
     right: -16px;
-    top: 0;
+    top: 16px;
     width: 19%;
     max-width: 72px;
     aspect-ratio: 1/1;
@@ -233,7 +245,8 @@
     border-radius: 50%;
 
     @include breakpoint(sm) {
-        right: 0px;
+        right: 0;
+        top: 0;
     }
 
     &__text {
@@ -244,7 +257,7 @@
         }
 
         @include breakpoint(md, sm) {
-            @include fontConfig("TTInterfacesBold", 13px, 800, white);
+            @include fontConfig("TTInterfacesBold", 12px, 800, white);
         }
     }
 }
@@ -301,13 +314,21 @@
     background-size: cover;
     width: 52.33%;
     max-width: 180px;
-    min-height: 30px;
     max-height: 44px;
     border-radius: 2px;
     cursor: pointer;
 
+    @include breakpoint(md, sm) {
+        width: 45%;
+        height: 32px;
+    }
+
     &__label {
         @include fontConfig("TTInterfacesSemiBold", 14px, 700, white);
+
+        @include breakpoint(md) {
+            @include fontConfig("TTInterfacesSemiBold", 12px, 700, white);
+        }
     }
 }
 

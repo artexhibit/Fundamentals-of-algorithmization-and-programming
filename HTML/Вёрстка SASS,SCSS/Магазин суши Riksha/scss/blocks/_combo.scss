@@ -1,30 +1,94 @@
 .combo {
+    min-width: 100%;
+    display: flex;
+    background-color: #f5f9fa;
+    margin-top: 72px;
+
+    @include breakpoint(sm) {
+        margin-top: 20px;
+    }
 
     &__body {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 80px;
+        width: 81.56%;
+        position: relative;
+
+        @include breakpoint(sm) {
+            margin-top: 20px;
+        }
     }
 
     &__decoration {
+        position: absolute;
+        left: -137px;
+        top: 50px;
+        opacity: 0.6;
+        width: 15%;
     }
 
     &__headline {
+        display: flex;
+        align-items: center;
     }
 
     &__mascot {
+        width: 10%;
+        max-width: 64px;
     }
 
     &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 41px;
+
+        @include breakpoint(sm) {
+            flex-direction: column;
+            margin-top: 0px;
+        }
     }
 
     &__btn {
+        position: absolute;
+        top: 59.9%;
+        right: -#{button-position($giftSwitchButtonSize)};
+        transform: translateY(-50%);
+
+        @include breakpoint(md, lg) {
+            top: 65%;
+            $giftSwitchButtonSize: 65px;
+            right: -#{button-position($giftSwitchButtonSize)};
+        }
+
+        @include breakpoint(sm) {
+            top: 52%;
+            $giftSwitchButtonSize: 42px;
+            right: -#{button-position($giftSwitchButtonSize)};
+        }
     }
 }
 .headline-button {
+    margin-right: 1.31%;
 
     &__main {
     }
 }
-.food-card {
+.food-card--white {
+    background-color: white;
+    margin-right: 24px;
 
+    @include breakpoint(sm) {
+        margin-top: 10px;
+        margin-right: 0px;
+    }
+
+    &:nth-child(3) {
+        margin-right: 0;
+    }
+}
+.food-card {
     &__header {
     }
 
@@ -35,6 +99,14 @@
     }
 
     &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-top: -19px;
+
+        @include breakpoint(lg, md, sm) {
+            flex-direction: column-reverse;
+        }
     }
 
     &__title {
@@ -46,12 +118,26 @@
     &__footer {
     }
 }
+.subtitle-underline {
+    text-decoration: underline;
+}
+.label--green {
+    background-color: #62e2b4;
+}
 .label {
-
     &__text {
     }
 }
 .food-weight {
+    @include breakpoint(lg, md, sm) {
+        align-self: self-start;
+        margin-top: 10%;
+
+        @include breakpoint(sm) {
+            align-self: center;
+            margin-top: 3%;
+        }
+    }
 
     &__label {
     }
@@ -60,31 +146,50 @@
     }
 }
 .food-size {
+    @include breakpoint(lg, md, sm) {
+        align-self: center;
+    }
 
     &__up {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 3px;
     }
 
     &__label {
+        @include fontConfig("TTInterfacesRegular", 12px, 600, #b7b7b7);
     }
 
     &__down {
-    }
-
-    &__price {
+        display: flex;
+        align-items: center;
     }
 }
 .size-btn--picked {
+    width: 55px;
+    height: 26px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e07153;
+    cursor: pointer;
 
     &__label {
+        @include fontConfig("TTInterfacesRegular", 14px, 600, white);
     }
 }
 .size-btn {
+    width: 55px;
+    height: 26px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f5f5f5;
+    cursor: pointer;
 
     &__label {
+        @include fontConfig("TTInterfacesRegular", 14px, 600, #b7b7b7);
     }
 }
 .price {
-
     &__old {
     }
 
@@ -92,12 +197,10 @@
     }
 }
 .order-btn {
-
     &__label {
     }
 }
 .switch-button {
-
     &__arrow {
     }
 }
