@@ -181,7 +181,7 @@
 
     &__footer {
         display: flex;
-        margin: 0 24px;
+        margin: 0 24px 18px;
         justify-content: space-between;
         margin-top: 54px;
 
@@ -191,7 +191,7 @@
 
         @include breakpoint(sm) {
             flex-direction: column;
-            margin: 0 0 20px;
+            margin: 0 0 18px;
             width: 100%;
             align-items: center;
         }

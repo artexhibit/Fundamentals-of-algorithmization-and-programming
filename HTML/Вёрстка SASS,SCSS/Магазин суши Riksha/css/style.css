@@ -992,7 +992,7 @@ body {
 }
 .food-card__footer {
   display: flex;
-  margin: 0 24px;
+  margin: 0 24px 18px;
   justify-content: space-between;
   margin-top: 54px;
 }
@@ -1009,7 +1009,7 @@ body {
 @media (max-width: 767.98px) {
   .food-card__footer {
     flex-direction: column;
-    margin: 0 0 20px;
+    margin: 0 0 18px;
     width: 100%;
     align-items: center;
   }
@@ -1272,6 +1272,11 @@ body {
   display: flex;
   align-items: center;
 }
+@media (max-width: 767.98px) {
+  .combo__headline {
+    justify-content: center;
+  }
+}
 .combo__mascot {
   width: 10%;
   max-width: 64px;
@@ -1285,23 +1290,24 @@ body {
   .combo__row {
     flex-direction: column;
     margin-top: 0px;
+    align-items: center;
   }
 }
 .combo__btn {
   position: absolute;
-  top: 59.9%;
+  top: 58.3%;
   right: -40px;
   transform: translateY(-50%);
 }
 @media ((min-width: 768px) and (max-width: 1023.98px)) {
   .combo__btn {
-    top: 65%;
+    top: 60%;
     right: -32.5px;
   }
 }
 @media ((min-width: 1024px) and (max-width: 1279.98px)) {
   .combo__btn {
-    top: 65%;
+    top: 60%;
     right: -32.5px;
   }
 }
@@ -1323,6 +1329,8 @@ body {
   .food-card--white {
     margin-top: 10px;
     margin-right: 0px;
+    width: 100%;
+    max-width: 392px;
   }
 }
 .food-card--white:nth-child(3) {
@@ -1453,4 +1461,172 @@ body {
   font-size: 14px;
   font-weight: 600;
   color: #b7b7b7;
+}
+
+.promo {
+  min-width: 100%;
+  display: flex;
+  position: relative;
+}
+.promo__body {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 89px;
+  width: 81.56%;
+}
+@media (max-width: 767.98px) {
+  .promo__body {
+    margin-top: 15px;
+  }
+}
+.promo__headline {
+  display: flex;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .promo__headline {
+    justify-content: center;
+  }
+}
+.promo__mascot {
+  width: 10%;
+  max-width: 64px;
+}
+.promo__row {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 41px;
+}
+@media (max-width: 767.98px) {
+  .promo__row {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+}
+.promo__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 32.15%;
+  max-width: 392px;
+  aspect-ratio: 392/280;
+  border-radius: 8px;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+}
+.promo__card:nth-child(2) .promo__image-container {
+  padding: 0 23px;
+}
+.promo__card:nth-child(3) {
+  padding-right: 12px;
+}
+@media (max-width: 767.98px) {
+  .promo__card:nth-child(3) {
+    padding: 0 12px;
+  }
+}
+@media (max-width: 767.98px) {
+  .promo__card {
+    width: 100%;
+    height: 280px;
+    margin-top: 10px;
+    text-align: center;
+  }
+}
+.promo__card--blue {
+  background-image: url("../images/promo/blueB.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.promo__text {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0px 24px 24px;
+  height: 35%;
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .promo__text {
+    margin: 24px 12px 24px 12px;
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .promo__text {
+    margin: 24px 12px 24px 12px;
+    text-align: center;
+  }
+}
+.promo__title {
+  font-family: "TTInterfacesRegular", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .promo__title {
+    font-family: "TTInterfacesRegular", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+  }
+}
+@media (max-width: 767.98px) {
+  .promo__title {
+    font-family: "TTInterfacesRegular", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+  }
+}
+.promo__subtitle {
+  font-family: "TTInterfacesRegular", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  margin-top: 4px;
+}
+.promo__image-container {
+  display: flex;
+  justify-content: end;
+  height: 65%;
+}
+@media (max-width: 767.98px) {
+  .promo__image-container {
+    height: 45%;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .promo__image-container {
+    height: 45%;
+  }
+}
+@media ((min-width: 1024px) and (max-width: 1279.98px)) {
+  .promo__image-container {
+    height: 45%;
+  }
+}
+.promo__image {
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+}
+.promo__card--red {
+  background-image: url("../images/promo/redB.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.promo__card--green {
+  background-image: url("../images/promo/greenB.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.promo__decoration {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0.6;
+  width: 23%;
 }

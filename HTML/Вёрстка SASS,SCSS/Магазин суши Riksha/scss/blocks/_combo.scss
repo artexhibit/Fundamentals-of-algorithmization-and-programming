@@ -32,6 +32,10 @@
     &__headline {
         display: flex;
         align-items: center;
+
+        @include breakpoint(sm) {
+            justify-content: center;
+        }
     }
 
     &__mascot {
@@ -47,17 +51,18 @@
         @include breakpoint(sm) {
             flex-direction: column;
             margin-top: 0px;
+            align-items: center;   
         }
     }
 
     &__btn {
         position: absolute;
-        top: 59.9%;
+        top: 58.3%;
         right: -#{button-position($giftSwitchButtonSize)};
         transform: translateY(-50%);
 
         @include breakpoint(md, lg) {
-            top: 65%;
+            top: 60%;
             $giftSwitchButtonSize: 65px;
             right: -#{button-position($giftSwitchButtonSize)};
         }
@@ -82,6 +87,9 @@
     @include breakpoint(sm) {
         margin-top: 10px;
         margin-right: 0px;
+
+        width: 100%;
+        max-width: 392px;
     }
 
     &:nth-child(3) {
