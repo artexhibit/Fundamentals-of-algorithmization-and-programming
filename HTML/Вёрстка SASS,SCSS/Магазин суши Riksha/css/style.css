@@ -1240,7 +1240,7 @@ body {
 .combo {
   min-width: 100%;
   display: flex;
-  background-color: #f5f9fa;
+  background-color: rgba(245, 249, 250, 0.6);
   margin-top: 72px;
 }
 @media (max-width: 767.98px) {
