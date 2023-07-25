@@ -1,32 +1,92 @@
 .category {
+    min-width: 100%;
+    display: flex;
+
     &__body {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 120px;
+        width: 81.56%;
+
+        @include breakpoint(sm) {
+            margin-top: 20px;
+        }
     }
 
     &__headline {
+        display: flex;
+        align-items: center;
+
+        @include breakpoint(sm) {
+            justify-content: center;
+        }
     }
 
     &__mascot {
+        width: 10%;
+        max-width: 64px;
     }
 
     &__options {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.6);;
+        border-radius: 16px;
+        flex-wrap: wrap;
+        margin: 44px 0 31px 0;
+       
     }
 
     &__options-items {
+        display: flex;
+        width: 100%;
+        padding: 0 12px;
+        margin: 18px 0;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     &__options-item {
+        padding: 0 19.9px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__options-item--picked {
+        background-color: #E07153;
+        border-radius: 12px;
+        box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.25);
     }
 
     &__options-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 4px;
+    }
+
+    &__options-title--picked {
+        @include fontConfig("TTInterfacesRegular", 16px, 600, white);
+        text-decoration: none;
     }
 
     &__options-title {
+        @include fontConfig("TTInterfacesRegular", 16px, 600);
+        text-decoration: none;
     }
 
     &__cards-container {
+        display: flex;
+        flex-direction: column;
     }
 
     &__cards-row {
+        display: flex;
+        justify-content: space-between;
     }
 
     &__nav {
@@ -120,7 +180,22 @@
     }
 }
 .page-btn--picked {
+    display: flex;
+    position: relative;
+
+    &::before {
+        width: 56px;
+        height: 56px;
+        content: "";
+        position: absolute;
+        padding: 1px;
+        border-radius: 100%;
+        background: linear-gradient(to bottom, #c95c3f 30%, transparent 31%, transparent 69%, #c95c3f 0%);
+        -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+    }
 }
+
 .nav-catalog {
 }
 .catalog-btn {
