@@ -983,18 +983,21 @@ body {
   font-size: 14px;
   font-weight: 400;
   color: black;
+  display: flex;
+  height: 51px;
 }
 @media (max-width: 767.98px) {
   .food-card__subtitle {
     text-align: center;
     justify-content: center;
+    align-items: center;
   }
 }
 .food-card__footer {
   display: flex;
   margin: 0 24px 18px;
   justify-content: space-between;
-  margin-top: 54px;
+  margin-top: 19px;
 }
 @media ((min-width: 768px) and (max-width: 1023.98px)) {
   .food-card__footer {
@@ -1322,7 +1325,7 @@ body {
   margin-right: 1.31%;
 }
 .food-card--white {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.4);
   margin-right: 24px;
   width: 100%;
   height: 100%;
@@ -1423,6 +1426,11 @@ body {
   display: flex;
   justify-content: end;
   margin-bottom: 3px;
+}
+@media (max-width: 767.98px) {
+  .food-size__up {
+    margin-top: 5px;
+  }
 }
 .food-size__label {
   font-family: "TTInterfacesRegular", sans-serif;
@@ -1688,21 +1696,18 @@ body {
   align-items: center;
 }
 .category__options-item--picked {
-  background-color: #E07153;
+  background-color: #e07153;
   border-radius: 12px;
   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.category__options-item--picked a {
+  color: white;
+  text-decoration: none;
 }
 .category__options-icon {
   width: 24px;
   height: 24px;
   margin-right: 4px;
-}
-.category__options-title--picked {
-  font-family: "TTInterfacesRegular", sans-serif;
-  font-size: 16px;
-  font-weight: 600;
-  color: white;
-  text-decoration: none;
 }
 .category__options-title {
   font-family: "TTInterfacesRegular", sans-serif;
@@ -1719,18 +1724,153 @@ body {
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 767.98px) {
+  .category__cards-row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .category__cards-row:first-child .food-card__subtitle {
+    height: 110px;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .category__cards-row:first-child .food-card__subtitle {
+    height: 110px;
+  }
+}
+@media ((min-width: 1024px) and (max-width: 1279.98px)) {
+  .category__cards-row:first-child .food-card__subtitle {
+    height: 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  .category__cards-row:first-child .food-card--white {
+    margin: 5% 0;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .category__cards-row:first-child .food-card--white {
+    margin: 5% 0;
+  }
+}
+@media ((min-width: 1024px) and (max-width: 1279.98px)) {
+  .category__cards-row:first-child .food-card--white {
+    margin: 2% 0;
+  }
+}
+.category__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 40px 0 24px;
+}
+@media (max-width: 767.98px) {
+  .category__nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0px 0 0px;
+  }
+}
+
+.nav-pages {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 283px;
+  height: 56px;
+}
+
+.arrow-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 100%;
+  max-width: 36px;
+  height: 36px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.arrow-btn__image {
+  width: 100%;
+  max-width: 36px;
+  aspect-ratio: 1;
+}
+
+.page-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 36px;
+  height: 41px;
+  cursor: pointer;
+  background-color: transparent;
+}
+.page-btn__text {
+  font-family: "TTInterfacesRegular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+}
+
 .page-btn--picked {
   display: flex;
   position: relative;
+}
+.page-btn--picked p {
+  color: #c95c3f;
 }
 .page-btn--picked::before {
   width: 56px;
   height: 56px;
   content: "";
   position: absolute;
+  top: -6px;
+  bottom: 0;
+  left: -11px;
+  right: 0;
   padding: 1px;
   border-radius: 100%;
   background: linear-gradient(to bottom, #c95c3f 30%, transparent 31%, transparent 69%, #c95c3f 0%);
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
+}
+@media (max-width: 767.98px) {
+  .page-btn--picked::before {
+    width: 36px;
+    height: 36px;
+    top: 2px;
+    bottom: 0;
+    left: -1px;
+    right: 0;
+  }
+}
+
+.catalog-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 272px;
+  height: 36px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+.catalog-btn__text {
+  font-family: "TTInterfacesRegular", sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #c95c3f;
+  padding-right: 16px;
+}
+@media (max-width: 767.98px) {
+  .catalog-btn__text {
+    font-size: 15px;
+    padding-right: 8px;
+  }
 }

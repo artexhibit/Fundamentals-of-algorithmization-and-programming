@@ -33,11 +33,10 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(255, 255, 255, 0.6);;
+        background-color: rgba(255, 255, 255, 0.6);
         border-radius: 16px;
         flex-wrap: wrap;
         margin: 44px 0 31px 0;
-       
     }
 
     &__options-items {
@@ -58,7 +57,12 @@
     }
 
     &__options-item--picked {
-        background-color: #E07153;
+        a {
+            color: white;
+            text-decoration: none;
+        }
+
+        background-color: #e07153;
         border-radius: 12px;
         box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.25);
     }
@@ -67,11 +71,6 @@
         width: 24px;
         height: 24px;
         margin-right: 4px;
-    }
-
-    &__options-title--picked {
-        @include fontConfig("TTInterfacesRegular", 16px, 600, white);
-        text-decoration: none;
     }
 
     &__options-title {
@@ -87,9 +86,43 @@
     &__cards-row {
         display: flex;
         justify-content: space-between;
+
+        @include breakpoint(sm) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &:first-child .food-card__subtitle {
+            @include breakpoint(sm, md) {
+                height: 110px;
+            }
+
+            @include breakpoint(lg) {
+                height: 60px;
+            }
+        }
+
+        &:first-child .food-card--white {
+            @include breakpoint(sm, md) {
+                margin: 5% 0;
+            }
+            @include breakpoint(lg) {
+                margin: 2% 0;
+            }
+        }
     }
 
     &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 48px 40px 0 24px;
+
+        @include breakpoint(sm) {
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 0px 0 0px;
+        }
     }
 }
 .headline-button {
@@ -170,38 +203,96 @@
     }
 }
 .nav-pages {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 283px;
+    height: 56px;
 }
 .arrow-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 100%;
+    max-width: 36px;
+    height: 36px;
+    cursor: pointer;
+    background-color: transparent;
+
     &__image {
+        width: 100%;
+        max-width: 36px;
+        aspect-ratio: 1;
     }
 }
 .page-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    width: 36px;
+    height: 41px;
+    cursor: pointer;
+    background-color: transparent;
+
     &__text {
+        @include fontConfig("TTInterfacesRegular", 20px, 400);
     }
 }
 .page-btn--picked {
     display: flex;
     position: relative;
 
+    p {
+        color: #c95c3f;
+    }
+
     &::before {
         width: 56px;
         height: 56px;
         content: "";
         position: absolute;
+        top: -6px;
+        bottom: 0;
+        left: -11px;
+        right: 0;
         padding: 1px;
         border-radius: 100%;
         background: linear-gradient(to bottom, #c95c3f 30%, transparent 31%, transparent 69%, #c95c3f 0%);
         -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
         -webkit-mask-composite: xor;
+
+        @include breakpoint(sm) {
+            width: 36px;
+            height: 36px;
+            top: 2px;
+            bottom: 0;
+            left: -1px;
+            right: 0;
+        }
     }
 }
 
-.nav-catalog {
-}
 .catalog-btn {
-    &__text {
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 272px;
+    height: 36px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
 
-    &__image {
+    &__text {
+        @include fontConfig("TTInterfacesRegular", 24px, 600, #c95c3f);
+        padding-right: 16px;
+
+        @include breakpoint(sm) {
+            font-size: 15px;
+            padding-right: 8px;
+        }
     }
 }
