@@ -1874,3 +1874,116 @@ body {
     padding-right: 8px;
   }
 }
+
+.about {
+  min-width: 100%;
+  display: flex;
+  position: relative;
+}
+.about__body {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 120px;
+  width: 87%;
+  margin-left: 9.3%;
+}
+@media (max-width: 767.98px) {
+  .about__body {
+    flex-direction: column-reverse;
+    align-items: center;
+    margin: auto;
+    margin-top: 30px;
+    width: 81.56%;
+  }
+}
+.about__decoration {
+  position: absolute;
+  top: -15%;
+  left: 0;
+  z-index: -1;
+  opacity: 0.6;
+  width: 12%;
+}
+.about__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 767.98px) {
+  .about__data {
+    margin-top: 20px;
+    align-items: center;
+    text-align: center;
+  }
+}
+.about__headline {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7.6%;
+}
+@media (max-width: 767.98px) {
+  .about__headline {
+    margin-bottom: 2%;
+    justify-content: center;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .about__headline {
+    margin-bottom: 2%;
+  }
+}
+.about__mascot {
+  width: 10%;
+  max-width: 64px;
+}
+.about__text {
+  font-family: "TTInterfacesRegular", sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  color: black;
+  width: 95.5%;
+  max-width: 553px;
+}
+@media ((min-width: 1024px) and (max-width: 1279.98px)) {
+  .about__text {
+    font-size: 16px;
+  }
+}
+@media (max-width: 767.98px) {
+  .about__text {
+    font-size: 16px;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .about__text {
+    font-size: 12px;
+  }
+}
+.about__images {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 60%;
+  padding-left: 20px;
+}
+@media (max-width: 767.98px) {
+  .about__images {
+    width: 80%;
+    padding-left: 0;
+  }
+}
+.about__image-main {
+  width: 70%;
+  max-width: 514px;
+  max-height: 640px;
+  z-index: 1;
+}
+.about__image-secondary {
+  position: absolute;
+  width: 40%;
+  max-width: 336px;
+  max-height: 419px;
+  right: 0;
+  top: 28%;
+  z-index: -1;
+}
