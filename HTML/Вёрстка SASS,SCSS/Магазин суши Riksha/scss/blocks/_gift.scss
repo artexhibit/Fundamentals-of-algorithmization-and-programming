@@ -61,10 +61,6 @@
         }
     }
 
-    &__title--orange {
-        color: #e07153;
-    }
-
     &__subtitle {
         @include fontConfig("TTInterfacesRegular", 20px, 500);
         margin-top: 8px;
@@ -103,6 +99,10 @@
             right: -#{button-position($giftSwitchButtonSize)};
         }
     }
+}
+
+.title--orange {
+    color: #e07153;
 }
 
 .switch-button {

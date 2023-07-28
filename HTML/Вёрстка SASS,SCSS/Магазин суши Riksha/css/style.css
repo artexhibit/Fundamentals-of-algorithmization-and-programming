@@ -425,9 +425,6 @@ body {
     color: black;
   }
 }
-.gift__title--orange {
-  color: #e07153;
-}
 .gift__subtitle {
   font-family: "TTInterfacesRegular", sans-serif;
   font-size: 20px;
@@ -475,6 +472,10 @@ body {
   .gift__right-btn {
     right: -16px;
   }
+}
+
+.title--orange {
+  color: #e07153;
 }
 
 .switch-button {
