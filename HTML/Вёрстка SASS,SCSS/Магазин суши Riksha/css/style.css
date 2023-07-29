@@ -1988,3 +1988,147 @@ body {
   top: 28%;
   z-index: -1;
 }
+
+.insta {
+  min-width: 100%;
+  display: flex;
+  position: relative;
+}
+.insta__decoration-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.6;
+  width: 30%;
+  max-width: 450px;
+}
+.insta__body {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 230px;
+  width: 81.56%;
+}
+@media (max-width: 767.98px) {
+  .insta__body {
+    margin-top: 20px;
+  }
+}
+.insta__data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media (max-width: 767.98px) {
+  .insta__data {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+.insta__title {
+  font-family: "TTInterfacesSemiBold", sans-serif;
+  font-size: 40px;
+  font-weight: 600;
+  color: black;
+  width: 100%;
+  max-width: 468px;
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .insta__title {
+    font-size: 32px;
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .insta__title {
+    font-size: 23px;
+    text-align: center;
+  }
+}
+.insta__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  aspect-ratio: 288/72;
+  max-width: 288px;
+  max-height: 72px;
+  background-color: #e07153;
+  background-image: url("../images/positions/btnBackground.svg");
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+}
+.insta__btn-image {
+  width: 15%;
+  max-width: 32px;
+}
+.insta__btn-label {
+  font-family: "TTInterfacesSemiBold", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+  margin-left: 16px;
+}
+@media (max-width: 767.98px) {
+  .insta__btn-label {
+    font-size: 18px;
+    text-align: center;
+    margin-left: 5px;
+  }
+}
+.insta__images {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 58px;
+}
+@media (max-width: 767.98px) {
+  .insta__images {
+    margin-top: 20px;
+  }
+}
+.insta__horizontal-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 75.33%;
+  max-width: 924px;
+  max-height: 520px;
+  gap: 2.1%;
+}
+.insta__horizontal-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.insta__horizontal-row:last-child img:first-child {
+  width: 66.24%;
+  max-width: 612px;
+}
+.insta__image {
+  width: 32.47%;
+  max-width: 300px;
+  max-height: 254px;
+}
+.insta__vertical-block {
+  width: 23.6%;
+}
+.insta__vertical-block img {
+  width: 100%;
+  height: 100%;
+  max-width: 288px;
+  max-height: 520px;
+}
+.insta__decoration-right {
+  position: absolute;
+  right: -9%;
+  top: -25%;
+  z-index: -1;
+  opacity: 0.6;
+  width: 50%;
+  max-width: 596px;
+}
