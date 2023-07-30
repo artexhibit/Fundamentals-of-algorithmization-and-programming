@@ -2132,3 +2132,235 @@ body {
   width: 50%;
   max-width: 596px;
 }
+
+.footer {
+  min-width: 100%;
+  margin-top: 50px;
+  display: flex;
+  background: linear-gradient(to bottom, transparent 0%, transparent 7%, black 7%);
+}
+@media ((min-width: 1280px) and (max-width: 1535.98px)) {
+  .footer {
+    margin-top: 143px;
+    max-height: 181px;
+    background: linear-gradient(to bottom, transparent 0%, transparent 21.57%, black 21.57%);
+  }
+}
+.footer__body {
+  display: flex;
+  margin: auto;
+  width: 81.56%;
+}
+.footer__background-stripes {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: repeating-linear-gradient(to right, rgba(250, 250, 250, 0.09) 0, rgba(250, 250, 250, 0.09) 79px, transparent 79px, transparent 104px);
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .footer__background-stripes {
+    justify-content: center;
+    gap: 5px 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__background-stripes {
+    justify-content: center;
+    gap: 5px 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__background-stripes {
+    background: repeating-linear-gradient(to right, rgba(250, 250, 250, 0.09) 0, rgba(250, 250, 250, 0.09) 30px, transparent 30px, transparent 38px);
+  }
+}
+.footer__logo {
+  width: 100%;
+  max-width: 112px;
+  height: 132px;
+  margin-bottom: 51px;
+}
+@media (max-width: 767.98px) {
+  .footer__logo {
+    margin-bottom: 10px;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .footer__logo {
+    margin-bottom: 10px;
+  }
+}
+@media ((min-width: 1024px) and (max-width: 1279.98px)) {
+  .footer__logo {
+    margin-bottom: 10px;
+  }
+}
+.footer__contacts-left {
+  display: flex;
+  flex-direction: column;
+  gap: 12px 0;
+  margin-top: 20px;
+  max-width: 294px;
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .footer__contacts-left {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media ((min-width: 1024px) and (max-width: 1279.98px)) {
+  .footer__contacts-left {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__contacts-left {
+    align-items: center;
+    text-align: center;
+  }
+}
+.footer__icons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 96px;
+}
+.footer__icon {
+  width: 24px;
+  height: 24px;
+}
+.footer__links-container {
+  margin: 20px 15px 0 15px;
+  width: 100%;
+  max-width: 396px;
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .footer__links-container {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media ((min-width: 1024px) and (max-width: 1279.98px)) {
+  .footer__links-container {
+    align-items: center;
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__links-container {
+    align-items: center;
+    text-align: center;
+  }
+}
+.footer__contacts-right {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+  color: white;
+  margin-top: 50px;
+}
+@media (max-width: 767.98px) {
+  .footer__contacts-right {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .footer__contacts-right {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media ((min-width: 1024px) and (max-width: 1279.98px)) {
+  .footer__contacts-right {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+@media ((min-width: 1024px) and (max-width: 1279.98px)) {
+  .footer__contacts-right {
+    width: 100%;
+    align-self: flex-end;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media ((min-width: 768px) and (max-width: 1023.98px)) {
+  .footer__contacts-right {
+    width: 100%;
+    align-self: flex-end;
+    justify-content: center;
+    text-align: center;
+  }
+}
+@media (max-width: 767.98px) {
+  .footer__contacts-right {
+    width: 100%;
+    align-self: flex-end;
+    justify-content: center;
+    text-align: center;
+  }
+}
+.footer__title {
+  font-family: "TTInterfacesMedium", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: white;
+}
+@media (max-width: 767.98px) {
+  .footer__title {
+    font-size: 15px;
+  }
+}
+.footer__subtitle {
+  font-family: "TTInterfacesRegular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: white;
+  margin-top: 7px;
+}
+@media (max-width: 767.98px) {
+  .footer__subtitle {
+    font-size: 12px;
+  }
+}
+.footer__remark {
+  font-family: "TTInterfacesRegular", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  color: white;
+  margin-top: 20px;
+}
+@media (max-width: 767.98px) {
+  .footer__remark {
+    font-size: 10px;
+    margin-top: 10px;
+  }
+}
+
+.links {
+  display: flex;
+  list-style: none;
+  gap: 20px 40px;
+  flex-wrap: wrap;
+}
+@media (max-width: 767.98px) {
+  .links {
+    gap: 10px 40px;
+  }
+}
+.links__item {
+  font-family: "TTInterfacesRegular", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: black;
+  flex-grow: 1;
+}
+
+.link--white:link, .link--white:visited {
+  color: white;
+  text-decoration: none;
+}
