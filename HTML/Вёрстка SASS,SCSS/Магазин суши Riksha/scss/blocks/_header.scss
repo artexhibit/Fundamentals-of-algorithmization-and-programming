@@ -22,19 +22,14 @@ body {
 }
 
 .header {
-    min-width: 100%;
-    display: flex;
-    background: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(245, 245, 245, 0.7) 50%, rgba(245, 245, 245, 0.7) 100%);
+    @include setupSection($background: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(245, 245, 245, 0.7) 50%, rgba(245, 245, 245, 0.7) 100%));
 
     @include breakpoint(sm, md) {
         background: transparent;
     }
 
     &__body {
-        display: flex;
-        margin: auto;
-        width: 81.56%;
-        flex-direction: column;
+        @include setupBody($flexDir: column);
 
         @include breakpoint(lg, xl, 2xl) {
             flex-direction: row;

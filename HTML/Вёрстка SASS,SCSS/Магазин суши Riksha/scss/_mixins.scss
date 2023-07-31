@@ -13,7 +13,7 @@
     cursor: pointer;
 }
 
-@mixin configureButton($width, $height, $flexDir: row) {
+@mixin makeRoundButton($width, $height, $flexDir: row) {
     display: flex;
     flex-direction: $flexDir;
     justify-content: center;
@@ -24,6 +24,35 @@
     width: $width;
     height: $height;
     cursor: pointer;
+}
+
+@mixin setupSection($minWidth: 100%, $marginT: 0px, $display: flex, $background: none, $position: initial) {
+    min-width: $minWidth; 
+    margin-top: $marginT;
+    display: $display;
+    background: $background;
+    position: $position;
+}
+
+@mixin setupBody($width: 81.56%, $margin: auto, $display: flex, $marginT: 0px, $position: initial, $flexDir: row, $justifyCont: initial) {
+    width: $width; 
+    margin: $margin;
+    display: $display;
+    margin-top: $marginT;
+    position: $position;
+    flex-direction: $flexDir;
+    justify-content: $justifyCont;
+}
+
+@mixin setupDecoration($width: 30%, $maxWidth: 450px, $zIndex: -1, $position: absolute, $top: auto, $left: auto, $right: auto, $opacity: 0.6) {
+    position: $position;
+    width: $width; 
+    max-width: $maxWidth;
+    z-index: $zIndex;
+    top: $top;
+    left: $left;
+    right: $right;
+    opacity: $opacity;
 }
 
 @mixin breakpoint($userValues...) {

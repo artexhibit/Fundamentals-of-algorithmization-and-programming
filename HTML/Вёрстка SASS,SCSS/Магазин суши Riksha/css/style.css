@@ -40,8 +40,10 @@ body {
 
 .header {
   min-width: 100%;
+  margin-top: 0px;
   display: flex;
   background: linear-gradient(to bottom, transparent 0%, transparent 50%, rgba(245, 245, 245, 0.7) 50%, rgba(245, 245, 245, 0.7) 100%);
+  position: initial;
 }
 @media (max-width: 767.98px) {
   .header {
@@ -54,10 +56,13 @@ body {
   }
 }
 .header__body {
-  display: flex;
-  margin: auto;
   width: 81.56%;
+  margin: auto;
+  display: flex;
+  margin-top: 0px;
+  position: initial;
   flex-direction: column;
+  justify-content: initial;
 }
 @media ((min-width: 1024px) and (max-width: 1279.98px)) {
   .header__body {
@@ -342,14 +347,19 @@ body {
 
 .gift {
   min-width: 100%;
+  margin-top: 0px;
   display: flex;
+  background: none;
+  position: initial;
 }
 .gift__body {
-  display: flex;
-  margin: auto;
   width: 81.56%;
+  margin: auto;
+  display: flex;
   margin-top: 48px;
   position: relative;
+  flex-direction: row;
+  justify-content: initial;
   background-color: rgba(245, 249, 250, 0.7);
   border-radius: 20px;
 }
@@ -403,26 +413,17 @@ body {
 }
 @media ((min-width: 768px) and (max-width: 1023.98px)) {
   .gift__title {
-    font-family: "TTInterfacesSemiBold", sans-serif;
     font-size: 30px;
-    font-weight: 700;
-    color: black;
   }
 }
 @media ((min-width: 1024px) and (max-width: 1279.98px)) {
   .gift__title {
-    font-family: "TTInterfacesSemiBold", sans-serif;
     font-size: 30px;
-    font-weight: 700;
-    color: black;
   }
 }
 @media (max-width: 767.98px) {
   .gift__title {
-    font-family: "TTInterfacesSemiBold", sans-serif;
     font-size: 15px;
-    font-weight: 700;
-    color: black;
   }
 }
 .gift__subtitle {
@@ -595,26 +596,21 @@ body {
 }
 @media (max-width: 767.98px) {
   .details-btn__title {
-    font-family: "TTInterfacesMedium", sans-serif;
     font-size: 13px;
-    font-weight: 700;
-    color: white;
   }
 }
 @media ((min-width: 768px) and (max-width: 1023.98px)) {
   .details-btn__title {
-    font-family: "TTInterfacesMedium", sans-serif;
     font-size: 13px;
-    font-weight: 700;
-    color: white;
   }
 }
 
 .advantage {
   min-width: 100%;
-  display: flex;
-  position: relative;
   margin-top: 133px;
+  display: flex;
+  background: none;
+  position: relative;
 }
 @media (max-width: 767.98px) {
   .advantage {
@@ -628,15 +624,21 @@ body {
 }
 .advantage__decoration {
   position: absolute;
-  left: 0;
-  top: -128px;
-  opacity: 0.6;
   width: 12%;
+  max-width: 450px;
+  z-index: -1;
+  top: -128px;
+  left: 0;
+  right: auto;
+  opacity: 0.6;
 }
 .advantage__body {
-  display: flex;
-  margin: auto;
   width: 81.56%;
+  margin: auto;
+  display: flex;
+  margin-top: 0px;
+  position: initial;
+  flex-direction: row;
   justify-content: space-between;
 }
 @media (max-width: 767.98px) {
@@ -767,15 +769,19 @@ body {
 
 .positions {
   min-width: 100%;
+  margin-top: 0px;
   display: flex;
+  background: none;
+  position: initial;
 }
 .positions__body {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 135px;
   width: 81.56%;
+  margin: auto;
+  display: flex;
+  margin-top: 135px;
   position: relative;
+  flex-direction: column;
+  justify-content: initial;
 }
 @media (max-width: 767.98px) {
   .positions__body {
@@ -849,10 +855,13 @@ body {
 }
 .positions__decoration {
   position: absolute;
+  width: 7%;
+  max-width: 450px;
+  z-index: -1;
   top: 15px;
+  left: auto;
   right: -10%;
   opacity: 0.6;
-  width: 7%;
 }
 
 .headline-button {
@@ -877,10 +886,7 @@ body {
 }
 @media (max-width: 767.98px) {
   .headline-button__main {
-    font-family: "TTInterfacesMedium", sans-serif;
     font-size: 16px;
-    font-weight: 600;
-    color: black;
   }
 }
 .headline-button__secondary {
@@ -891,10 +897,7 @@ body {
 }
 @media (max-width: 767.98px) {
   .headline-button__secondary {
-    font-family: "TTInterfacesMedium", sans-serif;
     font-size: 16px;
-    font-weight: 500;
-    color: #b7b7b7;
   }
 }
 
@@ -948,28 +951,19 @@ body {
 }
 @media ((min-width: 1024px) and (max-width: 1279.98px)) {
   .food-card__title {
-    font-family: "TTInterfacesRegular", sans-serif;
     font-size: 17px;
-    font-weight: 600;
-    color: black;
     align-items: center;
   }
 }
 @media (max-width: 767.98px) {
   .food-card__title {
-    font-family: "TTInterfacesRegular", sans-serif;
     font-size: 17px;
-    font-weight: 600;
-    color: black;
     align-items: center;
   }
 }
 @media ((min-width: 768px) and (max-width: 1023.98px)) {
   .food-card__title {
-    font-family: "TTInterfacesRegular", sans-serif;
     font-size: 12px;
-    font-weight: 600;
-    color: black;
     align-items: center;
   }
 }
@@ -1060,28 +1054,19 @@ body {
 }
 @media ((min-width: 1024px) and (max-width: 1279.98px)) {
   .qualities__headline {
-    font-family: "TTInterfacesRegular", sans-serif;
     font-size: 7px;
-    font-weight: 600;
-    color: black;
     margin-top: 0px;
   }
 }
 @media ((min-width: 768px) and (max-width: 1023.98px)) {
   .qualities__headline {
-    font-family: "TTInterfacesRegular", sans-serif;
     font-size: 7px;
-    font-weight: 600;
-    color: black;
     margin-top: 0px;
   }
 }
 @media (max-width: 767.98px) {
   .qualities__headline {
-    font-family: "TTInterfacesRegular", sans-serif;
     font-size: 7px;
-    font-weight: 600;
-    color: black;
     margin-top: 0px;
   }
 }
@@ -1113,26 +1098,17 @@ body {
 }
 @media ((min-width: 1024px) and (max-width: 1279.98px)) {
   .label__text {
-    font-family: "TTInterfacesBold", sans-serif;
     font-size: 16px;
-    font-weight: 800;
-    color: white;
   }
 }
 @media ((min-width: 768px) and (max-width: 1023.98px)) {
   .label__text {
-    font-family: "TTInterfacesBold", sans-serif;
     font-size: 12px;
-    font-weight: 800;
-    color: white;
   }
 }
 @media (max-width: 767.98px) {
   .label__text {
-    font-family: "TTInterfacesBold", sans-serif;
     font-size: 12px;
-    font-weight: 800;
-    color: white;
   }
 }
 
@@ -1180,26 +1156,17 @@ body {
 }
 @media ((min-width: 1024px) and (max-width: 1279.98px)) {
   .price__new {
-    font-family: "TTInterfacesBold", sans-serif;
     font-size: 25px;
-    font-weight: 700;
-    color: black;
   }
 }
 @media ((min-width: 768px) and (max-width: 1023.98px)) {
   .price__new {
-    font-family: "TTInterfacesBold", sans-serif;
     font-size: 20px;
-    font-weight: 700;
-    color: black;
   }
 }
 @media (max-width: 767.98px) {
   .price__new {
-    font-family: "TTInterfacesBold", sans-serif;
     font-size: 20px;
-    font-weight: 700;
-    color: black;
   }
 }
 
@@ -1234,18 +1201,17 @@ body {
 }
 @media ((min-width: 768px) and (max-width: 1023.98px)) {
   .order-btn__label {
-    font-family: "TTInterfacesSemiBold", sans-serif;
     font-size: 12px;
-    font-weight: 700;
-    color: white;
   }
 }
 
 .combo {
   min-width: 100%;
-  display: flex;
-  background-color: rgba(245, 249, 250, 0.6);
   margin-top: 72px;
+  display: flex;
+  background: none;
+  position: initial;
+  background-color: rgba(245, 249, 250, 0.6);
 }
 @media (max-width: 767.98px) {
   .combo {
@@ -1253,12 +1219,13 @@ body {
   }
 }
 .combo__body {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 80px;
   width: 81.56%;
+  margin: auto;
+  display: flex;
+  margin-top: 80px;
   position: relative;
+  flex-direction: column;
+  justify-content: initial;
 }
 @media (max-width: 767.98px) {
   .combo__body {
@@ -1267,10 +1234,13 @@ body {
 }
 .combo__decoration {
   position: absolute;
-  left: -137px;
-  top: 50px;
-  opacity: 0.6;
   width: 15%;
+  max-width: 450px;
+  z-index: -1;
+  top: 50px;
+  left: -137px;
+  right: auto;
+  opacity: 0.6;
 }
 .combo__headline {
   display: flex;
@@ -1476,15 +1446,19 @@ body {
 
 .promo {
   min-width: 100%;
+  margin-top: 0px;
   display: flex;
+  background: none;
   position: relative;
 }
 .promo__body {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 89px;
   width: 81.56%;
+  margin: auto;
+  display: flex;
+  margin-top: 89px;
+  position: initial;
+  flex-direction: column;
+  justify-content: initial;
 }
 @media (max-width: 767.98px) {
   .promo__body {
@@ -1576,18 +1550,12 @@ body {
 }
 @media ((min-width: 768px) and (max-width: 1023.98px)) {
   .promo__title {
-    font-family: "TTInterfacesRegular", sans-serif;
     font-size: 20px;
-    font-weight: 600;
-    color: black;
   }
 }
 @media (max-width: 767.98px) {
   .promo__title {
-    font-family: "TTInterfacesRegular", sans-serif;
     font-size: 20px;
-    font-weight: 600;
-    color: black;
   }
 }
 .promo__subtitle {
@@ -1635,23 +1603,30 @@ body {
 }
 .promo__decoration {
   position: absolute;
-  right: 0;
-  top: 0;
-  z-index: -1;
-  opacity: 0.6;
   width: 23%;
+  max-width: 450px;
+  z-index: -1;
+  top: 0;
+  left: auto;
+  right: 0;
+  opacity: 0.6;
 }
 
 .category {
   min-width: 100%;
+  margin-top: 0px;
   display: flex;
+  background: none;
+  position: initial;
 }
 .category__body {
-  display: flex;
-  flex-direction: column;
-  margin: auto;
-  margin-top: 120px;
   width: 81.56%;
+  margin: auto;
+  display: flex;
+  margin-top: 120px;
+  position: initial;
+  flex-direction: column;
+  justify-content: initial;
 }
 @media (max-width: 767.98px) {
   .category__body {
@@ -1785,15 +1760,15 @@ body {
 }
 
 .arrow-btn {
+  width: 100%;
+  height: 36px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none;
-  width: 100%;
   max-width: 36px;
-  height: 36px;
-  cursor: pointer;
-  background-color: transparent;
 }
 .arrow-btn__image {
   width: 100%;
@@ -1878,32 +1853,42 @@ body {
 
 .about {
   min-width: 100%;
+  margin-top: 0px;
   display: flex;
+  background: none;
   position: relative;
 }
 .about__body {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 120px;
   width: 87%;
+  margin: auto;
+  display: flex;
+  margin-top: 120px;
+  position: initial;
+  flex-direction: row;
+  justify-content: space-between;
   margin-left: 9.3%;
 }
 @media (max-width: 767.98px) {
   .about__body {
-    flex-direction: column-reverse;
-    align-items: center;
-    margin: auto;
-    margin-top: 30px;
     width: 81.56%;
+    margin: auto;
+    display: flex;
+    margin-top: 30px;
+    position: initial;
+    flex-direction: column-reverse;
+    justify-content: initial;
+    align-items: center;
   }
 }
 .about__decoration {
   position: absolute;
+  width: 12%;
+  max-width: 450px;
+  z-index: -1;
   top: -15%;
   left: 0;
-  z-index: -1;
+  right: auto;
   opacity: 0.6;
-  width: 12%;
 }
 .about__data {
   display: flex;
@@ -1991,25 +1976,29 @@ body {
 
 .insta {
   min-width: 100%;
+  margin-top: 0px;
   display: flex;
+  background: none;
   position: relative;
 }
 .insta__decoration-left {
   position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  opacity: 0.6;
   width: 30%;
   max-width: 450px;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: auto;
+  opacity: 0.6;
 }
 .insta__body {
+  width: 81.56%;
+  margin: auto;
   display: flex;
+  margin-top: 230px;
   position: relative;
   flex-direction: column;
-  margin: auto;
-  margin-top: 230px;
-  width: 81.56%;
+  justify-content: initial;
 }
 @media (max-width: 767.98px) {
   .insta__body {
@@ -2125,12 +2114,13 @@ body {
 }
 .insta__decoration-right {
   position: absolute;
-  right: -9%;
-  top: -25%;
-  z-index: -1;
-  opacity: 0.6;
   width: 50%;
   max-width: 596px;
+  z-index: -1;
+  top: -25%;
+  left: auto;
+  right: -9%;
+  opacity: 0.6;
 }
 
 .footer {
@@ -2138,18 +2128,23 @@ body {
   margin-top: 50px;
   display: flex;
   background: linear-gradient(to bottom, transparent 0%, transparent 7%, black 7%);
+  position: initial;
 }
 @media ((min-width: 1280px) and (max-width: 1535.98px)) {
   .footer {
     margin-top: 143px;
-    max-height: 181px;
+    max-height: 183px;
     background: linear-gradient(to bottom, transparent 0%, transparent 21.57%, black 21.57%);
   }
 }
 .footer__body {
-  display: flex;
-  margin: auto;
   width: 81.56%;
+  margin: auto;
+  display: flex;
+  margin-top: 0px;
+  position: initial;
+  flex-direction: row;
+  justify-content: initial;
 }
 .footer__background-stripes {
   width: 100%;

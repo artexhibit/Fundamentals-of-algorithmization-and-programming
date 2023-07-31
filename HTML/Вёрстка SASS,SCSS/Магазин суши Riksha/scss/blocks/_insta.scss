@@ -1,25 +1,12 @@
 .insta {
-    min-width: 100%;
-    display: flex;
-    position: relative;
+    @include setupSection($position: relative);
 
     &__decoration-left {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -1;
-        opacity: 0.6;
-        width: 30%;
-        max-width: 450px;
+        @include setupDecoration($top: 0px, $left: 0px);
     }
 
     &__body {
-        display: flex;
-        position: relative;
-        flex-direction: column;
-        margin: auto;
-        margin-top: 230px;
-        width: 81.56%;
+        @include setupBody($position: relative, $flexDir: column, $marginT: 230px);
 
         @include breakpoint(sm) {
             margin-top: 20px;
@@ -38,7 +25,7 @@
     }
 
     &__title {
-        @include fontConfig("TTInterfacesSemiBold", 40px, 600);
+        @include fontConfig($semiBoldFont, 40px, 600);
         width: 100%;
         max-width: 468px;
 
@@ -75,7 +62,7 @@
     }
 
     &__btn-label {
-        @include fontConfig("TTInterfacesSemiBold", 24px, 700, white);
+        @include fontConfig($semiBoldFont, 24px, 700, white);
         margin-left: 16px;
 
         @include breakpoint(sm) {
@@ -137,13 +124,7 @@
     }
 
     &__decoration-right {
-        position: absolute;
-        right: -9%;
-        top: -25%;
-        z-index: -1;
-        opacity: 0.6;
-        width: 50%;
-        max-width: 596px;
+        @include setupDecoration($right: -9%, $top: -25%, $width: 50%, $maxWidth: 596px);
     }
 }
 .title--orange {

@@ -1,26 +1,16 @@
 .advantage {
-    min-width: 100%;
-    display: flex;
-    position: relative;
-    margin-top: 133px;
+    @include setupSection($position: relative, $marginT: 133px);
 
     @include breakpoint(sm, md) {
         margin-top: 70px;
     }
 
     &__decoration {
-        position: absolute;
-        left: 0;
-        top: -128px;
-        opacity: 0.6;
-        width: 12%;
+        @include setupDecoration($left: 0, $top: -128px, $width: 12%);
     }
 
     &__body {
-        display: flex;
-        margin: auto;
-        width: 81.56%;
-        justify-content: space-between;
+        @include setupBody($justifyCont: space-between);
 
         @include breakpoint(sm) {
             flex-wrap: wrap;
@@ -36,10 +26,10 @@
         background-size: contain;
         box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.4);
 
-        @include configureButton(110px, 110px, column);
+        @include makeRoundButton(110px, 110px, column);
 
         @include breakpoint(sm) {
-            @include configureButton(51px, 51px, column);
+            @include makeRoundButton(51px, 51px, column);
             right: 5%;
         }
 
@@ -55,10 +45,10 @@
     }
 
     &__btn-title {
-        @include fontConfig("TTInterfacesRegular", 15px, 600, white);
+        @include fontConfig($regularFont, 15px, 600, white);
 
         @include breakpoint(sm) {
-            @include fontConfig("TTInterfacesRegular", 9px, 400, white);
+            @include fontConfig($regularFont, 9px, 400, white);
         }
     }
 }
@@ -82,7 +72,7 @@
     }
 
     &__title {
-        @include fontConfig("TTInterfacesSemiBold", 32px, 700);
+        @include fontConfig($semiBoldFont, 32px, 700);
     }
 
     &__circle {
@@ -100,12 +90,12 @@
     }
 
     &__subtitle {
-        @include fontConfig("TTInterfacesSemiBold", 14px, 700);
+        @include fontConfig($semiBoldFont, 14px, 700);
         margin-top: 12px;
     }
 
     &__comment {
-        @include fontConfig("TTInterfacesRegular", 14px, 400);
+        @include fontConfig($regularFont, 14px, 400);
         margin-top: 2px;
 
         @include breakpoint(sm) {

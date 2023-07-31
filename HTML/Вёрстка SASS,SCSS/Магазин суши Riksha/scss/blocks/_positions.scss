@@ -1,14 +1,8 @@
 .positions {
-    min-width: 100%;
-    display: flex;
+    @include setupSection;
 
     &__body {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        margin-top: 135px;
-        width: 81.56%;
-        position: relative;
+        @include setupBody($flexDir: column, $marginT: 135px, $position: relative);
 
         @include breakpoint(sm) {
             margin-top: 35px;
@@ -71,11 +65,7 @@
     }
 
     &__decoration {
-        position: absolute;
-        top: 15px;
-        right: -10%;
-        opacity: 0.6;
-        width: 7%;
+        @include setupDecoration($top: 15px, $right: -10%, $width: 7%);
     }
 }
 
@@ -94,18 +84,18 @@
     }
 
     &__main {
-        @include fontConfig("TTInterfacesMedium", 48px, 600);
+        @include fontConfig($mediumFont, 48px, 600);
 
         @include breakpoint(sm) {
-            @include fontConfig("TTInterfacesMedium", 16px, 600);
+            font-size: 16px;
         }
     }
 
     &__secondary {
-        @include fontConfig("TTInterfacesMedium", 48px, 500, #b7b7b7);
+        @include fontConfig($mediumFont, 48px, 500, #b7b7b7);
 
         @include breakpoint(sm) {
-            @include fontConfig("TTInterfacesMedium", 16px, 500, #b7b7b7);
+            font-size: 16px;
         }
     }
 }
@@ -149,18 +139,18 @@
     }
 
     &__title {
-        @include fontConfig("TTInterfacesRegular", 24px, 600);
+        @include fontConfig($regularFont, 24px, 600);
         display: flex;
         min-height: 30px;
         margin: 4px 0;
 
         @include breakpoint(lg, sm) {
-            @include fontConfig("TTInterfacesRegular", 17px, 600);
+            font-size: 17px;
             align-items: center;
         }
 
         @include breakpoint(md) {
-            @include fontConfig("TTInterfacesRegular", 12px, 600);
+            font-size: 12px;
             align-items: center;
         }
 
@@ -171,7 +161,7 @@
     }
 
     &__subtitle {
-        @include fontConfig("TTInterfacesRegular", 14px, 400);
+        @include fontConfig($regularFont, 14px, 400);
         display: flex;
         height: 51px;
 
@@ -224,11 +214,11 @@
     }
 
     &__headline {
-        @include fontConfig("TTInterfacesRegular", 12px, 600);
+        @include fontConfig($regularFont, 12px, 600);
         margin-top: 4px;
 
         @include breakpoint(lg, md, sm) {
-            @include fontConfig("TTInterfacesRegular", 7px, 600);
+            font-size: 7px;
             margin-top: 0px;
         }
     }
@@ -253,14 +243,14 @@
     }
 
     &__text {
-        @include fontConfig("TTInterfacesBold", 20px, 800, white);
+        @include fontConfig($boldFont, 20px, 800, white);
 
         @include breakpoint(lg) {
-            @include fontConfig("TTInterfacesBold", 16px, 800, white);
+            font-size: 16px;
         }
 
         @include breakpoint(md, sm) {
-            @include fontConfig("TTInterfacesBold", 12px, 800, white);
+            font-size: 12px;
         }
     }
 }
@@ -275,7 +265,7 @@
     }
 
     &__label {
-        @include fontConfig("TTInterfacesRegular", 14px, 400, #b7b7b7);
+        @include fontConfig($regularFont, 14px, 400, #b7b7b7);
     }
 
     &__separator {
@@ -292,20 +282,20 @@
     flex-direction: column;
 
     &__old {
-        @include fontConfig("TTInterfacesRegular", 14px, 400, #b7b7b7);
+        @include fontConfig($regularFont, 14px, 400, #b7b7b7);
         text-decoration-line: line-through;
         line-height: 11px;
     }
 
     &__new {
-        @include fontConfig("TTInterfacesBold", 32px, 700);
+        @include fontConfig($boldFont, 32px, 700);
 
         @include breakpoint(lg) {
-            @include fontConfig("TTInterfacesBold", 25px, 700);
+            font-size: 25px;
         }
 
         @include breakpoint(md, sm) {
-            @include fontConfig("TTInterfacesBold", 20px, 700);
+            font-size: 20px;
         }
     }
 }
@@ -327,10 +317,10 @@
     }
 
     &__label {
-        @include fontConfig("TTInterfacesSemiBold", 14px, 700, white);
+        @include fontConfig($semiBoldFont, 14px, 700, white);
 
         @include breakpoint(md) {
-            @include fontConfig("TTInterfacesSemiBold", 12px, 700, white);
+            font-size: 12px;
         }
     }
 }

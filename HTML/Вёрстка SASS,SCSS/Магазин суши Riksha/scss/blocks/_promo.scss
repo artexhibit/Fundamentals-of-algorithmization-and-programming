@@ -1,14 +1,8 @@
 .promo {
-    min-width: 100%;
-    display: flex;
-    position: relative;
+    @include setupSection($position: relative);
 
     &__body {
-        display: flex;
-        flex-direction: column;
-        margin: auto;
-        margin-top: 89px;
-        width: 81.56%;
+        @include setupBody($flexDir: column, $marginT: 89px);
 
         @include breakpoint(sm) {
             margin-top: 15px;
@@ -92,15 +86,15 @@
     }
 
     &__title {
-        @include fontConfig("TTInterfacesRegular", 24px, 600);
+        @include fontConfig($regularFont, 24px, 600);
 
         @include breakpoint(md, sm) {
-            @include fontConfig("TTInterfacesRegular", 20px, 600);
+            font-size: 20px;
         }
     }
 
     &__subtitle {
-        @include fontConfig("TTInterfacesRegular", 14px, 500);
+        @include fontConfig($regularFont, 14px, 500);
         margin-top: 4px;
     }
 
@@ -133,12 +127,7 @@
     }
 
     &__decoration {
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: -1;
-        opacity: 0.6;
-        width: 23%;
+        @include setupDecoration($right: 0, $top: 0, $width: 23%);
     }
 }
 .headline-button {
