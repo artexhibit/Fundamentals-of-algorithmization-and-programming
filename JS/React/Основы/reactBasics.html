@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <style>
+            .list {
+                display: flex;
+                justify-content: center;
+                padding: 0 10px;
+                list-style-type: none;
+            }
+
+            .list li {
+                padding: 0 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/babel">
+            // const app = document.getElementById("app");
+            // const root = ReactDOM.createRoot(app);
+            // root.render(<h1>Hello World</h1>);
+
+            //upper camel case for components to distinguish between html tags and custom components
+            function MyComponent() {
+                return (
+                    <React.Fragment>
+                        <Logo />
+                        <Menu />
+
+                        {
+                            //comment inside
+                        }
+                    </React.Fragment>
+                );
+            }
+
+            const Logo = () => {
+                return <React.Fragment>Logo</React.Fragment>;
+            };
+
+            const List = {
+                title1: "О Нас",
+                title2: "Контакты",
+            };
+            let a = true;
+
+            function Menu() {
+                return (
+                    <nav>
+                        <ul className="list">
+                            <li>{a == false ? "Main" : "Not Main"}</li>
+                            <li>{2 + 2}</li>
+                            <li>{List.title2}</li>
+                        </ul>
+                    </nav>
+                );
+            }
+
+            ReactDOM.createRoot(document.getElementById("app")).render(<MyComponent />);
+        </script>
+    </body>
+</html>

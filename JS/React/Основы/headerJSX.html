@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/babel">
+            function SiteHeader() {
+                return (
+                    <React.Fragment>
+                        <Logo />
+                        <Menu />
+                        <Socials />
+                    </React.Fragment>
+                );
+            }
+
+            const List = {
+                title1: "О Нас",
+                title2: "Контакты",
+                title3: "Реквизиты",
+            };
+
+            function Logo() {
+                return (
+                    <div className="logoContainer">
+                        <img src="./images/heart.png" alt="logo" />
+                    </div>
+                );
+            }
+
+            function Menu() {
+                return (
+                    <nav>
+                        <ul className="list">
+                            <li>{List.title1}</li>
+                            <li>{List.title2}</li>
+                            <li>{List.title3}</li>
+                        </ul>
+                    </nav>
+                );
+            }
+
+            function Socials() {
+                return (
+                    <nav className="socialsNav">
+                        <ul className="list">
+                            <li>
+                                <a href="#">
+                                    <img src="./images/face.png" alt="facebook" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/vk.png" alt="vk" />
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <img src="./images/inst.png" alt="inst" />
+                                </a>
+                            </li>
+                        </ul>
+                        <a href="tel:74957775345">+74957775345</a>
+                        <a href="mailto:mail@free-lines.ru">mail@free-lines.ru</a>
+                    </nav>
+                );
+            }
+
+            ReactDOM.createRoot(document.getElementById("app")).render(<SiteHeader />);
+        </script>
+    </body>
+</html>

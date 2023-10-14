@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+    </head>
+    <body>
+        <div id="app"></div>
+
+        <script type="text/babel">
+            function SiteHeader() {
+                return React.createElement(React.Fragment, null, React.createElement(Logo, null), React.createElement(Menu, null), React.createElement(Socials, null));
+            }
+
+            const List = {
+                title1: "О Нас",
+                title2: "Контакты",
+                title3: "Реквизиты",
+            };
+
+            function Logo() {
+                return React.createElement("div", { className: "logoContainer" }, React.createElement("img", { src: "./images/heart.png", alt: "logo" }));
+            }
+
+            function Menu() {
+                return React.createElement("nav", null, React.createElement("ul", { className: "list" }, React.createElement("li", null, List.title1), React.createElement("li", null, List.title2), React.createElement("li", null, List.title3)));
+            }
+
+            function Socials() {
+                return React.createElement("nav", { className: "socialsNav" }, React.createElement("ul", { className: "list" }, React.createElement("li", null, React.createElement("a", { href: "#" }, React.createElement("img", { src: "./images/face.png", alt: "facebook" }))), React.createElement("li", null, React.createElement("a", { href: "#" }, React.createElement("img", { src: "./images/vk.png", alt: "vk" }))), React.createElement("li", null, React.createElement("a", { href: "#" }, React.createElement("img", { src: "./images/inst.png", alt: "instagram" })))), React.createElement("a", { href: "tel:74957775345" }, "+74957775345"), React.createElement("a", { href: "mailto:mail@free-lines.ru" }, "mail@free-lines.ru"));
+            }
+
+            ReactDOM.createRoot(document.getElementById("app")).render(React.createElement(SiteHeader, null));
+        </script>
+    </body>
+</html>
