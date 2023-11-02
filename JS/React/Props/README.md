@@ -4,7 +4,7 @@
 
 ## About
 
-College homework to work with `React` props. Here I created a row of 3 cards and passed them data from separate `js` file, using `props`.
+College homework to work with `React` props. Here I created a row of 3 cards and passed to them data from a separate `js` file, using `props`.
 
 ## Props
 
