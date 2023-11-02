@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Cards with props</title>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <script src="./content.js"></script>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div id="root"></div>
+
+        <script type="text/babel">
+            const rootElement = document.getElementById("root");
+            const root = ReactDOM.createRoot(rootElement);
+            root.render(<Page cardsContent={cardsContent} />);
+
+            function Page({ cardsContent }) {
+                const [openCardIndex, setOpenCardIndex] = React.useState(null);
+
+                const setCardState = (index) => {
+                    setOpenCardIndex((prevIndex) => (prevIndex === index ? null : index));
+                };
+
+                return (
+                    <section className="projects">
+                        <div className="cards">
+                            {cardsContent.map((cardData, index) => (
+                                <Card cardData={cardData} key={index} index={index} setCardState={setCardState} isOpen={openCardIndex === index} />
+                            ))}
+                        </div>
+                    </section>
+                );
+            }
+
+            function Card({ cardData, index, setCardState, isOpen }) {
+                const { title, subtitle, tags, imgSrc, gitLink } = cardData;
+
+                function animateCard(e) {
+                    e.currentTarget.classList.toggle("hover");
+                }
+
+                const handleClick = () => {
+                    setCardState(index);
+                };
+
+                return (
+                    <div className="card">
+                        <div className={`card__content ${isOpen ? "expandCard" : ""}`} onMouseEnter={animateCard} onMouseLeave={animateCard}>
+                            <div className="card__cover">
+                                <img src={imgSrc} alt="cardImage" className="card__image" />
+                            </div>
+                            <p className="card__title">{title}</p>
+                            <div className={`card__button-container ${isOpen ? "expandCard" : ""}`}>
+                                <div className="card__subtitle-container">
+                                    <p className="card__subtitle" dangerouslySetInnerHTML={{ __html: subtitle }}></p>
+                                </div>
+                                <div className={`card__button-wrapper ${isOpen ? "expandCard" : ""}`}>
+                                    <button className="card__button" onClick={handleClick}>
+                                        <p className="card__button-title">{isOpen ? "Close" : "Open"}</p>
+                                        <img className={`card__button-icon ${isOpen ? "expandCard" : ""}`} src="./images/chevron.svg" alt="chevron" />
+                                    </button>
+                                </div>
+                            </div>
+                            <div className="card__bottom">
+                                <div className="card__tags">
+                                    {tags.map((tag, index) => (
+                                        <div className="tag" key={index}>
+                                            <p className="tag__title">{tag}</p>
+                                        </div>
+                                    ))}
+                                </div>
+                                <div className="card__links">
+                                    <a href={gitLink} className="link" target="_blank">
+                                        <img className="link__icon-blue" src="./images/globe.svg" alt="globe" />
+                                        <p className="link__title">Open Demo</p>
+                                        <img className="link__arrow" src="./images/arrowRightBlue.svg" alt="arrow" />
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                );
+            }
+        </script>
+    </body>
+</html>
