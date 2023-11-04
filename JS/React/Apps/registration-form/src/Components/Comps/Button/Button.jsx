@@ -1,8 +1,9 @@
 import "./Button.css"
 
 const Button = (props) => {
+    const buttonSetup = `button ${props.isDisabled ? "disabled" : ""}`
     return (
-        <button className="button" onClick={props.onClick}>{props.name}</button>  
+        <button className={buttonSetup} onClick={props.onClick}>{props.name}</button>  
     )
 }
 
