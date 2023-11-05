@@ -20,6 +20,12 @@ function App() {
         password: "grey",
         number: "grey",
     });
+    const [inputLabelsErrorMessage, setInputLabelsErrorMessage] = useState({
+        email: "Should contain @ and . and be longer than 6 characters",
+        text: "Should be longer than 6 characters",
+        password: "Should contain at least one digit",
+        number: "Only for adults!",
+    });
 
     //when user clicks button check if there is an empty inputs and mark them red, if not - print what user typed
     function validateInputs() {
@@ -48,7 +54,7 @@ function App() {
     return (
         <div className="App">
             <div className="form__container">
-                <Form setInputData={setInputData} setInputsColor={setInputsColor} inputsColor={inputsColor} />
+                <Form setInputData={setInputData} setInputsColor={setInputsColor} inputsColor={inputsColor} inputLabelsErrorMessage={inputLabelsErrorMessage} setInputLabelsErrorMessage={setInputLabelsErrorMessage} />
             </div>
             <div className="form__results-container">
                 <span className="form__results" dangerouslySetInnerHTML={{ __html: formText }}></span>
