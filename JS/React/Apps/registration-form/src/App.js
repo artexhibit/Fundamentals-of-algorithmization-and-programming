@@ -5,6 +5,7 @@ import Form from "./Components/Comps/Form/Form";
 
 function App() {
     const [formText, setFormText] = useState(null);
+    const [showUserData, setShowUserData] = useState(false);
 
     //store what user is type in inputs
     const [inputData, setInputData] = useState({
@@ -19,12 +20,6 @@ function App() {
         text: "grey",
         password: "grey",
         number: "grey",
-    });
-    const [inputLabelsErrorMessage, setInputLabelsErrorMessage] = useState({
-        email: "Should contain @ and . and be longer than 6 characters",
-        text: "Should be longer than 6 characters",
-        password: "Should contain at least one digit",
-        number: "Only for adults!",
     });
 
     //when user clicks button check if there is an empty inputs and mark them red, if not - print what user typed
@@ -42,22 +37,24 @@ function App() {
         });
 
         if (!isFailedValidation) {
+            setShowUserData(true);
             printInputs();
         }
     }
 
     //prints all what user typed if all inputs not empty and validation is succsessful
     function printInputs() {
-        setFormText(`Typed email: ${inputData.email} <br /> Typed login: ${inputData.text} <br /> Typed password: ${inputData.password} <br /> Typed age: ${inputData.number} <br />`);
+        setFormText(`Congrats with successful registration! <br /> <br /> Your login data: <br /> <br /> email: ${inputData.email} <br />  login: ${inputData.text} <br /> password: ${inputData.password}`);
     }
 
     return (
         <div className="App">
             <div className="form__container">
-                <Form setInputData={setInputData} setInputsColor={setInputsColor} inputsColor={inputsColor} inputLabelsErrorMessage={inputLabelsErrorMessage} setInputLabelsErrorMessage={setInputLabelsErrorMessage} />
+                <p className="form__title">Register NOW</p>
+                <Form setInputData={setInputData} setInputsColor={setInputsColor} inputsColor={inputsColor} />
             </div>
-            <div className="form__results-container">
-                <span className="form__results" dangerouslySetInnerHTML={{ __html: formText }}></span>
+            <div className={`form__results-container ${showUserData && !Object.values(inputsColor).includes("red") ? "show" : ""}`}>
+                <span className={`form__results ${showUserData && !Object.values(inputsColor).includes("red") ? "show" : ""}`} dangerouslySetInnerHTML={{ __html: formText }}></span>
             </div>
             <div className="button__container">{<Button isDisabled={Object.values(inputsColor).includes("red")} name="Send data" onClick={validateInputs} />}</div>
         </div>
