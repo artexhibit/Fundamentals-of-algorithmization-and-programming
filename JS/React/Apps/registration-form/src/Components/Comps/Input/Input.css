@@ -17,6 +17,10 @@ input {
     border-color: green;
 }
 
+.grey {
+    border-color: grey;
+}
+
 /* .input:not(:focus) {
     border-color: grey;
 } */

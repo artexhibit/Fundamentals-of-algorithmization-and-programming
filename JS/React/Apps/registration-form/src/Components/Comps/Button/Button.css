@@ -1,7 +1,7 @@
 .button {
     border: none;
     border-radius: 10px;
-    background-color: lightgray;
+    background-color: lightgreen;
     cursor: pointer;
     width: 200px;
     height: 35px;
@@ -11,5 +11,5 @@
 
 .disabled {
     pointer-events: none;
-    background-color: red;
+    background-color: lightcoral;
 }

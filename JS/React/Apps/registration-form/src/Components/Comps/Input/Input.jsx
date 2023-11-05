@@ -1,37 +1,53 @@
 import "./Input.css";
 
 const Input = (props) => {
-
     function handleInputsChange(e) {
         props.setInputData((prevData) => ({
             ...prevData,
             [e.target.type]: e.target.value,
         }));
-        validateInputs(e.target);
+        validateInputs(e);
     }
 
+    //receive an input value on each user char insert and set the color of input based on validation
     function validateInputs(e) {
         const validEmailPattern = /^(?=.{6,}$)\S+@\S+\.[a-zA-Z]{2,3}$/;
         const validPasswordPattern = /^(?=.*\d).+$/;
-        let isValid = false;
+        let inputColor = "";
 
-        if (e.type === "email") {
-            isValid = e.value.match(validEmailPattern) ? true : false;
-        } else if (e.type === "text") {
-            isValid = e.value.length > 6 ? true : false;
-        } else if (e.type === "password") {
-            isValid = e.value.match(validPasswordPattern) ? true : false;
+        if (e.target.type === "email") {
+            inputColor = e.target.value.match(validEmailPattern) ? "green" : "red";
+        } else if (e.target.type === "text") {
+            inputColor = e.target.value.length >= 6 ? "green" : "red";
+        } else if (e.target.type === "password") {
+            inputColor = e.target.value.match(validPasswordPattern) ? "green" : "red";
         } else {
-            isValid = e.value >= 18 ? true : false;
+            inputColor = e.target.value >= 18 ? "green" : "red";
         }
 
-        props.setIsInputGreen((prevData) => ({
+        props.setInputsColor((prevData) => ({
             ...prevData,
-            [e.type]: isValid,
+            [e.target.type]: inputColor,
         }));
+        setInputGrey(e);
     }
 
-    return <input className={`input ${props.isInputGreen ? "green" : "red"}`} type={props.type} placeholder={props.placeholder} onChange={handleInputsChange} />;
+    //when user end typing and clicked outside textfield
+    function handleInputsEndEditing(e) {
+        setInputGrey(e);
+    }
+
+    //make input grey which is a standard color for non-active input
+    function setInputGrey(e) {
+        if (e.target.value === "") {
+            props.setInputsColor((prevData) => ({
+                ...prevData,
+                [e.target.type]: "grey",
+            }));
+        }
+    }
+
+    return <input className={`input ${props.inputsColor}`} type={props.type} placeholder={props.placeholder} onChange={handleInputsChange} onBlur={handleInputsEndEditing} />;
 };
 
 export default Input;
