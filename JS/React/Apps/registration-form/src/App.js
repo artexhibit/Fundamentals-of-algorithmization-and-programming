@@ -53,8 +53,8 @@ function App() {
                 <p className="form__title">Register NOW</p>
                 <Form setInputData={setInputData} setInputsColor={setInputsColor} inputsColor={inputsColor} />
             </div>
-            <div className={`form__results-container ${showUserData && !Object.values(inputsColor).includes("red") ? "show" : ""}`}>
-                <span className={`form__results ${showUserData && !Object.values(inputsColor).includes("red") ? "show" : ""}`} dangerouslySetInnerHTML={{ __html: formText }}></span>
+            <div className={`form__results-container ${showUserData && !["red", "grey"].some(color => Object.values(inputsColor).includes(color)) ? "show" : ""}`}>
+                <span className={`form__results ${showUserData && !["red", "grey"].some(color => Object.values(inputsColor).includes(color)) ? "show" : ""}`} dangerouslySetInnerHTML={{ __html: formText }}></span>
             </div>
             <div className="button__container">{<Button isDisabled={Object.values(inputsColor).includes("red")} name="Send data" onClick={validateInputs} />}</div>
         </div>

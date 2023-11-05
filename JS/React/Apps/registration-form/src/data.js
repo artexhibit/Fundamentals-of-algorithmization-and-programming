@@ -2,7 +2,7 @@ export const inputData = [
     {
         type: "email",
         placeholder: "type an email",
-        errorMessage: "Should contain @ and . and be longer than 6 characters",
+        errorMessage: "Should contain @ and . also be longer than 6 characters",
     },
     {
         type: "text",
