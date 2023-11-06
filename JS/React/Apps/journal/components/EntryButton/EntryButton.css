@@ -1,0 +1,22 @@
+.entry__button {
+    border: none;
+    border-radius: 7px;
+    background-color: #121318;
+    cursor: pointer;
+    width: 100%;
+}
+
+.entry__button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px 10px 5px;
+}
+
+.entry__button-icon {
+    width: 20px;
+}
+
+.entry__button-text {
+    font-size: 1rem;
+}

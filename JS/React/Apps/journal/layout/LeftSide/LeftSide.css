@@ -1,0 +1,8 @@
+.left__side {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 100%;
+    gap: 20px;
+    padding: 20px;
+}

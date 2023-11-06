@@ -1,1 +1,18 @@
+* {
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
 
+body {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+    height: 100vh;
+    background-color: #343646;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}
