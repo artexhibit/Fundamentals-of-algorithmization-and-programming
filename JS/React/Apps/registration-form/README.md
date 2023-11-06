@@ -16,4 +16,4 @@ College homework to work with `React` props and `useState` hook.
 - if the user enters a password of less than 6 characters, the input turns red and an error message appears below;
 - the send button becomes inactive.
 
-Implement such validation on different types of inputs.
+Implement such validation on different input types.
