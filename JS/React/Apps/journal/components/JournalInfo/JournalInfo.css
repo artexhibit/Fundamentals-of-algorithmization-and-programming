@@ -1,0 +1,19 @@
+.journal__info {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.journal__info--icon {
+    width: 25px;
+    height: 25px;
+}
+
+.journal__info-title {
+    color: #A3A4AB;
+}
+
+.journal__info-input {
+    background: transparent;
+    border: none;
+}

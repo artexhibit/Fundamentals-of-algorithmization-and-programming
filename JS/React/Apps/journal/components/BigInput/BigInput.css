@@ -1,0 +1,13 @@
+.big__input {
+    outline: none;
+    font-size: 2rem;
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    width: 100%;
+    caret-color: white;
+}
+
+.big__input::placeholder {
+    color: white;
+}

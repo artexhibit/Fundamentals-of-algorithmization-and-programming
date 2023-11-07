@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    gap: 20px;
+    padding: 90px 70px 20px 20px;
+}
+
+.header__icon {
+    width: 35px;
+    height: 35px;
+}

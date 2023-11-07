@@ -18,3 +18,22 @@ export const journalData = [
         text: "Создал первую заметку, чтобы попробовать работу с React. Пока что все получается. Если есть какие-то вопросы, то можно посмотреть в документации.",
     },
 ];
+
+export const journalInfo = [
+    {
+        id: "1",
+        icon: "../../src/assets/images/calendar.png",
+        title: "Дата",
+        inputType: "date",
+        inputPlaceholder: "Введите дату",
+        inputAutofocus: false,
+    },
+    {
+        id: "1",
+        icon: "../../src/assets/images/folder.png",
+        title: "Метки",
+        inputType: "text",
+        inputPlaceholder: "Добавьте метку",
+        inputAutofocus: false,
+    },
+];

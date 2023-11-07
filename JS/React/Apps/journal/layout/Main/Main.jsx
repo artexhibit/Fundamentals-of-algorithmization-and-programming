@@ -1,7 +1,11 @@
 import "./Main.css";
 
 const Main = ({ children }) => {
-    return <>{children}</>;
+    return (
+        <>
+            <section className="main">{children}</section>
+        </>
+    );
 };
 
 export default Main;
