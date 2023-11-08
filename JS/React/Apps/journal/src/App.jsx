@@ -14,6 +14,22 @@ import SendButton from "../components/SendButton/SendButton";
 
 function App() {
     const [recordsToShow, setRecordsToShow] = useState(journalData);
+    const [newRecord, setNewRecord] = useState({
+        date: "",
+        title: "",
+        text: "",
+    });
+
+    function sendButtonClicked() {
+        console.log(newRecord);
+    }
+    
+    function receiveInputsValue(e) {
+        setNewRecord((prevData) => ({
+            ...prevData,
+            [e.target.name]: e.target.value,
+        }));
+    }
 
     return (
         <>
@@ -32,19 +48,19 @@ function App() {
             </LeftSide>
             <Main>
                 <div className="header__container">
-                    <BigInput type={"text"} placeholder={"Введите заголовок"} autofocus={true} />
+                    <BigInput type={"text"} name={"title"} placeholder={"Введите заголовок"} autofocus={true} receiveInputsValue={receiveInputsValue} />
                     <img className="header__icon" src="../../src/assets/images/archive.png" alt="archive" />
                 </div>
                 <div className="journal__data-container">
                     {journalInfo.map((item) => (
-                        <JournalInfo icon={item.icon} title={item.title} inputType={item.inputType} inputPlaceholder={item.inputPlaceholder} inputAutofocus={item.inputAutofocus} key={item.id} />
+                        <JournalInfo icon={item.icon} title={item.title} inputType={item.inputType} inputPlaceholder={item.inputPlaceholder} inputAutofocus={item.inputAutofocus} key={item.id} receiveInputsValue={receiveInputsValue} />
                     ))}
                 </div>
                 <div className="journal__text-container">
-                    <TextInput placeholder={"Опишите свой день"}  />
+                    <TextInput placeholder={"Опишите свой день"} name={"text"} receiveInputsValue={receiveInputsValue}  />
                 </div>
                 <div className="send__button-container">
-                    <SendButton text={"Отправить"} />
+                    <SendButton text={"Отправить"} onClick={sendButtonClicked} />
                 </div>
             </Main>
         </>
