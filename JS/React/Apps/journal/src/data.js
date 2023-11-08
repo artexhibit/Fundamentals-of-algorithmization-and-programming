@@ -29,7 +29,7 @@ export const journalInfo = [
         inputAutofocus: false,
     },
     {
-        id: "1",
+        id: "2",
         icon: "../../src/assets/images/folder.png",
         title: "Метки",
         inputType: "text",

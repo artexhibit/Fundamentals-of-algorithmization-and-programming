@@ -1,0 +1,11 @@
+.text__input {
+    background: transparent;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+    width: 100%;
+    min-height: 300px;
+    color: #C6C6CA;
+}

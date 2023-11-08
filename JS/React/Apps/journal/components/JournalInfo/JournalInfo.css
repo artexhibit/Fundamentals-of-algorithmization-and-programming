@@ -1,7 +1,12 @@
 .journal__info {
+    border-bottom: 1px solid #A3A4AB;
+}
+
+.journal__info-wrapper {
     display: flex;
     align-items: center;
     gap: 25px;
+    margin-bottom: 15px;
 }
 
 .journal__info--icon {
@@ -11,9 +16,4 @@
 
 .journal__info-title {
     color: #A3A4AB;
-}
-
-.journal__info-input {
-    background: transparent;
-    border: none;
 }

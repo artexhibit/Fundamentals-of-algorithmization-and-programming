@@ -9,6 +9,8 @@ import JournalItem from "../components/JournalItem/JournalItem";
 import { useState } from "react";
 import BigInput from "../components/bigInput/bigInput";
 import JournalInfo from "../components/JournalInfo/JournalInfo";
+import TextInput from "../components/TextInput/TextInput";
+import SendButton from "../components/SendButton/SendButton";
 
 function App() {
     const [recordsToShow, setRecordsToShow] = useState(journalData);
@@ -30,13 +32,19 @@ function App() {
             </LeftSide>
             <Main>
                 <div className="header__container">
-                    <BigInput className={"big__input"} type={"text"} placeholder={"Введите заголовок"} autofocus={true} />
+                    <BigInput type={"text"} placeholder={"Введите заголовок"} autofocus={true} />
                     <img className="header__icon" src="../../src/assets/images/archive.png" alt="archive" />
                 </div>
                 <div className="journal__data-container">
                     {journalInfo.map((item) => (
                         <JournalInfo icon={item.icon} title={item.title} inputType={item.inputType} inputPlaceholder={item.inputPlaceholder} inputAutofocus={item.inputAutofocus} key={item.id} />
                     ))}
+                </div>
+                <div className="journal__text-container">
+                    <TextInput placeholder={"Опишите свой день"}  />
+                </div>
+                <div className="send__button-container">
+                    <SendButton text={"Отправить"} />
                 </div>
             </Main>
         </>

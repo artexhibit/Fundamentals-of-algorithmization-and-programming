@@ -1,0 +1,10 @@
+.send__button {
+    border: none;
+    border-radius: 7px;
+    background-color: #121318;
+    color: #B8B9BA;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: 170px;
+    height: 45px;
+}
