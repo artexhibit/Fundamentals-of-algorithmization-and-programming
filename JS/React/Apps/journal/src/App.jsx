@@ -16,19 +16,46 @@ function App() {
     const [recordsToShow, setRecordsToShow] = useState(journalData);
     const [newRecord, setNewRecord] = useState({
         date: "",
+        id: "4",
         title: "",
         text: "",
     });
 
     function sendButtonClicked() {
-        console.log(newRecord);
+        setNewEntryId();
+        setDate();
+        setRecordsToShow((prevData) => [newRecord, ...prevData]);
     }
-    
+
     function receiveInputsValue(e) {
         setNewRecord((prevData) => ({
             ...prevData,
             [e.target.name]: e.target.value,
         }));
+    }
+
+    function setNewEntryId() {
+        setNewRecord((prevData) => ({
+            ...prevData,
+            id: `${parseInt(prevData.id) + 1}`,
+        }));
+    }
+
+    function setDate() {
+        let dateToSet = "";
+
+        if (newRecord.date === "") {
+            const date = new Date();
+            const day = date.getDate();
+            const month = date.getMonth() + 1;
+            const year = date.getFullYear();
+
+            dateToSet = `${day}.${month}.${year}`;
+        } else {
+            const dateParts = newRecord.date.split("-");
+            dateToSet = `${dateParts[2]}.${dateParts[1]}.${dateParts[0]}`;
+        }
+        newRecord.date = dateToSet;
     }
 
     return (
@@ -57,7 +84,7 @@ function App() {
                     ))}
                 </div>
                 <div className="journal__text-container">
-                    <TextInput placeholder={"Опишите свой день"} name={"text"} receiveInputsValue={receiveInputsValue}  />
+                    <TextInput placeholder={"Опишите свой день"} name={"text"} receiveInputsValue={receiveInputsValue} />
                 </div>
                 <div className="send__button-container">
                     <SendButton text={"Отправить"} onClick={sendButtonClicked} />
