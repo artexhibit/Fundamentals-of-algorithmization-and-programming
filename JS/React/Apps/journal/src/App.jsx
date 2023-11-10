@@ -21,6 +21,7 @@ function App() {
         text: "",
     });
     const [indexToHide, setIndexToHide] = useState(recordsToShow.length + 1);
+    const [canEraseValue, setCanEraseValue] = useState(false);
 
     function sendButtonClicked() {
         setNewEntryId();
@@ -28,9 +29,12 @@ function App() {
         setIndexToHide(parseInt(newRecord.id));
         setRecordsToShow((prevData) => [newRecord, ...prevData]);
         animateNewEntry();
+        eraseInput();
     }
 
     function receiveInputsValue(e) {
+        setCanEraseValue(false);
+
         setNewRecord((prevData) => ({
             ...prevData,
             [e.target.name]: e.target.value,
@@ -55,12 +59,7 @@ function App() {
         let dateToSet = "";
 
         if (newRecord.date === "") {
-            const date = new Date();
-            const day = date.getDate();
-            const month = date.getMonth() + 1;
-            const year = date.getFullYear();
-
-            dateToSet = `${day}.${month}.${year}`;
+            dateToSet = todaysDate();
         } else {
             const dateParts = newRecord.date.split("-");
             dateToSet = `${dateParts[2]}.${dateParts[1]}.${dateParts[0]}`;
@@ -74,10 +73,27 @@ function App() {
             let newEntry = document.querySelector(".journal__item.animateIn");
             newEntry.classList.toggle("animateIn");
             console.log(newEntry);
-        }, 100);
+        }, 400);
     }
 
-    function eraseInputs() {}
+    function eraseInput() {
+        setNewRecord((prevData) => ({
+            ...prevData,
+            title: "",
+            text: "",
+            date: `${todaysDate()}`,
+        }));
+        setCanEraseValue(true);
+    }
+
+    function todaysDate() {
+        const date = new Date();
+        const day = date.getDate();
+        const month = date.getMonth() + 1;
+        const year = date.getFullYear();
+
+        return `${day}.${month}.${year}`;
+    }
 
     return (
         <>
@@ -86,7 +102,7 @@ function App() {
                     <Logo />
                 </div>
                 <div className="entry__button-container">
-                    <EntryButton eraseInputs={eraseInputs} />
+                    <EntryButton eraseInput={eraseInput} />
                 </div>
                 <div className="journal__items-container">
                     {recordsToShow.map((record) => (
@@ -98,7 +114,7 @@ function App() {
             </LeftSide>
             <Main>
                 <div className="header__container">
-                    <BigInput type={"text"} name={"title"} placeholder={"Введите заголовок"} autofocus={true} receiveInputsValue={receiveInputsValue} />
+                    <BigInput type={"text"} name={"title"} placeholder={"Введите заголовок"} autofocus={true} receiveInputsValue={receiveInputsValue} canEraseValue={canEraseValue} currentValue={newRecord.title} />
                     <img className="header__icon" src="../../src/assets/images/archive.png" alt="archive" />
                 </div>
                 <div className="journal__data-container">
@@ -107,7 +123,7 @@ function App() {
                     ))}
                 </div>
                 <div className="journal__text-container">
-                    <TextInput placeholder={"Опишите свой день"} name={"text"} receiveInputsValue={receiveInputsValue} />
+                    <TextInput placeholder={"Опишите свой день"} name={"text"} receiveInputsValue={receiveInputsValue} canEraseValue={canEraseValue} currentValue={newRecord.text} />
                 </div>
                 <div className="send__button-container">
                     <SendButton text={"Отправить"} sendButtonClicked={sendButtonClicked} />

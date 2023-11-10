@@ -7,8 +7,9 @@
     position: absolute;
     top: 0;
     left: 0;
+    bottom: 0;
     transform: translateX(0);
-    transition: all 1s ease;
+    transition: all .5s ease;
 }
 
 .journal__item-container {
@@ -34,7 +35,6 @@
 .journal__item.animateIn {
     opacity: 0.5;
     transform: translateX(105%);
-    transition: all .5s ease;
 }
 
 .jounral__item-wrapper {
