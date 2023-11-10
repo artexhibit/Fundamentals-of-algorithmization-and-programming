@@ -3,6 +3,38 @@
     background-color: #121318;
     cursor: pointer;
     width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(0);
+    transition: all 1s ease;
+}
+
+.journal__item-container {
+    display: flex;
+    width: 100%;
+    height: 98px;
+    position: relative;
+}
+
+.journal__item-container.animateIn {
+    animation: insert .5s ease;
+}
+
+@keyframes insert {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 98px;
+    }
+}
+
+.journal__item.animateIn {
+    opacity: 0.5;
+    transform: translateX(105%);
+    transition: all .5s ease;
 }
 
 .jounral__item-wrapper {
@@ -28,7 +60,7 @@
 
 .journal__item-text {
     white-space: nowrap;
-    overflow: hidden;  
-    text-overflow: ellipsis; 
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: grey;
 }

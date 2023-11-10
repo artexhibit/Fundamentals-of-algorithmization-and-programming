@@ -1,7 +1,7 @@
 import "./SendButton.css";
 
 const SendButton = (props) => (
-    <button className="send__button" onClick={props.onClick}>{props.text}</button>
+    <button className="send__button" onClick={props.sendButtonClicked}>{props.text}</button>
 );
 
 export default SendButton;

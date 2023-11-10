@@ -16,21 +16,31 @@ function App() {
     const [recordsToShow, setRecordsToShow] = useState(journalData);
     const [newRecord, setNewRecord] = useState({
         date: "",
-        id: "4",
+        id: `${recordsToShow.length + 1}`,
         title: "",
         text: "",
     });
+    const [indexToHide, setIndexToHide] = useState(recordsToShow.length + 1);
 
     function sendButtonClicked() {
         setNewEntryId();
         setDate();
+        setIndexToHide(parseInt(newRecord.id));
         setRecordsToShow((prevData) => [newRecord, ...prevData]);
+        animateNewEntry();
     }
 
     function receiveInputsValue(e) {
         setNewRecord((prevData) => ({
             ...prevData,
             [e.target.name]: e.target.value,
+        }));
+    }
+
+    function eraseDate() {
+        setNewRecord((prevData) => ({
+            ...prevData,
+            date: "",
         }));
     }
 
@@ -56,7 +66,18 @@ function App() {
             dateToSet = `${dateParts[2]}.${dateParts[1]}.${dateParts[0]}`;
         }
         newRecord.date = dateToSet;
+        eraseDate();
     }
+
+    function animateNewEntry() {
+        setTimeout(() => {
+            let newEntry = document.querySelector(".journal__item.animateIn");
+            newEntry.classList.toggle("animateIn");
+            console.log(newEntry);
+        }, 100);
+    }
+
+    function eraseInputs() {}
 
     return (
         <>
@@ -65,11 +86,13 @@ function App() {
                     <Logo />
                 </div>
                 <div className="entry__button-container">
-                    <EntryButton />
+                    <EntryButton eraseInputs={eraseInputs} />
                 </div>
                 <div className="journal__items-container">
                     {recordsToShow.map((record) => (
-                        <JournalItem title={record.title} date={record.date} text={record.text} key={record.id} />
+                        <div className={`journal__item-container ${record.id === String(indexToHide) ? "animateIn" : ""}`} key={record.id}>
+                            <JournalItem title={record.title} date={record.date} text={record.text} animateIn={record.id === String(indexToHide) ? true : false} />
+                        </div>
                     ))}
                 </div>
             </LeftSide>
@@ -87,7 +110,7 @@ function App() {
                     <TextInput placeholder={"Опишите свой день"} name={"text"} receiveInputsValue={receiveInputsValue} />
                 </div>
                 <div className="send__button-container">
-                    <SendButton text={"Отправить"} onClick={sendButtonClicked} />
+                    <SendButton text={"Отправить"} sendButtonClicked={sendButtonClicked} />
                 </div>
             </Main>
         </>
