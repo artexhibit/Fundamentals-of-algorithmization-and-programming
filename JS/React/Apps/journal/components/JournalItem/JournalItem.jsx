@@ -1,7 +1,7 @@
 import "./JournalItem.css";
 
 const JournalItem = (props) => (
-    <div className={`journal__item ${props.animateIn ? "animateIn" : ""}`}>
+    <div className={`journal__item ${props.animateIn ? "animateIn" : ""} ${props.animateOut ? "animateOut" : ""}`}>
         <div className="jounral__item-wrapper">
             <p className="journal__item-title">{props.title}</p>
             <div className="journal__item-data">

@@ -20,16 +20,28 @@ function App() {
         title: "",
         text: "",
     });
-    const [indexToHide, setIndexToHide] = useState(recordsToShow.length + 1);
+    const [indexToAnimateIn, setIndexToAnimateIn] = useState(recordsToShow.length + 1);
+    const [indexToAnimateOut, setIndexToAnimateOut] = useState(0);
     const [canEraseValue, setCanEraseValue] = useState(false);
 
     function sendButtonClicked() {
         setNewEntryId();
         setDate();
-        setIndexToHide(parseInt(newRecord.id));
+        setIndexToAnimateIn(parseInt(newRecord.id));
         setRecordsToShow((prevData) => [newRecord, ...prevData]);
         animateNewEntry();
         eraseInput();
+
+        if (recordsToShow.length === 5) {
+            setIndexToAnimateOut(parseInt(findSmallestIndex()));
+            removeLastEntry();
+        }
+    }
+
+    function findSmallestIndex() {
+        return recordsToShow.reduce((min, current) => {
+            return current.id < min ? current.id : min;
+        }, recordsToShow[0].id);
     }
 
     function receiveInputsValue(e) {
@@ -59,7 +71,7 @@ function App() {
         let dateToSet = "";
 
         if (newRecord.date === "") {
-            dateToSet = todaysDate();
+            dateToSet = todaysDate(".");
         } else {
             const dateParts = newRecord.date.split("-");
             dateToSet = `${dateParts[2]}.${dateParts[1]}.${dateParts[0]}`;
@@ -72,8 +84,15 @@ function App() {
         setTimeout(() => {
             let newEntry = document.querySelector(".journal__item.animateIn");
             newEntry.classList.toggle("animateIn");
-            console.log(newEntry);
         }, 400);
+    }
+
+    function removeLastEntry() {
+        setTimeout(() => {
+            setRecordsToShow((prevData) => {
+                return [...prevData.slice(0, prevData.length - 1)];
+            });
+        }, 500);
     }
 
     function eraseInput() {
@@ -81,18 +100,18 @@ function App() {
             ...prevData,
             title: "",
             text: "",
-            date: `${todaysDate()}`,
+            date: `${todaysDate("-")}`,
         }));
         setCanEraseValue(true);
     }
 
-    function todaysDate() {
+    function todaysDate(separator) {
         const date = new Date();
         const day = date.getDate();
         const month = date.getMonth() + 1;
         const year = date.getFullYear();
 
-        return `${day}.${month}.${year}`;
+        return `${day}${separator}${month}${separator}${year}`;
     }
 
     return (
@@ -106,8 +125,8 @@ function App() {
                 </div>
                 <div className="journal__items-container">
                     {recordsToShow.map((record) => (
-                        <div className={`journal__item-container ${record.id === String(indexToHide) ? "animateIn" : ""}`} key={record.id}>
-                            <JournalItem title={record.title} date={record.date} text={record.text} animateIn={record.id === String(indexToHide) ? true : false} />
+                        <div className={`journal__item-container ${record.id === String(indexToAnimateIn) ? "animateIn" : ""}`} key={record.id}>
+                            <JournalItem title={record.title} date={record.date} text={record.text} animateIn={record.id === String(indexToAnimateIn) ? true : false} animateOut={record.id === String(indexToAnimateOut) ? true : false} />
                         </div>
                     ))}
                 </div>

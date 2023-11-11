@@ -33,7 +33,10 @@
 }
 
 .journal__item.animateIn {
-    opacity: 0.5;
+    transform: translateX(105%);
+}
+
+.journal__item.animateOut {
     transform: translateX(105%);
 }
 
