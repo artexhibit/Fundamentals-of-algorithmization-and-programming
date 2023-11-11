@@ -23,6 +23,7 @@ function App() {
     const [indexToAnimateIn, setIndexToAnimateIn] = useState(recordsToShow.length + 1);
     const [indexToAnimateOut, setIndexToAnimateOut] = useState(0);
     const [canEraseValue, setCanEraseValue] = useState(false);
+    const [tagValue, setTagValue] = useState("");
 
     function sendButtonClicked() {
         setNewEntryId();
@@ -51,6 +52,10 @@ function App() {
             ...prevData,
             [e.target.name]: e.target.value,
         }));
+
+        if (e.target.name === "tags") {
+            setTagValue(e.target.value);
+        }
     }
 
     function eraseDate() {
@@ -73,8 +78,8 @@ function App() {
         if (newRecord.date === "") {
             dateToSet = todaysDate(".");
         } else {
-            const dateParts = newRecord.date.split("-");
-            dateToSet = `${dateParts[2]}.${dateParts[1]}.${dateParts[0]}`;
+            let dateParts = newRecord.date.split("-");
+            dateToSet = dateParts[0].length === 4 ? `${dateParts[2]}.${dateParts[1]}.${dateParts[0]}` : `${dateParts[0]}.${dateParts[1]}.${dateParts[2]}`;
         }
         newRecord.date = dateToSet;
         eraseDate();
@@ -100,18 +105,19 @@ function App() {
             ...prevData,
             title: "",
             text: "",
-            date: `${todaysDate("-")}`,
+            date: `${todaysDate("-", true)}`,
         }));
+        setTagValue("");
         setCanEraseValue(true);
     }
 
-    function todaysDate(separator) {
+    function todaysDate(separator, yearFirst = false) {
         const date = new Date();
         const day = date.getDate();
         const month = date.getMonth() + 1;
         const year = date.getFullYear();
 
-        return `${day}${separator}${month}${separator}${year}`;
+        return yearFirst ? `${year}${separator}${month}${separator}${day}` : `${year}${separator}${month}${separator}${day}`;
     }
 
     return (
@@ -138,7 +144,7 @@ function App() {
                 </div>
                 <div className="journal__data-container">
                     {journalInfo.map((item) => (
-                        <JournalInfo icon={item.icon} title={item.title} inputType={item.inputType} inputPlaceholder={item.inputPlaceholder} inputAutofocus={item.inputAutofocus} key={item.id} receiveInputsValue={receiveInputsValue} />
+                        <JournalInfo icon={item.icon} title={item.title} inputType={item.inputType} inputPlaceholder={item.inputPlaceholder} inputAutofocus={item.inputAutofocus} key={item.id} receiveInputsValue={receiveInputsValue} currentTagValue={tagValue} currentDateValue={newRecord.date} />
                     ))}
                 </div>
                 <div className="journal__text-container">
