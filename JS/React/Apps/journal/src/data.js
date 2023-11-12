@@ -1,4 +1,4 @@
-export const journalData = [
+export let journalData = [
     {
         id: "3",
         date: "01.11.2023",
@@ -18,6 +18,10 @@ export const journalData = [
         text: "Создал первую заметку, чтобы попробовать работу с React. Пока что все получается. Если есть какие-то вопросы, то можно посмотреть в документации.",
     },
 ];
+
+export function setJournalData(data) {
+    journalData = data;
+}
 
 export const journalInfo = [
     {

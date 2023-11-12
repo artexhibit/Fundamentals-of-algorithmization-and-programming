@@ -3,33 +3,51 @@ import LeftSide from "../layout/LeftSide/LeftSide";
 import Main from "../layout/Main/Main";
 import Logo from "../components/Logo/Logo";
 import EntryButton from "../components/EntryButton/EntryButton";
-import { journalData } from "./data";
-import { journalInfo } from "./data";
-import JournalItem from "../components/JournalItem/JournalItem";
-import { useState } from "react";
 import BigInput from "../components/bigInput/bigInput";
 import JournalInfo from "../components/JournalInfo/JournalInfo";
 import TextInput from "../components/TextInput/TextInput";
 import SendButton from "../components/SendButton/SendButton";
+import JournalItem from "../components/JournalItem/JournalItem";
+import { journalData, journalInfo } from "./data";
+import { useState, useEffect } from "react";
+import { supabase } from "../supabase/supabaseInit";
 
 function App() {
-    const [recordsToShow, setRecordsToShow] = useState(journalData);
+    const [recordsToShow, setRecordsToShow] = useState([]);
     const [newRecord, setNewRecord] = useState({
         date: "",
-        id: `${recordsToShow.length + 1}`,
+        id: "",
         title: "",
         text: "",
     });
-    const [indexToAnimateIn, setIndexToAnimateIn] = useState(recordsToShow.length + 1);
+    const [indexToAnimateIn, setIndexToAnimateIn] = useState(0);
     const [indexToAnimateOut, setIndexToAnimateOut] = useState(0);
     const [canEraseValue, setCanEraseValue] = useState(false);
     const [tagValue, setTagValue] = useState("");
 
-    function sendButtonClicked() {
+    useEffect(() => {
+        getRecords();
+    }, []);
+
+    useEffect(() => {
         setNewEntryId();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [recordsToShow]);
+
+    async function getRecords() {
+        const { data, error } = await supabase.from("journal-data").select();
+        error ? setRecordsToShow(journalData) : setRecordsToShow(JSON.parse(data[0].data));
+    }
+
+    async function saveRecordsToDatabase(data) {
+        await supabase.from("journal-data").update({ data: data }).eq("id", "1");
+    }
+
+    function sendButtonClicked() {
         setDate();
         setIndexToAnimateIn(parseInt(newRecord.id));
         setRecordsToShow((prevData) => [newRecord, ...prevData]);
+        saveRecordsToDatabase(JSON.stringify([newRecord, ...recordsToShow]));
         animateNewEntry();
         eraseInput();
 
@@ -65,10 +83,23 @@ function App() {
         }));
     }
 
+    function biggestId() {
+        let maxId = -1;
+        for (let i = 0; i < recordsToShow.length; i++) {
+            const id = parseInt(recordsToShow[i].id);
+            if (id > maxId) {
+                maxId = id;
+            }
+        }
+        return maxId;
+    }
+
     function setNewEntryId() {
+        const id = biggestId();
+
         setNewRecord((prevData) => ({
             ...prevData,
-            id: `${parseInt(prevData.id) + 1}`,
+            id: `${id + 1}`,
         }));
     }
 
@@ -95,7 +126,9 @@ function App() {
     function removeLastEntry() {
         setTimeout(() => {
             setRecordsToShow((prevData) => {
-                return [...prevData.slice(0, prevData.length - 1)];
+                const result = [...prevData.slice(0, -1)];
+                saveRecordsToDatabase(JSON.stringify(result));
+                return result;
             });
         }, 500);
     }

@@ -7,5 +7,9 @@
     line-height: 1.6rem;
     width: 100%;
     min-height: 300px;
+    color: white;
+}
+
+.text__input::placeholder {
     color: #C6C6CA;
 }
