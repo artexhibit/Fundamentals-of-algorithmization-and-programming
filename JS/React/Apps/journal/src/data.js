@@ -19,10 +19,6 @@ export let journalData = [
     },
 ];
 
-export function setJournalData(data) {
-    journalData = data;
-}
-
 export const journalInfo = [
     {
         id: "1",
